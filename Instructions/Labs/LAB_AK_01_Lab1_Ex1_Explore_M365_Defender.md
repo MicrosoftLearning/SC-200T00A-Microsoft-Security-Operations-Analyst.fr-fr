@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 1 - Labo 1 - Exercice 1 - Explorer Microsoft 365 Defender
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![M365 Defender](../Media/SC-200-Lab_M1_L1_Ex1.png)
 

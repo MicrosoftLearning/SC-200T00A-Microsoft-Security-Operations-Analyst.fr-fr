@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 5 - Labo 1 - Exercice 1 - Configurer votre environnement Microsoft Sentinel
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod5_L1_Ex1.png)
 
@@ -107,7 +107,7 @@ Dans cette tâche, vous allez créer un indicateur dans Microsoft Sentinel.
 
 1. Dans Domaine, entrez le nom de domaine, par exemple : *contoso.com*.
 
-1. Pour les *types de menaces*, sélectionnez **+ Ajouter** et saisissez **malicious-activity**. Sélectionnez **OK**.
+1. Pour les *types de menaces*, sélectionnez **+ Ajouter** et saisissez **malicious-activity**. Cliquez sur **OK**.
 
 1. Entrez une **Description**.
 

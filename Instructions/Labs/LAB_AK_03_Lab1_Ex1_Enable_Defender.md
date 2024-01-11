@@ -6,7 +6,7 @@ lab:
 
 # Parcours d'apprentissage 3 - Labo 1 - Exercice 1 - Activer Microsoft Defender pour le cloud
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex1.png)
 

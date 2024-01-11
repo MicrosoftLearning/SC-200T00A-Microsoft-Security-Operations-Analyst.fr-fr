@@ -6,7 +6,7 @@ lab:
 
 # Chemin d’apprentissage 7 - Labo 1 - Exercice 3 - Créer une requête planifiée à partir d’un modèle
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex3.png)
 

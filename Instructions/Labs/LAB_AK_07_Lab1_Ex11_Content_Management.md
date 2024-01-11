@@ -6,7 +6,7 @@ lab:
 
 # Chemin d’apprentissage 7 - Labo 1 - Exercice 1 - Utiliser des référentiels dans Microsoft Sentinel
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous avez déjà créé des règles planifiées et analytiques de sécurité Microsoft.  Vous devez centraliser les règles analytiques dans un référentiel Azure DevOps.  Connectez Ensuite Sentinel au référentiel Azure DevOps et importez le contenu. 
 

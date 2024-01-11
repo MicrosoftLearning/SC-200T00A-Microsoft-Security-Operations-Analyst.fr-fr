@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 7 – Labo 1 – Exercice 4 – Explorer l’analyse du comportement des entités
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous avez déjà créé des règles planifiées et analytiques de sécurité Microsoft. 
 

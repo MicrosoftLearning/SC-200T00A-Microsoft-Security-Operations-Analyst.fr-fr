@@ -1,4 +1,4 @@
-# Module 6 : création de détections et investigations avec Microsoft Sentinel
+# Module 6 : création de détections et investigations avec Microsoft Sentinel
 
 **Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md). 
 
@@ -10,7 +10,7 @@ Dans cette tâche, vous allez créer une règle de requête d’analytique NRT (
 
 1. Sélectionnez l’onglet **Créer**, puis **Règle de requête NRT**.
 
-1. L’Assistant Règle d’analytique s’ouvre alors. Pour l’onglet *Général*, saisissez les valeurs suivantes :
+1. L’Assistant Règle d’analytique s’ouvre alors. Pour le type d’onglet *Général* :
 
     |Paramètre|Valeur|
     |---|---|
@@ -21,7 +21,7 @@ Dans cette tâche, vous allez créer une règle de requête d’analytique NRT (
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**. 
 
-1. Pour la *Requête de règle*, entrez l’instruction KQL suivante :
+1. Pour la *Règle de requête*, entrez l’instruction KQL suivante :
 
     ```KQL
     let lookback = 2d; 
@@ -33,9 +33,9 @@ Dans cette tâche, vous allez créer une règle de requête d’analytique NRT (
     | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam
     ```
 
-1. Sélectionnez **Afficher les résultats de la requête >** pour vous assurer que votre requête ne contient pas d’erreurs.
+1. Sélectionnez **Afficher les résultats de la requête >** pour vous assurer que votre requête ne contient pas d’erreurs.
 
-1. Fermez la fenêtre *Journaux* en cliquant sur le bouton **X** en haut à droite de la fenêtre, puis sélectionnez **OK** pour ignorer les modifications. 
+1. Fermez la fenêtre *Journaux* en cliquant sur **X** en haut à droite de la fenêtre, puis sélectionnez **OK** pour ignorer les modifications. 
 
 1. Sous *Simulation des résultats*, sélectionnez **Tester avec les données actuelles**. Notez le nombre attendu d’*Alertes par jour*.
 
@@ -59,13 +59,13 @@ Dans cette tâche, vous allez examiner l’incident créé à partir de la règl
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, accédez au Portail Azure à l’adresse https://portal.azure.com.
+1. Dans le navigateur Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
 
 1. Dans la boîte de dialogue **Se connecter**, copiez et collez le compte **E-mail du locataire** pour l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **Mot de passe du locataire** pour l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** pour l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
 
-1. Dans la barre de recherche du Portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
+1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
 1. Sélectionnez l’espace de travail Microsoft Sentinel que vous avez créé précédemment.
 

@@ -6,7 +6,7 @@ lab:
 
 # Parcours d'apprentissage 2 - Labo 1 - Exercice 2 - Atténuer les attaques avec Microsoft Defender for Endpoint
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex2_10_19.png)
 

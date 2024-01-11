@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 8 – Labo 1 – Exercice 2 – Repérage des menaces à l’aide de notebooks avec Microsoft Sentinel
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez explorer les avantages du repérage des menaces avec les notebooks Microsoft Sentinel. Vous pouvez utiliser des notebooks pour :
 

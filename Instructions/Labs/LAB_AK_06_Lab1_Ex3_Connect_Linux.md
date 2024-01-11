@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 6 - Labo 1 - Exercice 3 - Connecter des hôtes Linux à Microsoft Sentinel avec des connecteurs de données
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex3.png)
 
@@ -57,7 +57,7 @@ Dans cette tâche, vous allez connecter un hôte Linux à Microsoft Sentinel av
 
 1. Notez l’adresse IP de votre serveur LIN1. Voir la capture d’écran ci-dessous comme exemple :
 
-    ![Connexion Linux](../Media/LinuxLoginExample.png)
+    ![connexion Linux](../Media/LinuxLoginExample.png)
 
 1. Accédez à la machine virtuelle **WIN1**. Lancez Windows PowerShell en tant qu’administrateur en cliquant avec le bouton droit sur l'icône du menu Démarrer et en sélectionnant **Windows PowerShell (Admin)**. Sélectionnez **Oui** pour autoriser l’application à s’exécuter dans la fenêtre Contrôle de compte d’utilisateur qui s’affiche. **Conseil :** vous pouvez avoir une fenêtre Windows PowerShell déjà ouverte lors d’exercices précédents.
 
@@ -67,7 +67,7 @@ Dans cette tâche, vous allez connecter un hôte Linux à Microsoft Sentinel av
     ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
     ```
 
-1. Entrez *Oui* pour confirmer la connexion, puis tapez le mot de passe de l’utilisateur, et appuyez sur Entrée. Votre écran doit ressembler à ceci :
+1. Entrez *oui* pour confirmer la connexion, puis tapez le mot de passe de l’utilisateur et appuyez sur Entrée. Votre écran doit ressembler à ceci :
 
     ![Connexion Linux](../Media/PSconnectLinux.png)
 

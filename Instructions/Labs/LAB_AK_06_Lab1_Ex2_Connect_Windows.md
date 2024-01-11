@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 6 - Labo 1 - Exercice 2 - Connecter des appareils Windows à Microsoft Sentinel avec des connecteurs de données
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
 

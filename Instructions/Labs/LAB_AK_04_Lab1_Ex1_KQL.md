@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 4 - Labo 1- Exercice 1 - Créer des requêtes pour Microsoft Sentinel avec le langage de requête Kusto (KQL)
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod4_L1_Ex1.png)
 

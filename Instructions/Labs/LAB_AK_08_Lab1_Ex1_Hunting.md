@@ -6,7 +6,7 @@ lab:
 
 # Chemin d’apprentissage 8 - Labo 1 - Exercice 1 - Repérer les menaces dans Microsoft Sentinel
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod8_L1_Ex1.png)
 
@@ -143,7 +143,7 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
     |Nom|**Repérage PowerShell NRT**|
     |Description|**Repérage PowerShell NRT**|
     |Tactique|**Commande et contrôle**|
-    |Gravité|**Activité**|
+    |Niveau de gravité|**Activité**|
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**. 
 

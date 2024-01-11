@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 7 – Labo 1 – Exercice 1 – Modifier une règle de sécurité Microsoft
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex1.png)
 

@@ -2,7 +2,7 @@
 
 # Parcours d’apprentissage 6 - Labo 1 - Exercice 4 - Connecter le renseignement sur les menaces à Microsoft Sentinel à l’aide de connecteurs de données
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex4.png)
 

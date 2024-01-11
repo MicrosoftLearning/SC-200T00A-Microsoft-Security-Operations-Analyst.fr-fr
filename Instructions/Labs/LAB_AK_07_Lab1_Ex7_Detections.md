@@ -6,7 +6,7 @@ lab:
 
 # Parcours d’apprentissage 7 – Labo 1 – Exercice 7 – Créer des détections
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex7.png)
 
@@ -76,7 +76,7 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
     |Nom|Démarrage de RegKey|
     |Description|Démarrage de RegKey dans C:\temp|
     |Tactique|Persistance|
-    |Gravité|Élevée|
+    |Niveau de gravité|Forte|
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**.
 
@@ -155,7 +155,7 @@ Dans cette tâche, vous allez créer une détection pour la deuxième attaque de
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-   ![Capture d’écran](../Media/SC200_sysmon_attack3.png)
+   ![Capture d'écran](../Media/SC200_sysmon_attack3.png)
 
 1. Étendez la ligne pour afficher les colonnes résultantes. Dans la dernière, nous voyons le nom de l’utilisateur ajouté sous la colonne *UserName1* que nous *projetons* dans la requête KQL. Il est important d’aider l’analyste des opérations de sécurité en fournissant autant de contexte sur l’alerte que possible. Cela inclut la projection d’entités à utiliser dans le graphe d’investigation. **Exécutez** la requête suivante :
 
@@ -180,7 +180,7 @@ Dans cette tâche, vous allez créer une détection pour la deuxième attaque de
     |Nom|**SecurityEvent : ajout d’utilisateurs aux administrateurs locaux**|
     |Description|**Utilisateur ajouté au groupe Administrateurs local**|
     |Tactique|**Élévation des privilèges**|
-    |Gravité|**Activité**|
+    |Niveau de gravité|**Activité**|
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**. 
 

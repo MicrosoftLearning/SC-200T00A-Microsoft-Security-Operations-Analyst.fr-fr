@@ -6,7 +6,7 @@ lab:
 
 # Chemin d’apprentissage 2 - Labo 1 - Exercice 1 - Déployer Microsoft Defender pour point de terminaison
 
-## Scénario de l’exercice
+## Scénario du labo
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod2_L1_Ex1.png)
 
