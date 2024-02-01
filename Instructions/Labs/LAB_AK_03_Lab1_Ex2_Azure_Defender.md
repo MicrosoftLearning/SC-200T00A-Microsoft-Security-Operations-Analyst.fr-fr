@@ -37,22 +37,23 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 1. Sélectionnez votre abonnement.
 
-1. Dans le menu du portail, sous *Paramètres de stratégie*, sélectionnez **Stratégie de sécurité**.
+    >**Conseil :** Sélectionnez **Développer tout** pour trouver votre abonnement si vous disposez d’une hiérarchie Groupes d’administration.
 
-1. Faites défiler vers le bas et passez en revue les « normes sectorielles et réglementaires » disponibles par défaut. Notez que la norme *ISO 27001* est obsolète.
+1. Sous *Paramètres*, sélectionnez **Stratégie de sécurité** dans le menu du portail.
 
-1. Sélectionnez **Ajouter d’autres normes** pour ajouter la norme réglementaire ISO 27001:2013 mise à jour.
+1. Faites défiler vers le bas de l’écran et passez en revue les « Normes de sécurité » à votre disposition par défaut.
 
-1. Sélectionnez le bouton **Ajouter** en regard de *ISO 27001:2013*.
+1. Utilisez la zone de recherche pour rechercher la norme *ISO 27001:2013*.
 
-1. Une nouvelle page s’ouvre pour attribuer l’initiative Azure Policy. Vérifiez que votre abonnement est sélectionné sous *Étendue*, puis cliquez sur **Vérifier et créer**.
+1. Sélectionnez et déplacez le curseur **État** vers la droite de *ISO 27001:2013* vers **Activé**.
 
-1. Sélectionnez **Créer** pour attribuer l’initiative Azure Policy à votre abonnement.
+    >**Remarque :** Certaines normes vous obligent à attribuer une initiative Azure Policy.
 
-1. Sélectionnez Microsoft Defender pour le cloud en dessous de la zone de recherche pour revenir au volet principal.
+1. Sélectionnez **Actualiser** dans le menu de la page pour confirmer que *ISO 27001:2013* est définie sur *Activé* pour votre abonnement.
+
+1. Fermez la page des *Stratégies de sécurité* en sélectionnant le « X » en haut à droite de la page pour revenir aux **Paramètres d’environnement**.
 
     >**Remarque :** revenez ultérieurement à la *Conformité réglementaire* pour passer en revue les nouveaux contrôles et recommandations standard.
-
 
 ### Tâche 2 : explorer la posture de sécurité et les recommandations
 

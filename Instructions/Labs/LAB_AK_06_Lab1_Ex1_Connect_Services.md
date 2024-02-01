@@ -37,7 +37,7 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 1. Sélectionnez *Créer des incidents en fonction de Microsoft Defender pour le cloud* dans les modèles de règles.
 
-1. Sélectionnez **Créer une règle** dans le panneau d’informations de connexion.
+1. Sélectionnez **Créer une règle** dans le volet d’informations des règles, ou sélectionnez les points de suspension (...) et **+ Créer une règle**.
 
 1. Dans l’Assistant Règle analytique, sélectionnez **Suivant : Réponse automatique**, puis **Suivant : Vérifier et créer**.
 

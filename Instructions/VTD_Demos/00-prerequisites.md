@@ -581,97 +581,97 @@ Dans cette tâche, vous allez effectuer des attaques sur un hôte avec Microsoft
 1. Dans la recherche de la barre des tâches, entrez *Commande*.  L’invite de commandes s’affiche dans les résultats de la recherche.  Cliquez avec le bouton de droite sur l’invite de commande et sélectionnez **Exécuter en tant qu’administrateur**. Vérifiez les invites de contrôle de compte d’utilisateur qui s’affichent.
 
 1. Dans l’invite de commandes, entrez la commande dans chaque ligne en appuyant sur la touche Entrée après chaque ligne :
-```
-cd \
-mkdir temp
-cd temp
-```
+
+    ```CommandPrompt
+    cd \
+    mkdir temp
+    cd temp
+    ```
 
 1. Copiez et exécutez cette commande :
 
-```
-REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
-```
+    ```CommandPrompt
+    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
+    ```
 
 ### Tâche 2 : créer une attaque C2 (commande et contrôle)
 
 1. Connectez-vous à la machine virtuelle `WIN1` en tant qu’administrateur avec le mot de passe : **Pa55w.rd**.  
 
 1. Dans la recherche de la barre des tâches, entrez *Commande*.  L’invite de commandes s’affiche dans les résultats de la recherche.  Cliquez avec le bouton de droite sur l’invite de commande et sélectionnez **Exécuter en tant qu’administrateur**. Vérifiez les invites de contrôle de compte d’utilisateur qui s’affichent.
-1. 
-1. 
+
 1. Attaque 2 -  Copiez et exécutez cette commande :
 
-```
-notepad c2.ps1
-```
+    ```CommandPrompt
+    notepad c2.ps1
+    ```
+
 Sélectionnez **Oui** pour créer un fichier, puis copiez le script PowerShell suivant dans c2.ps1, puis sélectionnez **Enregistrer**.
 
-**Remarque :** le collage dans la machine virtuelle peut avoir une longueur limitée.  Collez ceci dans trois sections pour vous assurer que tout le script est collé dans la machine virtuelle.  Vérifiez que le script se présente comme dans ces instructions dans le fichier c2.ps1 du bloc-notes.
+>**Remarque :** Coller dans la machine virtuelle peut être soumis à une limitation de la longueur.  Collez ceci dans trois sections pour vous assurer que tout le script est collé dans la machine virtuelle.  Vérifiez que le script se présente comme dans ces instructions dans le fichier c2.ps1 du bloc-notes.
 
-```
-
-
-param(
-    [string]$Domain = "microsoft.com",
-    [string]$Subdomain = "subdomain",
-    [string]$Sub2domain = "sub2domain",
-    [string]$Sub3domain = "sub3domain",
-    [string]$QueryType = "TXT",
-        [int]$C2Interval = 8,
-        [int]$C2Jitter = 20,
-        [int]$RunTime = 240
-)
-
-
-$RunStart = Get-Date
-$RunEnd = $RunStart.addminutes($RunTime)
-
-$x2 = 1
-$x3 = 1 
-Do {
-    $TimeNow = Get-Date
-    Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
-    if ($x2 -eq 3 )
-    {
-        Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-        
-        $x2 = 1
-
-    }
-    else
-    {
-        $x2 = $x2 + 1
-    }
+    ```PowerShell
     
-    if ($x3 -eq 7 )
-    {
-
-        Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
-
-        $x3 = 1
+    param(
+        [string]$Domain = "microsoft.com",
+        [string]$Subdomain = "subdomain",
+        [string]$Sub2domain = "sub2domain",
+        [string]$Sub3domain = "sub3domain",
+        [string]$QueryType = "TXT",
+            [int]$C2Interval = 8,
+            [int]$C2Jitter = 20,
+            [int]$RunTime = 240
+    )
+    
+    
+    $RunStart = Get-Date
+    $RunEnd = $RunStart.addminutes($RunTime)
+    
+    $x2 = 1
+    $x3 = 1 
+    Do {
+        $TimeNow = Get-Date
+        Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+    
+        if ($x2 -eq 3 )
+        {
+            Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            
+            $x2 = 1
+    
+        }
+        else
+        {
+            $x2 = $x2 + 1
+        }
         
+        if ($x3 -eq 7 )
+        {
+    
+            Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+    
+            $x3 = 1
+            
+        }
+        else
+        {
+            $x3 = $x3 + 1
+        }
+    
+    
+        $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
+        Start-Sleep -Seconds $Jitter
     }
-    else
-    {
-        $x3 = $x3 + 1
-    }
-
-
-    $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
-    Start-Sleep -Seconds $Jitter
-}
-Until ($TimeNow -ge $RunEnd)
-
-```
+    Until ($TimeNow -ge $RunEnd)
+    ```
 
 À l’invite de commandes, entrez ce qui suit, et entrez la commande dans chaque ligne en appuyant sur la touche Entrée après chaque ligne :
-```
-powershell
-.\c2.ps1
-```
-**Remarque :** vous verrez des erreurs de résolution. Ce processus est normal.
+
+    ```PowerShell
+    .\c2.ps1
+    ```
+
+>**Remarque :** vous verrez des erreurs de résolution. Ce processus est normal.
 Laissez ce script de commande et ce script PowerShell s’exécuter en arrière-plan. Ne fermez pas la fenêtre.  La commande doit générer des entrées de journal pendant quelques heures.  Vous pouvez passer à la tâche suivante et aux exercices suivants pendant l’exécution de ce script.  Les données créées par cette tâche seront utilisées dans le labo Repérage des menaces ultérieurement.  Ce processus ne crée pas de quantités substantielles de données ou de traitement.
 
 ### Tâche 2 : attaquer Windows configuré avec l’Agent Azure Monitor (AMA)
@@ -692,6 +692,6 @@ Dans cette tâche, vous allez effectuer des attaques sur un hôte avec le connec
     net localgroup administrators theusernametoadd /add
     ```
 
->**Remarque** : vérifiez qu’il n’existe qu’une seule commande par ligne et que vous pouvez réexécuter les commandes en modifiant le nom d’utilisateur.
+    >**Remarque** : vérifiez qu’il n’existe qu’une seule commande par ligne et que vous pouvez réexécuter les commandes en modifiant le nom d’utilisateur.
 
 1. Dans la fenêtre `Output`, vous devriez voir `The command completed successfully` trois fois.
