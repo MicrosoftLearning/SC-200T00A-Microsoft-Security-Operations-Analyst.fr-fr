@@ -41,7 +41,7 @@ Dans cette tâche, vous allez configurer un abonnement Azure nécessaire pour te
 
 1. Sous l’onglet *Membres*, sélectionnez **+ Sélectionner des membres**, puis sélectionnez le compte **Administrateur MOD**, puis **Sélectionner** pour continuer.
 
-    >**Remarque :** si vous voyez l’onglet **Conditions** (avec un point rouge), sélectionnez **Suivant**, puis **Non contraint** à partir du type *Délégation.
+    >**Remarque :** Si l’onglet **Conditions** affiche un point rouge, sélectionnez **Suivant**, puis sélectionnez **Non contraint** si le type *Délégation* vous est présenté. Sinon, sélectionnez **Autoriser l’utilisateur à attribuer tous les rôles (hautement privilégié)** si l’option *Ce que l’utilisateur peut faire* vous est présentée.
 
 1. Sélectionnez **Vérifier + attribuer** deux fois pour attribuer le rôle de propriétaire à votre compte Administrateur.
 
@@ -124,7 +124,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Dans la section « Ajouter un serveur unique », sélectionnez **Générer un script**.
 
-1. Lisez l’onglet *Conditions préalables*, puis sélectionnez **Suivant** pour continuer.
+    <!--- 1. Read through the *Prerequisites* tab and then select **Next** to continue.--->
 
 1. Dans la page *Ajouter un serveur avec Azure Arc* , sélectionnez le groupe de ressources que vous avez créé précédemment sous *Détails du projet*. **Conseil :***RG-Defender*
 

@@ -111,7 +111,9 @@ Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine virtuel
 
 1. Sous l’onglet **Instructions**, dans la section *Configuration*, modifiez la *règle de collecte de données* **AZWINDCR** en sélectionnant l’icône en forme de *crayon*.
 
-1. Sélectionnez **Suivant : Ressources** et **+ Ajouter une ou plusieurs ressources**.
+1. Sélectionnez **Suivant : Ressources**et développez votre *Abonnement* sous *Étendue* sous l’onglet *Ressources* .
+
+    >**Conseil :** Vous pouvez développer l’ensemble de la hiérarchie *Étendue* en sélectionnant « > » devant la colonne *Étendue*.
 
 1. Développez **RG-Defender** (ou le groupe de ressources que vous avez créé), puis sélectionnez **WINServer**.
 
