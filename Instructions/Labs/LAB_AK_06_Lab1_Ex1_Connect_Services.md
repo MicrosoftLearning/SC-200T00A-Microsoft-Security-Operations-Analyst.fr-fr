@@ -51,9 +51,11 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Dans le *hub de contenu*, recherchez la solution **Microsoft Defender pour le cloud**, puis sélectionnez-la dans la liste.
 
-1. Dans la page de solution *Microsoft Defender pour le cloud*, sélectionnez **Installer**.
+1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Installer**.
 
-1. Une fois l’installation terminée, sélectionnez **Gérer**.
+1. Une fois l’installation terminée, recherchez la solution **Microsoft Defender pour le cloud** et sélectionnez-la.
+
+1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Gérer**.
 
     >**Remarque :** la solution *Microsoft Defender pour le cloud* installe le connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (préversion)* et une règle analytique.
 
@@ -65,7 +67,7 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Le *statut* doit maintenant être **Connecté** et la « Synchronisation bidirectionnelle » doit être *Activée*.
 
-1. Faites défiler vers le bas et sous la zone *Créer des incidents - Recommandé !*, vérifiez que *Créer automatiquement des incidents à partir de toutes les alertes générées dans ce service connecté* est **Activé**.
+    <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
 ### Tâche 3 : connecter le connecteur de données Activité Azure
 

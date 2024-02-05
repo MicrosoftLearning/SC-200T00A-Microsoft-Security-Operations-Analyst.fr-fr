@@ -53,9 +53,9 @@ Dans cette tâche, vous allez investiguer un incident.
 
 1. Masquez le panneau gauche en sélectionnant l’icône **<<** en regard du propriétaire.
 
-1. Passez en revue la fenêtre **Chronologie de l’incident**. Pour l’alerte *Démarrage de RegKey*, sélectionnez l’icône de points de suspension **(...)**, puis **Exécuter le playbook**. Le playbook *PostMessageTeams-OnAlert* s’affiche alors. Cette option vous aide à exécuter manuellement des playbooks.
+1. Passez en revue la fenêtre **Chronologie de l’incident**. Sélectionnez le bouton **Actions d’incident** en haut à droite, puis **Exécuter le guide opérationnel**. Vous voyez le guide opérationnel *PostMessageTeams-OnIncident*. Cette option vous aide à exécuter manuellement des playbooks.
 
-1. Fermez le volet *Playbooks d’alerte* en sélectionnant l’icône **x** en haut à droite.
+1. Fermez le panneau *Exécuter le guide opérationnel sur l’incident* en sélectionnant l’icône **x** en haut à droite.
 
 1. Examinez la fenêtre **Entités**. Au moins l’entité *Hôte* que nous avons mappée dans la requête KQL de l’exercice précédent doit apparaître. **Conseil :** si aucune entité n’est affichée, actualisez la page.
 

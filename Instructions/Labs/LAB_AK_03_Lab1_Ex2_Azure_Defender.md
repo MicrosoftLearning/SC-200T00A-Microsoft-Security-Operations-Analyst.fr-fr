@@ -37,7 +37,7 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 1. Sélectionnez votre abonnement.
 
-    >**Conseil :** Sélectionnez **Développer tout** pour trouver votre abonnement si vous disposez d’une hiérarchie Groupes d’administration.
+    >**Conseil :** Sélectionnez **Tout développer** pour trouver votre abonnement si vous avez une hiérarchie Groupes d’administration.
 
 1. Sous *Paramètres*, sélectionnez **Stratégie de sécurité** dans le menu du portail.
 
@@ -61,21 +61,27 @@ Dans cette tâche, vous allez examiner la gestion de la posture de sécurité cl
 
 1. Dans le menu du portail, sous *Sécurité cloud*, sélectionnez **Posture de sécurité**.
 
-1. Le niveau de sécurité doit afficher *N/A*, dans l’attente du nouveau calcul des données.
+1. Le *Niveau de sécurité* est défini par défaut sur l’*environnement Azure*.
 
-1. Dans le menu du portail, sous *Général*, sélectionnez **Recommandations**.
+1. Sous l’onglet *Environnement*, sélectionnez **Afficher les recommandations >**.
 
-1. Consultez les recommandations fournies pour votre abonnement et WINServer (serveur Arc).
+1. Dans la page *Recommandations*, sélectionnez l’onglet **Toutes les recommandations**.
 
-1. Sélectionnez une recommandation dont l’état n’est pas *« Terminé »* pour WINServer.
+    >**Remarque :** Vous pouvez également utiliser les *Recommandations sur le niveau de sécurité*.
 
-1. Lisez la recommandation, faites défiler vers le bas et **cochez** la case WINServer. **Conseil :** vous devrez peut-être sélectionner les **Ressources affectées** pour l’afficher.
+1. Sélectionnez le filtre **Type de ressource** et le sélecteur de liste déroulante **Valeur**.
 
-1. Sélectionnez **Attribuer un propriétaire**, puis **Ajouter un propriétaire**.
+1. Cochez la case **Machines - Azure Arc**, puis sélectionnez le bouton **OK**.
 
-1. Dans la zone *Adresse e-mail*, saisissez l’adresse e-mail de l’administrateur. **Conseil :** copiez l’adresse e-mail à partir des instructions de l’onglet *Ressources*.
+1. Sélectionnez une recommandation où l’état n’est pas *« Terminé »*.
 
-1. Sélectionnez **Précédent**, remplacez la *Date d’échéance* par celle de votre choix, puis cliquez sur **Enregistrer**.
+1. Lisez la recommandation, faites défiler vers le bas et **cochez** la case WINServer. **Conseil :** Vous devrez probablement développer et faire défiler vers le bas les **Ressources affectées** pour l’afficher.
+
+1. Sélectionnez **Attribuer un propriétaire**, puis développez **Détails de l’attribution**.
+
+1. Dans la zone *Adresse e-mail* `Set owner`, tapez votre e-mail d’administrateur. **Conseil :** copiez l’adresse e-mail à partir des instructions de l’onglet *Ressources*.
+
+1. Explorez les options *Définir la période de correction* et *Définir les notifications par e-mail*, puis sélectionnez **Créer**.
 
     >**Remarque :** si le message d’erreur suivant s’affiche *Échec de la création des attributions demandées*, réessayez plus tard.
 
@@ -89,23 +95,23 @@ Dans cette tâche, vous allez charger des exemples d’alertes de sécurité et 
 
 1. Dans le portail du menu, sous *Général*, sélectionnez **Alertes de sécurité**.
 
-1. Dans la barre de commandes, sélectionnez **Exemples d’alertes**. **Conseil :** vous devrez peut-être sélectionner le bouton en forme de points de suspension (…) dans la barre de commandes.
+1. Dans la barre de commandes, sélectionnez **Exemples d’alertes**. **Conseil :** Vous devrez peut-être sélectionner le bouton de points de suspension (...) dans la barre de commandes.
 
 1. Dans le volet Créer des exemples d’alertes (préversion), vérifiez que votre abonnement est sélectionné et que tous les exemples d’alertes sont sélectionnés dans la zone *Plans Defender pour le cloud*.
 
 1. Sélectionnez **Créer des exemples d’alertes**.  
 
-    >**Remarque :** cet exemple de processus de création d’alerte peut prendre quelques minutes, attendez la notification *« Exemples d’alertes créés avec succès ».* 
+    >**Remarque :** cet exemple de processus de création d’alerte peut prendre quelques minutes, attendez la notification *« Exemples d’alertes créés avec succès ».*
 
-1. Une fois l’opération terminée, sélectionnez **Actualiser** pour afficher les alertes sous la zone *Alertes de sécurité*.
+1. Une fois l’opération terminée, sélectionnez **Actualiser** (si nécessaire) pour voir les alertes sous la zone *Alertes de sécurité*.
 
-1. Pour les alertes qui ont attiré votre attention, effectuez les actions suivantes :
+1. Choisissez une alerte intéressante avec un *Niveau de gravité* *Élevé* et effectuez les actions suivantes :
 
-    - Sélectionnez l’alerte. Des informations à son sujet devraient apparaître. Sélectionnez **Afficher les détails complets**.
+    - Cochez la case de l’alerte pour faire apparaître le volet des détails la concernant. Sélectionnez **Afficher les détails complets**.
 
     - Vérifiez et consultez l’onglet *Détails de l’alerte*.
 
-    - Sélectionnez l’onglet **Entreprendre une action** ou sélectionnez le bouton **Suivant : Entreprendre une action** en bas de la page.
+    - Sélectionnez l’onglet **Agir** ou faites défiler vers le bas et sélectionnez le bouton **Suivant : Agir** à la fin de la page.
 
     - Passez en revue les informations *Entreprendre une action*. Notez que les sections disponibles pour entreprendre des actions dépendent du type d’alerte : inspecter le contexte de ressource, atténuer la menace, empêcher les futures attaques, déclencher une réponse automatique et supprimer des alertes similaires.
 
