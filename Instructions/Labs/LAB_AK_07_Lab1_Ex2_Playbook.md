@@ -30,6 +30,8 @@ Dans cette tâche, vous allez créer une équipe Microsoft Teams qui sera utili
 
 1. Fermez les fenêtres contextuelles Teams qui peuvent apparaître.
 
+    >**Remarque :** Si vous êtes invité à utiliser **New Teams**, acceptez et poursuivez avec l’exercice.
+
 1. Si ce n’est pas déjà le cas, sélectionnez **Teams** dans le menu de gauche, puis en haut, sélectionnez l’icône ![plus sign icon](../Media/plus-sign-icon-lab.png).
 
 1. Sélectionnez l’option **Créer une équipe**.
@@ -97,25 +99,25 @@ Dans cette tâche, vous allez mettre à jour le nouveau playbook que vous avez c
 
 1. Sélectionnez **Automatisation** sous la zone *Configuration*, puis sélectionnez l’onglet **Playbooks actifs**.
 
-1. Sélectionnez **Actualiser** dans la barre de commandes si vous ne voyez aucun playbook. Vous devez voir le playbook créé à l’étape précédente avec le *Type de déclencheur* **Incident Microsoft Sentinel**.
+1. Sélectionnez **Actualiser** dans la barre de commandes si vous ne voyez aucun playbook. Vous devez voir le playbook créé à l’étape précédente.
 
-1. Sélectionnez le nom du playbook **PostMessageTeams-OnIncident**.
+1. Sélectionnez le nom du playbook **PostMessageTeams**.
 
-1. Dans la page de l’application logique pour *PostMessageTeams-OnIncident*, dans le menu de commande, sélectionnez **Modifier**.
+1. Dans la page Application logique pour *PostMessageTeams*, dans le menu de commandes, sélectionnez **Modifier**.
 
     >**Remarque :** il peut être nécessaire d’actualiser la page.
 
-1. Sélectionnez le *premier* bloc, **Incident Microsoft Sentinel (préversion)**.
+1. Sélectionnez le *premier* bloc, **incident Microsoft Sentinel**.
 
 1. Sélectionnez le lien **Modifier la connexion**.
 
 1. Sélectionnez **Ajouter** et sélectionnez **Se connecter**. Dans la nouvelle fenêtre, sélectionnez les informations d’identification d’administrateur de votre abonnement Azure lorsque vous y êtes invité. La dernière ligne du bloc doit maintenant indiquer « Connecté à your-admin-username ».
 
-1. Sélectionnez maintenant le *deuxième* bloc, **Connexions**.
+1. Sélectionnez maintenant le *deuxième* bloc, **Publier un message (V3)**.
 
-1. Sélectionnez **Ajouter** et sélectionnez vos informations d’identification d’administrateur Azure lorsque vous y êtes invité. La dernière ligne du bloc doit maintenant indiquer « Connecté à your-admin-username ».
+1. Sous l’onglet Prameters, faites défiler vers le bas et sélectionnez **Modifier le lien de connexion**, puis sélectionnez **Ajouter un nouveau** et **Se connecter**. Choisissez vos informations d’identification d’administrateur Azure lorsque vous y êtes invité. L’onglet Prameters doit maintenant lire « Connecté à votre-admin-username ».
 
-1. Le bloc a maintenant été renommé en **Publier un message (V3)(préversion)**. À la fin du champ *Team*, sélectionnez **X** pour effacer le contenu. Le champ est remplacé par une liste déroulante avec une liste des équipes disponibles dans Microsoft Teams. Sélectionnez **SOC**.
+1. À la fin du champ *Team*, sélectionnez le **X** pour effacer le contenu. Le champ est remplacé par une liste déroulante avec une liste des équipes disponibles dans Microsoft Teams. Sélectionnez **SOC**.
 
 1. Faites de même pour le champ *Canal*. À la fin du champ pour effacer le contenu, sélectionnez **X**. Le champ est remplacé par une liste déroulante avec une liste des canaux des équipes SOC. Sélectionnez **Nouvelles alertes**.
 
