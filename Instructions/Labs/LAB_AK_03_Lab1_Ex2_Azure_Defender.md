@@ -33,7 +33,7 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 1. Dans le menu du portail, sous  *Sécurité cloud*, sélectionnez **Conformité réglementaire**.
 
-1. Sélectionnez **Gérer les stratégies de conformité** dans la barre d’outils.
+1. Sélectionnez **Gérer les normes de conformité** sur la barre d’outils.
 
 1. Sélectionnez votre abonnement.
 
@@ -58,6 +58,8 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 ### Tâche 2 : explorer la posture de sécurité et les recommandations
 
 Dans cette tâche, vous allez examiner la gestion de la posture de sécurité cloud.  Le calcul des informations relatives au Niveau de sécurité peut prendre 24 heures. Il est recommandé d’effectuer cette tâche à nouveau dans 24 heures.
+
+1. Sélectionnez le lien **Microsoft Defender pour le cloud – Conformité réglementaire** en haut de la page pour retourner aux menus supérieurs.
 
 1. Dans le menu du portail, sous *Sécurité cloud*, sélectionnez **Posture de sécurité**.
 

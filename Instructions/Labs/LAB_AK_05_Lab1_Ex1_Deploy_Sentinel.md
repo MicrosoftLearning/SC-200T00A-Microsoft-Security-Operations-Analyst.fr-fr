@@ -37,8 +37,9 @@ Dans cette tâche, vous allez créer un espace de travail Microsoft Sentinel.
 
     >**Remarque :** si vous ne voyez pas d’espace de travail Log Analytics ici, reportez-vous au module 3, exercice 1, tâche 2 pour en créer un.
 
-1. Parcourez l’espace de travail Microsoft Sentinel nouvellement créé pour vous familiariser avec les options de l’interface utilisateur.
+1. Dans **Microsoft Sentinel**, vous devriez être dans la section **Général** de *Actualités et guides* et voir un avis indiquant *L’essai gratuit de Microsoft Sentinel est activé*. Cliquez sur le bouton **OK**.
 
+1. Parcourez l’espace de travail Microsoft Sentinel nouvellement créé pour vous familiariser avec les options de l’interface utilisateur.
 
 ### Tâche 2 : créer une watchlist
 
