@@ -23,13 +23,13 @@ La première étape consiste à initialiser l’environnement Defender pour p
 
 ### Tâche 1 : initialiser Microsoft Defender pour point de terminaison
 
-Dans cette tâche, vous allez effectuer l’initialisation du portail Microsoft Defender pour point de terminaison.
+Dans cette tâche, vous effectuez l’initialisation de Microsoft Defender for Endpoint.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Si vous n’êtes pas déjà sur le portail Microsoft 365 Defender, ouvrez le navigateur Microsoft Edge.
+1. Si vous n’êtes pas déjà sur le portail Microsoft Defender XDR, lancez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Edge, accédez au portail Microsoft 365 Defender à l’adresse (https://security.microsoft.com).
+1. Dans le navigateur Edge, accédez au portail Defender XDR à l’adresse (https://security.microsoft.com).
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
@@ -37,7 +37,7 @@ Dans cette tâche, vous allez effectuer l’initialisation du portail Microsoft�
 
     >**Conseil :** le compte de messagerie et le mot de passe du locataire de l’administrateur sont disponibles sous l’onglet Ressources.
 
-1. Dans le portail **Microsoft 365 Defender**, dans le menu de navigation, sélectionnez **Paramètres** à gauche.
+1. Dans le portail **Defender XDR**, dans le menu de navigation, sélectionnez **Paramètres** à gauche.
 
 1. Dans la page Paramètres, sélectionnez **Découverte de l’appareil**. 
 
@@ -80,7 +80,7 @@ Dans cette tâche, vous allez intégrer un appareil à Microsoft Defender pour
 
 Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes d’appareils.
 
-1. Dans le portail Microsoft 365 Defender, sélectionnez **Paramètres** dans la barre de menus de gauche, puis **Points de terminaison**. 
+1. Dans le portail Microsoft Defender XDR, sélectionnez **Paramètres** dans la barre de menu à gauche, puis sélectionnez **Points de terminaison**. 
 
 1. Sous la zone des autorisations, sélectionnez **Rôles**.
 
@@ -107,7 +107,7 @@ Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes
 
 Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisent la configuration du contrôle d’accès et de l’automatisation.
 
-1. Dans le portail Microsoft 365 Defender, sélectionnez **Paramètres** dans la barre de menus de gauche, puis **Points de terminaison**. 
+1. Dans le portail Microsoft Defender XDR, sélectionnez **Paramètres** dans la barre de menu à gauche, puis sélectionnez **Points de terminaison**. 
 
 1. Sous la zone Autorisations, sélectionnez **Groupes d’appareils**.
 

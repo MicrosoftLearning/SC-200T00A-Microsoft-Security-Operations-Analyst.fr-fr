@@ -10,20 +10,20 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex2.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui a implémenté Microsoft Defender pour le cloud. Vous devez examiner les recommandations et les alertes de sécurité générées par Microsoft Defender pour le cloud.
+Vous êtes analyste des opérations de sécurité dans une entreprise qui a implémenté Microsoft Defender pour le cloud. Vous devez examiner les recommandations et les alertes de sécurité générées par Microsoft Defender pour le cloud.
 
 >**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20threats%20using%20Microsoft%20Defender%20for%20Cloud)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques. 
 
 
 ### Tâche 1 : explorer la conformité réglementaire
 
-Dans cette tâche, vous allez examiner la configuration de conformité réglementaire dans Microsoft Defender pour le cloud. 
+Dans cette tâche, vous passez en revue la configuration de conformité réglementaire dans Microsoft Defender pour le cloud. 
 
 >**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez les références de nom de machine virtuelle.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, ouvrez le portail Azure à l’adresse (https://portal.azure.com).
+1. Dans le navigateur Microsoft Edge, accédez au Portail Azure à l’adresse (https://portal.azure.com).
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
@@ -31,7 +31,7 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 1. Dans la barre de recherche du Portail Azure, tapez *Defender*, puis sélectionnez **Microsoft Defender pour le cloud**.
 
-1. Dans le menu du portail, sous  *Sécurité cloud*, sélectionnez **Conformité réglementaire**.
+1. Dans *Sécurité du cloud*, sélectionnez **Conformité réglementaire** parmi les éléments du menu de gauche.
 
 1. Sélectionnez **Gérer les normes de conformité** sur la barre d’outils.
 
@@ -41,7 +41,7 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 1. Sous *Paramètres*, sélectionnez **Stratégie de sécurité** dans le menu du portail.
 
-1. Faites défiler vers le bas de l’écran et passez en revue les « Normes de sécurité » à votre disposition par défaut.
+1. Défilez vers le bas et passez en revue les « Normes de sécurité » à votre disposition par défaut.
 
 1. Utilisez la zone de recherche pour rechercher la norme *ISO 27001:2013*.
 
@@ -57,29 +57,25 @@ Dans cette tâche, vous allez examiner la configuration de conformité réglemen
 
 ### Tâche 2 : explorer la posture de sécurité et les recommandations
 
-Dans cette tâche, vous allez examiner la gestion de la posture de sécurité cloud.  Le calcul des informations relatives au Niveau de sécurité peut prendre 24 heures. Il est recommandé d’effectuer cette tâche à nouveau dans 24 heures.
+Dans cette tâche, vous passez en revue la gestion de la posture de sécurité cloud.  Le calcul des informations relatives au Niveau de sécurité peut prendre 24 heures. Il est recommandé d’effectuer à nouveau cette tâche dans 24 heures.
 
-1. Sélectionnez le lien **Microsoft Defender pour le cloud – Conformité réglementaire** en haut de la page pour retourner aux menus supérieurs.
+1. Dans *Sécurité du cloud*, sélectionnez **Posture de sécurité** parmi les éléments du menu de gauche.
 
-1. Dans le menu du portail, sous *Sécurité cloud*, sélectionnez **Posture de sécurité**.
+1. Le *Score de sécurité* est défini par défaut sur l’*Environnement Azure*.
 
-1. Le *Niveau de sécurité* est défini par défaut sur l’*environnement Azure*.
+1. Sous l’onglet *Environnement*, sélectionnez le lien **Afficher les recommandations >**.
 
-1. Sous l’onglet *Environnement*, sélectionnez **Afficher les recommandations >**.
+1. Sélectionnez **Ajouter un filtre**, puis **Type de ressource**.
 
-1. Dans la page *Recommandations*, sélectionnez l’onglet **Toutes les recommandations**.
+1. Cochez la case **Machines - Azure Arc**, puis sélectionnez le bouton **Appliquer**.
 
-    >**Remarque :** Vous pouvez également utiliser les *Recommandations sur le niveau de sécurité*.
-
-1. Sélectionnez le filtre **Type de ressource** et le sélecteur de liste déroulante **Valeur**.
-
-1. Cochez la case **Machines - Azure Arc**, puis sélectionnez le bouton **OK**.
+    >**Remarque :** Si vous ne voyez pas **Machines - Azure Arc**, vérifiez que vous avez terminé le Parcours d’apprentissage 3 - Labo 1 - Exercice 1 Tâche 4.
 
 1. Sélectionnez une recommandation où l’état n’est pas *« Terminé »*.
 
-1. Lisez la recommandation, faites défiler vers le bas et **cochez** la case WINServer. **Conseil :** Vous devrez probablement développer et faire défiler vers le bas les **Ressources affectées** pour l’afficher.
+1. Passez en revue la recommandation et, dans l’onglet **Prendre des mesures**, défilez vers le bas jusqu’à **Délégué**, puis sélectionnez **Attribuer un propriétaire et définir la date d’échéance**.
 
-1. Sélectionnez **Attribuer un propriétaire**, puis développez **Détails de l’attribution**.
+1. Dans la fenêtre **Créer une affectation**, conservez la définition du *Type* sur *Defender pour le cloud* et développez les **Détails d’affectation**.
 
 1. Dans la zone *Adresse e-mail* `Set owner`, tapez votre e-mail d’administrateur. **Conseil :** copiez l’adresse e-mail à partir des instructions de l’onglet *Ressources*.
 
@@ -92,7 +88,7 @@ Dans cette tâche, vous allez examiner la gestion de la posture de sécurité cl
 
 ### Tâche 3 : atténuer les alertes de sécurité
 
-Dans cette tâche, vous allez charger des exemples d’alertes de sécurité et examiner les détails de l’alerte.
+Dans cette tâche, vous chargez des exemples d’alertes de sécurité et passez en revue les détails des alertes.
 
 
 1. Dans le portail du menu, sous *Général*, sélectionnez **Alertes de sécurité**.
