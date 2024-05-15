@@ -80,14 +80,14 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**.
 
-1. Dans l’onglet *Définir la logique de la règle*, la *requête de règle* doit être déjà remplie avec votre requête KQL, ainsi qu’avec les entités sous *Enrichissement des alertes – Mappage d’entités*.
+1. Sous l’onglet *Définir la logique de la règle*, la *requête de règle* doit déjà être remplie avec votre requête KQL, tout comme les entités affichées sous *Amélioration des alertes – Mappage d’entités*.
 
     |Entité|Identificateur|Champ de données|
     |:----|:----|:----|
     |Compte|FullName|AccountCustomEntity|
     |Hôte|Nom d’hôte|HostCustomEntity|
 
-1. Si le **nom d’hôte** n’est pas sélectionné pour l’entité *hôte*, sélectionnez-le dans la liste déroulante.
+1. Si **Nom d’hôte** n’est pas sélectionné pour *Entité hôte*, choisissez un nom dans la liste déroulante et remplissez les champs à l’aide des paramètres du tableau précédent.
 
 1. Pour la *planification de la requête*, définissez les éléments suivants :
 
@@ -117,9 +117,9 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
 
 1. Sélectionnez **Appliquer**
 
-1. Sélectionnez ensuite le bouton **Suivant : Vérifier >**.
+1. Sélectionnez **Suivant : Vérifier + créer > **.
   
-1. Sous l’onglet *Vérifier et créer*, sélectionnez le bouton **Créer** pour créer la nouvelle règle analytique planifiée.
+1. Sous l’onglet *Vérifier et créer*, sélectionnez le bouton **Enregistrer** pour créer la règle Analytique planifiée.
 
 ### Tâche 2 : détection des attaques par élévation de privilèges
 
@@ -182,9 +182,16 @@ Dans cette tâche, vous allez créer une détection pour la deuxième attaque de
     |Tactique|**Élévation des privilèges**|
     |Niveau de gravité|**Activité**|
 
-1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**. 
+1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**.
 
-1. Dans l’onglet *Définir la logique de la règle*, la *requête de règle* doit être déjà remplie avec votre requête KQL, ainsi qu’avec les entités sous *Enrichissement des alertes – Mappage d’entités*.
+1. Sous l’onglet *Définir la logique de la règle*, la *requête de règle* doit déjà être remplie avec votre requête KQL, tout comme les entités affichées sous *Amélioration des alertes – Mappage d’entités*.
+
+    |Entité|Identificateur|Champ de données|
+    |:----|:----|:----|
+    |Compte|FullName|AccountCustomEntity|
+    |Hôte|Nom d’hôte|HostCustomEntity|
+
+1. Si **Nom d’hôte** n’est pas sélectionné pour *Entité hôte*, choisissez un nom dans la liste déroulante et remplissez les champs à l’aide des paramètres du tableau précédent.
 
 1. Pour la *planification de la requête*, définissez les éléments suivants :
 
