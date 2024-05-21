@@ -19,7 +19,7 @@ Les règles analytiques recherchent des événements ou des ensembles d'événem
 
 ### Tâche 1 : créer une requête planifiée
 
-Dans cette tâche, vous allez créer une requête planifiée et la connecter au canal Teams que vous avez créé dans l’exercice précédent.
+Dans cette tâche, vous créez une requête planifiée et vous la connectez au canal Teams que vous avez créé au cours de l’exercice précédent.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
@@ -97,13 +97,19 @@ Dans cette tâche, vous allez créer une requête planifiée et la connecter au 
 
 ### Tâche  2 : Tester votre nouvelle règle
 
-Dans cette tâche, vous allez tester votre nouvelle règle de requête planifiée.
+Dans cette tâche, vous testez votre nouvelle règle de requête planifiée.
 
 1. Dans la barre supérieure du Portail Azure, sélectionnez l’icône **>_** correspondant à Cloud Shell. Vous devrez peut-être d’abord sélectionenr l'icône représentant des points de suspension **(...)** si votre résolution d’affichage est trop faible.
 
-1. Si vous y êtes invité(e), sélectionnez **PowerShell**, puis **Créer un stockage**. Attendez que Cloud Shell soit provisionné.
+1. Dans la fenêtre *Bienvenue dans Azure Cloud Shell*, sélectionnez **PowerShell**.
 
-1. Fermez la fenêtre Azure Cloud Shell.
+1. Sur la page *Prise en main*, sélectionnez **Monter le compte de stockage**, puis sélectionnez votre **Pass Azure - Sponsorship** à partir de l’élément de menu déroulant *Abonnement du compte de stockage* et sélectionnez le bouton **Appliquer**.
+
+    >**Important :** Ne sélectionnez pas l'option de bouton radio *Aucun compte de stockage requis*. Cela entraîne l’échec de la création de l’incident.
+
+1. Sur la page *Monter le compte de stockage*, sélectionnez **Nous allons créer un compte de stockage pour vous**, puis sélectionner **Suivant**.
+
+1. Attendez que Cloud Shell soit provisionné, puis fermez la fenêtre Azure Cloud Shell.
 
 1. Dans la barre de recherche du portail Azure, tapez *Activité*, puis sélectionnez **Journal d’activité**.
 
