@@ -90,7 +90,7 @@ Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 
     $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
     ```
 
-    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Copiez et exécutez séparément chaque ligne du script dans PowerShell.
+    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Ensuite, copiez et exécutez séparément chaque ligne du script dans PowerShell. En outre, un script PowerShell (attacksim.ps1) a été fourni dans les fichiers téléchargés au début des labos. Pour utiliser le script, dans **Windows PowerShell (Administrateur)**, accédez au dossier *\Users\Admin\Desktop* et tapez *.\attacksim.ps1*, puis appuyez sur **Entrée** pour l’exécuter.
 
 1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
 

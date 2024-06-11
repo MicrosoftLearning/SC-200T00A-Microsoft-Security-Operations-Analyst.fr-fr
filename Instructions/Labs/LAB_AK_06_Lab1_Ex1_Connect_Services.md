@@ -33,21 +33,13 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 1. Sélectionnez l’espace de travail Microsoft Sentinel que vous avez créé dans l'atelier précédent.
 
-1. Dans le menu de navigation principal, sélectionnez Analyse.
-
-1. Sélectionnez *Créer des incidents en fonction de Microsoft Defender pour le cloud* dans les modèles de règles.
-
-1. Sélectionnez **Créer une règle** dans le volet d’informations des règles, ou sélectionnez les points de suspension (...) et **+ Créer une règle**.
-
-1. Dans l’Assistant Règle analytique, sélectionnez **Suivant : Réponse automatique**, puis **Suivant : Vérifier et créer**.
-
-1. Sélectionnez **Enregistrer**.
+1. Passez à la tâche suivante.
 
 ### Tâche 2 : connecter le connecteur de données Microsoft Defender pour le cloud.
 
 Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defender pour le cloud.
 
-1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion de contenu*, puis sélectionnez **Hub de contenu**.
+1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section **Gestion de contenu**, puis sélectionnez **Hub de contenu**.
 
 1. Dans le *hub de contenu*, recherchez la solution **Microsoft Defender pour le cloud**, puis sélectionnez-la dans la liste.
 
@@ -57,7 +49,7 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Gérer**.
 
-    >**Remarque :** la solution *Microsoft Defender pour le cloud* installe le connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (préversion)* et une règle analytique.
+    >**Remarque :** la solution *Microsoft Defender pour le cloud* installe le connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (préversion)* et une règle analytique. Le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (Préversion)* est utilisé quand un tenant a plusieurs abonnements.
 
 1. Activez la case à cocher du connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, puis sélectionnez **Ouvrir la page du connecteur**.
 

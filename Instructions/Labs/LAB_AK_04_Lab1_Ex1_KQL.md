@@ -48,11 +48,17 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
 >**Important :** pour chaque requête, effacez l’instruction précédente de la fenêtre de requête ou ouvrez une nouvelle fenêtre de requête en sélectionnant **+** après le dernier onglet ouvert (jusqu’à 25).
 
-1. L’instruction suivante illustre l’opérateur **Search**, qui recherche la valeur dans toutes les colonnes de la table. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre l’opérateur **Search**, qui recherche la valeur dans toutes les colonnes de la table. 
+
+1. Changez l’**intervalle de temps* et définissez-le sur *30 dernières minutes** dans la fenêtre de requête.
+
+1. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
-    search "new"
+    search "location"
     ```
+
+    >**Remarque :** L’utilisation de l’opérateur *Search* sans tables spécifiques ou clauses éligibles est moins efficace que le filtrage de texte spécifique à une table ou à une colonne.
 
 1. L’instruction suivante illustre l’opérateur **search** dans les tables répertoriées dans la clause **In**. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
 

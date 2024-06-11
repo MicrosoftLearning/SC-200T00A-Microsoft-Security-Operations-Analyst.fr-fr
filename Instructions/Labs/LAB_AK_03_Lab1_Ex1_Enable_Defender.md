@@ -118,7 +118,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Dans la barre de recherche du Portail Azure, tapez *Arc*, puis sélectionnez **Azure Arc**.
 
-1. Dans le volet de navigation, sous **Infrastructure**, sélectionnez **Machines**.
+1. Dans le volet de navigation sous **Ressources Azure Arc**, sélectionnez **Machines**
 
 1. Sélectionnez **+ Ajouter/Créer**, puis **Ajouter une machine**.
 
@@ -205,7 +205,15 @@ Dans cette tâche, vous allez installer manuellement l’*agent Azure Monitor* e
 
     >**Remarque :** pour les besoins de ce labo, vous pouvez sélectionner *Journaux des événements Windows*. Ces sélections peuvent être révisées ultérieurement.
 
-1. Sélectionnez **Ajouter une source de données** et **Vérifier + créer**
+1. Cliquez sur l’onglet **Destination**
+
+1. Sélectionnez **Journaux Azure Monitor** dans la liste déroulante **Type de destination**
+
+1. Sélectionnez votre abonnement *Pass Azure– Parrainage* dans la liste déroulante **Abonnement**
+
+1. Sélectionnez votre nom d’espace de travail **Conseil :** *RG-Defender* dans la liste déroulante **Compte ou espace de noms**
+
+1.  Sélectionnez **Ajouter une source de données** et **Vérifier + créer**
 
 1. Sélectionnez **Créer** une fois que *Validation réussie* s’affiche.
 
