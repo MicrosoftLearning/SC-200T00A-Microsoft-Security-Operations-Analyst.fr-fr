@@ -10,43 +10,43 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex9.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez modéliser les analyseurs ASIM pour un événement de Registre Windows spécifique. Ces analyseurs simplifiés seront finalisés ultérieurement après les [Informations de référence de schéma de normalisation d’événement du registre Advanced Security Information Model (ASIM)](https://docs.microsoft.com/en-us/azure/sentinel/registry-event-normalization-schema).
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez modéliser les analyseurs ASIM pour un événement de Registre Windows spécifique. Ces analyseurs seront finalisés ultérieurement à la suite de la [référence de schéma de normalisation des événements de Registre ASIM (Advanced Security Information Model)](https://docs.microsoft.com/en-us/azure/sentinel/registry-event-normalization-schema).
 
 >**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20Advanced%20Security%20Information%20Model%20Parsers)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques. 
 
 ### Tâche 1 : Déployer les analyseurs ASIM du schéma de Registre
 
-Dans cette tâche, vous allez déployer les analyseurs de schéma de registre à partir du référentiel GitHub Microsoft Sentinel.
+Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre inclus dans le déploiement de Microsoft Sentinel.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer un mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
 1. Sélectionnez l’espace de travail Microsoft Sentinel que vous avez créé précédemment.
 
-1. Dans le navigateur Edge, ouvrez un nouvel onglet (Ctrl+T) et accédez à la page Microsoft Sentinel GitHub ASIM <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
+<!--- 1. In the Edge browser, open a new tab (Ctrl+T) and navigate to the Microsoft Sentinel GitHub ASIM page <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
 
-    <!--- 1. On the right pane, select the **Onboard community content** link. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel). --->
+ 1. On the right pane, select the **Onboard community content** link. This will open a new tab in the Edge Browser for Microsoft Sentinel GitHub content. **Hint:** You might need to scroll right to see the link. Alternatively, follow this link instead: [Microsoft Sentinel on GitHub](https://github.com/Azure/Azure-Sentinel).
 
-    >**Remarque :** Dans le dossier **ASIM**, vous pouvez déployer des modèles qui contiennent tous les analyseurs ASIM, mais nous allons nous concentrer ici sur le schéma de Registre uniquement.
+    >**Note:** In the **ASIM** folder you can deploy templates that contain all ASIM parsers, but we will only focus on the Registry Schema.
 
-1. Faites défiler vers le bas et en regard du **Registre**, sélectionnez le bouton **Déployer sur Azure**.
+<!--- 1. Scroll down and next to **Registry Event**, select the **Deploy to Azure** button.
 
-1. Pour le *Groupe de ressources*, sélectionnez **RG-Defender** où réside votre espace de travail Sentinel.
+1. For *Resource Group*, select **RG-Defender** where your Sentinel workspace resides.
 
-1. Pour l’*Espace de travail*, tapez le nom de votre espace de travail Sentinel, comme *nomuniqueDefender*.
+1. For *Workspace*, type your Sentinel workspace name, like *uniquenameDefender*.
 
-1. Laissez le reste des valeurs par défaut, puis sélectionnez **Vérifier + créer**.
+1. Leave the other default values and select **Review + create**.
 
-1. Sélectionnez **Créer** pour déployer le modèle. Notez les noms des différentes ressources.
+1. Select **Create** to deploy the template. Notice the Names of the different resources. 
 
-1. Une fois le déploiement terminé, revenez à l’onglet *Microsoft Sentinel*.
+1. After the deployment completes return to the *Microsoft Sentinel* tab. --->
 
 1. Dans le menu de gauche *Général*, sélectionnez **Journaux**.
 
@@ -54,20 +54,18 @@ Dans cette tâche, vous allez déployer les analyseurs de schéma de registre à
 
 1. Sélectionnez l’onglet **Fonctions** (en regard des onglets Tables et Requêtes). **Conseil :** vous devrez peut-être sélectionner l’icône de points de suspension **(...)** pour sélectionner l’onglet.
 
-1. Développez **Fonctions d’espace de travail**. Notez que les noms correspondent aux modèles que vous venez de déployer.
+1. Dans la barre de *Recherche*, tapez **Registre**, faites défiler les fonctions d’analyseur ASIM jusqu’à ce que vous voyiez *_Im_RegistryEvent_MicrosoftWindowsEventxxx* pour Microsoft Windows sous le titre *Microsoft Sentinel*.
 
-1. Pointez sur l’*analyseur d’espace de travail* **vimRegistryEventMicrosoftSecurityEvents**, puis sélectionnez **Charger le code de fonction** dans la fenêtre contextuelle.
+    >**Remarque :** Nous utilisons xxx dans le nom de la fonction d’analyseur ASIM pour tenir compte des modifications de version. Au moment où ce labo a été mis à jour, la fonction était _Im_RegistryEvent_MicrosoftWindowsEvent*V02*.
+
+1. Pointez sur la fonction ASIM **_Im_RegistryEvent_MicrosoftWindowsEventxxx**, puis sélectionnez **Charger le code de la fonction** dans la fenêtre contextuelle.
 
 1. Passez en revue l’instruction KQL qui analyse l’ID d’événement 4657 pour simplifier votre analyse des données dans l’espace de travail Microsoft Sentinel.
 
-1. **Exécutez** la requête. Vous ne devriez obtenir aucun résultat ni aucune erreur, l’objectif étant juste de valider.
+    >**Conseil :** Tapez Ctrl+f dans la fenêtre de code pour afficher *Rechercher* et simplifier la recherche de *EventID : 4657*.
 
-1. Revenez au volet *Schéma et filtre* et placez le curseur sur l’*analyseur* **inRegistry**, puis sélectionnez **Charger le code de la fonction**.
+1. Revenez au panneau *Schéma et Filtre*, puis pointez sur **_Im_RegistryEvent_MicrosoftWindowsEventxxx**, *analyseur de filtrage ASIM de l’événement de Registre pour les événements Microsoft Windows et les événements de sécurité*, puis sélectionnez **Utiliser dans l’éditeur**.
 
-1. Notez que les analyseurs d’unification utilisent l’opérateur d’*union* pour exécuter tous les analyseurs d’espace de travail à la fois. Si vous développez un analyseur pour le schéma de registre, vous devez l’ajouter ici.
-
-1. **Exécutez** la requête. Vous ne devez pas obtenir de résultat ni d’erreur, la requête est uniquement exécutée à des fins de validation.
-
-1. Cet analyseur d’unification peut maintenant être utilisé pour les règles analytiques ou les requêtes de repérage.
+1. **Exécutez** la requête de fonction ASIM. Vous ne devez pas obtenir de résultat ni d’erreurs, il s’agit simplement d’une validation.
 
 ## Passez à l’exercice 10
