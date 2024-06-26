@@ -36,7 +36,7 @@ Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre in
 
     >**Note:** In the **ASIM** folder you can deploy templates that contain all ASIM parsers, but we will only focus on the Registry Schema.
 
-<!--- 1. Scroll down and next to **Registry Event**, select the **Deploy to Azure** button.
+1. Scroll down and next to **Registry Event**, select the **Deploy to Azure** button.
 
 1. For *Resource Group*, select **RG-Defender** where your Sentinel workspace resides.
 

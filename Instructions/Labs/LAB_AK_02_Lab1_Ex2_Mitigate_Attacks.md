@@ -26,7 +26,7 @@ Dans cette tâche, vous allez confirmer que l’appareil a été intégré avec 
 
     >**Remarque :** si vous avez terminé le processus d’intégration et que vous ne voyez pas d’appareils sur la liste Appareils au bout d’une heure, cela peut indiquer un problème d’intégration ou de connectivité.
 
-1. Sélectionnez **Paramètres** dans la barre de menus de gauche, puis, sur la page Paramètres, choisissez **Points de terminaison**.
+1. Dans la barre de menus de gauche du portail Microsoft Defender XDR, développez la section **Système**, puis sélectionnez **Paramètres**. Ensuite, sur la page *Paramètres*, sélectionnez **Points de terminaison**.
 
 1. Sélectionnez **Intégration** dans la section Gestion des appareils, puis vérifiez si *« Windows 10 et Windows 111 »* est sélectionné comme système d’exploitation. Le message *« Premier appareil intégré »* affiche désormais *Terminé*.
 
@@ -44,9 +44,11 @@ Dans cette tâche, vous allez confirmer que l’appareil a été intégré avec 
 
 Dans cette tâche, vous allez examiner les alertes et les incidents générés par le script de test de détection d’intégration dans la tâche précédente.
 
-1. Dans le portail Microsoft Defender XDR, sélectionnez **Incidents et alertes** dans le menu de gauche, puis **Alertes**.
+1. Dans le portail Microsoft Defender XDR, développez **Enquête et réponse** dans la barre de menus de gauche, développez **Incidents et alertes**, puis sélectionnez **Alertes**.
 
-1. Dans le volet **Alertes**, sélectionnez l’alerte nommée *Ligne de commande PowerShell suspecte* pour charger ses détails.
+    >**Remarque :** Dans les versions mises à jour de la page du portail Microsoft Defender XDR, la section *Incidents et alertes* se trouve sous l’en-tête de menu *Enquête et réponse*.
+
+1. Dans le volet **Alertes**, sélectionnez l’alerte nommée *[TestAlert] Ligne de commande PowerShell suspecte* pour charger ses détails.
 
 1. Passez en revue la chronologie *Historique de l’alerte*, puis les onglets *Détails* et *Recommandations*.
 
@@ -54,7 +56,9 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 1. Dans le portail Microsoft Defender XDR, sélectionnez **Incidents et alertes** dans le menu de gauche, puis **Incidents**.
 
-1. Un nouvel incident appelé *Incident d’exécution sur un point de terminaison* se trouve dans le volet droit. Sélectionnez le nom de l’incident pour charger ses informations.
+1. Effacez le filtre *Gravité de l’alerte* en sélectionnant la croix **X** à droite du filtre.
+
+1. Un nouvel incident nommé *[TestAlert] Ligne de commande PowerShell suspecte* apparaît dans le volet de droite. Sélectionnez le nom de l’incident pour charger ses informations.
 
 1. Sélectionnez le lien **Gérer l’incident** (avec une icône de crayon) et un nouveau panneau de fenêtre s’affiche.
 
@@ -90,15 +94,19 @@ Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 
     $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
     ```
 
-    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Ensuite, copiez et exécutez séparément chaque ligne du script dans PowerShell. En outre, un script PowerShell (attacksim.ps1) a été fourni dans les fichiers téléchargés au début des labos. Pour utiliser le script, dans **Windows PowerShell (Administrateur)**, accédez au dossier *\Users\Admin\Desktop* et tapez *.\attacksim.ps1*, puis appuyez sur **Entrée** pour l’exécuter.
+    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Ensuite, copiez et exécutez séparément chaque ligne du script dans PowerShell. En outre, un script PowerShell (attacksim.ps1) a été fourni dans les fichiers téléchargés au début des labos. Pour utiliser le script, dans **Windows PowerShell (Administrateur)**, accédez au dossier *\Users\Admin\Desktop\Allfiles*, tapez *.\attacksim.ps1*, puis appuyez sur **Entrée** pour l’exécuter.
 
 1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
 
 ### Tâche 4 : Examiner l’attaque simulée en tant qu’incident unique
 
-1. Dans le portail Microsoft Defender XDR, sélectionnez **Incidents et alertes** dans le menu de gauche, puis **Incidents**.
+1. Dans le portail Microsoft Defender XDR, développez **Enquête et réponse** dans la barre de menus de gauche, développez **Incidents et alertes**, puis sélectionnez **Incidents**.
+
+    >**Remarque :** Dans les versions mises à jour de la page du portail Microsoft Defender XDR, la section *Incidents et alertes* se trouve sous l’en-tête de menu *Enquête et réponse*.
 
 1. Un nouvel incident appelé *Incident à plusieurs étapes impliquant le contournement de la défense et la découverte sur un point de terminaison* se trouve dans le volet droit. Sélectionnez le nom de l’incident pour charger ses informations.
+
+    >**Remarque :** Si l’incident n’apparaît pas, veillez à effacer le filtre *Gravité de l’alerte* en sélectionnant la croix **X** à droite du filtre.
 
 1. Sous l’onglet *Historique de l’attaque*, réduisez les volets **Alertes** et **Détails de l’incident** pour afficher le **Graphique de l’incident** complet.
 
