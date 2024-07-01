@@ -10,7 +10,7 @@ lab:
 
 ![M365 Defender](../Media/SC-200-Lab_M1_L1_Ex1.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Defender XDR. Vous devez attribuer des stratégies de sécurité prédéfinies dans EOP et Microsoft Defender pour Office 365.
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Defender XDR. Vous commencez par attribuer des stratégies de sécurité prédéfinies utilisées dans Exchange Online Protection (EOP) et Microsoft Defender for Office 365.
 
 >**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20Microsoft%20365%20Defender)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques.
 
@@ -19,30 +19,30 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 ### Tâche 1 : obtenir vos informations d’identification Microsoft 365
 
-Une fois que vous avez lancé le labo, un locataire d’essai gratuit sera mis à votre disposition dans l’environnement de labo virtuel Microsoft. Ce locataire reçoit automatiquement un nom d’utilisateur et un mot de passe uniques. Vous devez récupérer ce nom d’utilisateur et ce mot de passe pour vous connecter à Azure et Microsoft 365 dans l’environnement de labo virtuel Microsoft. 
+Une fois que vous avez lancé le labo, un locataire d’essai gratuit est mis à votre disposition pour accéder à l’environnement de labo virtuel Microsoft. Ce locataire dispose automatiquement d’un nom d’utilisateur unique et d’un mot de passe. Vous devez récupérer ce nom d’utilisateur et ce mot de passe pour vous connecter à Azure et Microsoft 365 dans l’environnement de labo virtuel Microsoft. 
 
 Comme ce cours peut être proposé par des partenaires d’apprentissage utilisant différents fournisseurs d’hébergement de labo autorisés (ALH), la procédure de récupération de l’ID de locataire associé à votre locataire peut varier. Par conséquent, votre instructeur vous fournira les instructions nécessaires pour récupérer ces informations pour votre cours. Les informations dont vous aurez besoin pour le cours sont les suivantes :
 
-- **ID de suffixe du locataire.** Cet identifiant de compte onmicrosoft.com vous permettra de vous connecter à Microsoft 365 pendant les labos. Il est au format **{username}@ZZZZZZ.onmicrosoft.com**, où ZZZZZZ est votre ID de suffixe de locataire unique, fourni par votre fournisseur d’hébergement de labo. Enregistrez cette valeur ZZZZZZ  pour une utilisation ultérieure. Lorsque vous êtes invité à vous connecter au portail Microsoft 365 durant le labo, vous devez entrer cette valeur ZZZZZZ.
+- **ID de suffixe du locataire.** Cet ID est destiné aux comptes onmicrosoft.com que vous utilisez pour vous connecter à Microsoft 365 dans les labos. Il est au format **{username}@ZZZZZZ.onmicrosoft.com**, où ZZZZZZ est votre ID de suffixe de locataire unique, fourni par votre fournisseur d’hébergement de labo. Enregistrez cette valeur ZZZZZZ  pour une utilisation ultérieure. Lorsque vous êtes invité à vous connecter au portail Microsoft 365 durant le labo, vous devez entrer cette valeur ZZZZZZ.
 - **Mot de passe du locataire.** Il s’agit du mot de passe du compte d’administrateur communiqué par votre fournisseur d’hébergement de labo.
 
 ### tâche 2 : appliquer des stratégies de sécurité prédéfinies pour Microsoft Defender pour Office 365.
 
-Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfinies pour Exchange Online Protection (EOP) et Microsoft Defender pour Office 365 dans le portail de sécurité Microsoft 365.
+Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfinies pour Exchange Online Protection (EOP) et Microsoft Defender for Office 365 dans le portail de sécurité Microsoft 365.
 
-1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
 1. Ouvrez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Edge, accédez au portail Microsoft Defender XDR à l’adresse (https://security.microsoft.com).
+1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse (https://security.microsoft.com).
 
-1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de messagerie du locataire associé au nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
+1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrez le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
 
     >**Remarque :** si le message suivant s’affiche « Impossible d’effectuer l’opération. Veuillez réessayer plus tard. Si le problème persiste, contactez le support technique Microsoft ». cliquez sur **OK** pour continuer.  
 
-1. Si elle s’affiche, fermez la fenêtre contextuelle de visite guidée rapide de Microsoft Defender XDR. **Conseil :** Plus loin dans ce labo, vous devez attendre que l’espace de travail Defender soit approvisionné, vous pouvez prendre ce temps pour parcourir les visites guidées pour en savoir plus sur Microsoft Defender XDR.
+1. Si elle s’affiche, fermez la fenêtre contextuelle de visite guidée rapide de Microsoft Defender XDR. **Conseil :** Plus loin dans ce labo, vous devez attendre que l’espace de travail Defender soit approvisionné. Vous pouvez profiter de ce moment pour parcourir les visites guidées pour en savoir plus sur Microsoft Defender XDR.
 
 1. Dans le menu de navigation, dans la zone *E-mail et collaboration*, sélectionnez **Stratégies et règles**.
 
@@ -60,7 +60,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Dans la section *Appliquer Exchange Online Protection*, sélectionnez **Destinataires spécifiques** et sous **Domaines**, commencez à écrire le nom de domaine de votre locataire, sélectionnez-le, puis cliquez sur **Suivant**.
 
-    >**Conseil :** le nom de domaine de votre locataire est identique à celui du compte d’administrateur (semblable à *WWLx#####.onmicrosoft.com*. Notez que cette configuration applique des stratégies anti-courrier indésirable, de filtrage du courrier indésirable sortant, anti-programme malveillant et anti-hameçonnage.
+    >**Conseil :** Le nom de domaine de votre locataire est identique à celui de votre compte d’administrateur. Il peut s’agir d’un nom similaire à *WWLx######.onmicrosoft.com*. Notez que cette configuration applique des stratégies anti-courrier indésirable, de filtrage du courrier indésirable sortant, anti-programme malveillant et anti-hameçonnage.
 
 1. Dans la section *Appliquer la protection Defender pour Office 365*, effectuez la même configuration que l’étape précédente et sélectionnez **Suivant**. Notez que cette configuration applique des stratégies anti-hameçonnage, de pièces jointes fiables et de liens fiables.
 
@@ -96,10 +96,10 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Faites défiler les éléments de menu vers **Ressources** et sélectionnez **Appareils**.
 
-1. Le processus de déploiement de l’espace de travail Defender XDR doit commencer et vous devez voir les messages indiquant *le chargement et l’initialisation* brièvement affichés en haut de la page, puis vous verrez une image d’une tasse de café et un message qui lit : **Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons.** Cette opération va prendre environ 5 minutes. *Laissez la page ouverte et assurez-vous qu’elle se termine correctement, car elle est requise pour le labo suivant.*
+1. Le processus de déploiement de l’espace de travail Defender XDR doit commencer et vous devez voir les messages indiquant *le chargement et l’initialisation* brièvement affichés en haut de la page, puis vous verrez une image d’une tasse de café et un message qui lit : **Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons.** La procédure prend environ 5 minutes. *Laissez la page ouverte et assurez-vous que la procédure se termine, car elle est requise pour le labo suivant.*
 
-    >**Remarque :** si le message « Attendez ! Nous préparons de nouveaux espaces pour vos données et les connectons ne s’affiche pas, ou la page « Paramètres > Microsoft Defender > Compte » s’ouvre, mais vous voyez le message « Échec du chargement de l’emplacement de stockage des données. Réessayez ultérieurement » s’affiche, ouvrez le menu « Général » et sélectionnez « Paramètres du service d’alerte » ou accédez au menu de navigation, faites défiler jusqu’à la section « Ressources » et sélectionnez « Appareils ».
+    >**Remarque :** Ignorez les messages d’erreur contextuels indiquant que *certaines de vos données ne peuvent pas être récupérées*. Si le message « Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons » ne s’affiche pas, ou si la page « Paramètres > Microsoft Defender XDR > Compte » s’ouvre, mais que vous voyez le message *Échec du chargement de l’emplacement de stockage des données. Réessayez ultérieurement*, sélectionnez « Paramètres du service d’alerte » dans le menu « Général ».
 
-1. Une fois le nouvel espace terminé, vous verrez les paramètres généraux de Microsoft Defender XDR pour le compte, les notifications par e-mail, les paramètres du service d’alerte, les autorisations et les rôles et l’API streaming. L’option **Fonctionnalités en préversion** est également activée.
+1. Une fois le nouvel espace terminé, vous verrez les paramètres généraux de Microsoft Defender XDR pour le compte, les notifications par e-mail, les paramètres du service d’alerte, les autorisations et les rôles et l’API Streaming. Vous verrez également que l’option **Fonctionnalités de préversion** est activée.
 
 ## Vous avez terminé le labo
