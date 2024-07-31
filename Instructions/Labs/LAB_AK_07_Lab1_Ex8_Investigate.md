@@ -59,11 +59,11 @@ Dans cette tâche, vous allez investiguer un incident.
 
 1. Examinez la fenêtre **Entités**. Au moins l’entité *Hôte* que nous avons mappée dans la requête KQL de l’exercice précédent doit apparaître. **Conseil :** si aucune entité n’est affichée, actualisez la page.
 
-1. Sélectionnez le bouton **Tâches (préversion)** dans la barre de commandes.
+1. Sélectionnez le nouveau bouton **Tâches** dans la barre de commandes.
 
 1. Sélectionnez **+ Ajouter une tâche**, tapez **Vérifier qui possède la machine** dans la zone Titre, puis cliquez sur **Enregistrer**.
 
-1. Fermez le volet *Tâches d’incident (préversion)* en sélectionnant l’icône **x** en haut à droite.
+1. Fermez le volet *Tâches d’incident* en sélectionnant l’icône **x** en haut à droite.
 
 1. Sélectionnez le nouveau bouton **Journal d’activité** dans la barre de commandes.
 

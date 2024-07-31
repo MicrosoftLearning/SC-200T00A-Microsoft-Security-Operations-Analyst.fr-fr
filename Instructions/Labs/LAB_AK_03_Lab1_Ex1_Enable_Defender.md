@@ -10,7 +10,7 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod3_L1_Ex1.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui met en œuvre la protection des charges de travail cloud avec Microsoft Defender pour le cloud.  Dans ce labo, vous allez activer Microsoft Defender pour le cloud.
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui met en œuvre la protection des charges de travail cloud avec Microsoft Defender pour le cloud. Dans ce labo, vous allez activer Microsoft Defender pour le cloud.
 
 >**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Enable%20Microsoft%20Defender%20for%20Cloud)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques. 
 
@@ -23,7 +23,7 @@ Dans cette tâche, vous allez configurer un abonnement Azure nécessaire pour te
 
 1. Ouvrez le navigateur Microsoft Edge ou un nouvel onglet s’il est déjà ouvert.
 
-1. Dans le navigateur Edge, accédez au Portail Azure à l’adresse https://portal.azure.com).
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
@@ -50,7 +50,7 @@ Dans cette tâche, vous allez configurer un abonnement Azure nécessaire pour te
 
 ### Tâche 2 : créer un espace de travail Log Analytics
 
-Dans cette tâche, vous allez créer un espace de travail Log Analytics à utiliser avec Microsoft Defender pour le cloud.
+Dans cette tâche, vous allez créer un espace de travail Log Analytics à utiliser avec la surveillance Azure, Microsoft Sentinel et Microsoft Defender pour le cloud.
 
 1. Dans la barre de recherche du Portail Azure, tapez *Espaces de travail Log Analytics*, puis sélectionnez le même nom de service.
 
@@ -108,13 +108,13 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 >**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez les références de nom de machine virtuelle.
 
-1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** (le cas échéant).  
+1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.  
 
-1. Ouvrez le navigateur Microsoft Edge et accédez au Portail Azure à l’adresse https://portal.azure.com.
+1. Ouvrez le navigateur Microsoft Edge et accédez au Portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer un mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
 
 1. Dans la barre de recherche du Portail Azure, tapez *Arc*, puis sélectionnez **Azure Arc**.
 
@@ -136,7 +136,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Passez en revue les balises disponibles par défaut. Sélectionnez **Suivant** pour accéder à l’onglet Télécharger et exécuter le script.
 
-1. Faites défiler la page et sélectionnez le bouton **Télécharger**. **Conseil :** si votre navigateur bloque le téléchargement, prenez des mesures dans le navigateur pour l’autoriser. Dans le navigateur Edge, sélectionnez le bouton de points de suspension (...) si nécessaire, puis sélectionnez **Conserver**.
+1. Faites défiler la page et sélectionnez le bouton **Télécharger**. **Conseil :** si votre navigateur bloque le téléchargement, prenez des mesures dans le navigateur pour l’autoriser. Dans le navigateur Microsoft Edge, sélectionnez le bouton de points de suspension (...) si nécessaire, puis **Conserver**.
 
 1. Cliquez avec le bouton droit sur Démarrer Windows et sélectionnez **Windows PowerShell (admin)**.
 
@@ -156,7 +156,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Entrez **R** pour exécuter une seule fois et appuyez sur Entrée (cela peut prendre quelques minutes).
 
-1. Le processus d’installation ouvre un nouvel onglet dans le navigateur Edge pour authentifier l’agent Azure Arc. Sélectionnez votre compte d’administrateur, attendez que le message « Authentification terminée » s’affiche, puis revenez à la fenêtre Windows PowerShell.
+1. Le processus d’installation ouvre un nouvel onglet dans le navigateur Microsoft Edge pour authentifier l’agent Azure Arc. Sélectionnez votre compte d’administrateur, attendez que le message « Authentification terminée » s’affiche, puis revenez à la fenêtre Windows PowerShell.
 
 1. Une fois l’installation terminée, revenez à la page Portail Azure où vous avez téléchargé le script, puis sélectionnez **Fermer**. Fermez **Ajouter des serveurs avec Azure Arc** pour revenir à la page **Machines** Azure Arc.
 
@@ -175,7 +175,7 @@ Dans cette tâche, vous allez installer manuellement l’*agent Azure Monitor* e
 
 1. Faites défiler vers le bas et sélectionnez **Configurer** sous la section *Ajouter des serveurs non-Azure*.
 
-1. Sélectionnez **Mettre à niveau** à côté de l’espace de travail que vous avez créé précédemment. Cela peut prendre quelques minutes, attendez de voir la notification *« Le plan Microsoft Defender pour l’espace de travail uniquenameDefender a été enregistré avec succès ! ».*
+1. Sélectionnez **Mettre à niveau** à côté de l’espace de travail que vous avez créé précédemment. Cette opération peut prendre quelques minutes. Attendez de voir la notification *« Le plan Microsoft Defender pour l’espace de travail uniquenameDefender a été enregistré avec succès ! ».*
 
 1. Sélectionnez **+ Ajouter des serveurs** en regard de l’espace de travail que vous avez créé précédemment.
 
@@ -205,7 +205,7 @@ Dans cette tâche, vous allez installer manuellement l’*agent Azure Monitor* e
 
     >**Remarque :** pour les besoins de ce labo, vous pouvez sélectionner *Journaux des événements Windows*. Ces sélections peuvent être révisées ultérieurement.
 
-1. Cliquez sur l’onglet **Destination**
+1. Sélectionnez l’onglet **Destination**
 
 1. Sélectionnez **Journaux Azure Monitor** dans la liste déroulante **Type de destination**
 
@@ -213,7 +213,7 @@ Dans cette tâche, vous allez installer manuellement l’*agent Azure Monitor* e
 
 1. Sélectionnez votre nom d’espace de travail **Conseil :** *RG-Defender* dans la liste déroulante **Compte ou espace de noms**
 
-1.  Sélectionnez **Ajouter une source de données** et **Vérifier + créer**
+1. Sélectionnez **Ajouter une source de données** et **Vérifier + créer**
 
 1. Sélectionnez **Créer** une fois que *Validation réussie* s’affiche.
 

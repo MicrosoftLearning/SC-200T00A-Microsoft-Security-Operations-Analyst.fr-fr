@@ -35,13 +35,13 @@ Dans cette tâche, vous allez explorer l’analyse du comportement des entités 
 
 1. Dans la fenêtre contextuelle à partir des *paramètres de comportement des entités*, sélectionnez **Définir l’UEBA**.
 
-1. Sur la page suivante, sélectionnez **Définir l’UEBA**.
+1. Sous l’onglet *Paramètres*, dans *Analyse du comportement de l’entité*, sélectionnez **Définir UEBA**.
 
 1. Passez en revue les trois étapes préalables requises pour activer l’analyse du comportement des entités.
 
 1. Fermez la page *Configuration de comportement des entités* en sélectionnant « x » en haut à droite de la page.
 
-1. Faites défiler la page *Paramètres* et consultez le paragraphe *Anomalies*.
+1. Faites défiler l’onglet *Paramètres* sur la section *Anomalies* et lisez le paragraphe.
 
 1. Sélectionnez **Accéder à l’analyse pour configurer les anomalies**.
 
@@ -74,7 +74,7 @@ Dans cette tâche, vous allez confirmer que les règles analytiques des anomalie
 
 1. Définissez la valeur sur **1**, puis sélectionnez **Suivant : Envoyer des commentaires**.
 
-1. Sélectionnez **Suivant : Vérifier**, puis **Enregistrer** pour mettre à jour la règle.
+1. Sélectionnez **Suivant : examiner et créer**, puis **Enregistrer** pour mettre à jour la règle.
 
     >**Remarque :** vous pouvez mettre à niveau la règle **Distribution de versions d’évaluation** vers **Production** en modifiant le paramètre de cette règle et en enregistrant les modifications. La règle **Production** deviendra ensuite la règle **Distribution de versions d’évalaluation**.
     

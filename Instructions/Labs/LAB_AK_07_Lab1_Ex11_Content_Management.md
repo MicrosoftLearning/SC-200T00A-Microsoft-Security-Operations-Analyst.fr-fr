@@ -46,7 +46,7 @@ Dans cette tâche, vous allez activer l’analyse comportementale des entités d
 
 Dans cette tâche, vous allez créer un référentiel Azure DevOps.
 
-1. Ouvrez un autre onglet de navigateur et accédez à l’adresse (https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
+1. Ouvrez un autre onglet de navigateur et accédez à l’adresse <https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US>.
 
 1. Dans la page *Nous avons besoin de quelques détails supplémentaires*, sélectionnez **Continuer**.
 

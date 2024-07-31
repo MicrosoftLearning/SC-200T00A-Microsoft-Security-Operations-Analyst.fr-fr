@@ -23,7 +23,7 @@ Dans cette tâche, vous passez en revue la configuration de conformité régleme
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Dans le navigateur Microsoft Edge, accédez au Portail Azure à l’adresse (https://portal.azure.com).
+1. Dans le navigateur Microsoft Edge, accédez au Portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
