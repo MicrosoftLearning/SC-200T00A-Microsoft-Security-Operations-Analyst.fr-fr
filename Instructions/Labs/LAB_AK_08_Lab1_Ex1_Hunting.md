@@ -25,7 +25,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
+1. Dans le navigateur Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
@@ -56,7 +56,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Cochez la case *« -file c2.ps1 »* qui s’affiche dans les résultats. 
 
-1. Dans la barre de commandes centrale, sélectionnez le bouton **Ajouter un signet**.
+1. Dans la barre de commandes du volet *Résultats*, sélectionnez le bouton **Ajouter un signet**.
 
 1. Sélectionnez **+ Ajouter une nouvelle entité** sous *Mappage d’entités*.
 
@@ -64,7 +64,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Pour les *Tactiques et techniques*, sélectionnez **Commande et contrôle**.
 
-1. Revenez au panneau *Ajouter un signet*, puis sélectionnez **Créer**. Nous allons mapper ce signet à un incident plus loin dans ce labo.
+1. Dans le volet *Ajouter un signet*, sélectionnez **Créer**. Nous allons mapper ce signet à un incident plus loin dans ce labo.
 
 1. Fermez la fenêtre *Journaux* en cliquant sur **X** en haut à droite de la fenêtre, puis sélectionnez **OK** pour ignorer les modifications. 
 
@@ -123,7 +123,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Sélectionnez **Ajouter à un incident existant**. Tous les incidents apparaissent dans le volet droit.
 
-1. Sélectionnez l’un des incidents, puis cliquez sur **Ajouter**. 
+1. Sélectionnez l’un des incidents, puis cliquez sur **Ajouter**.
 
 1. Faites défiler vers la gauche jusqu’à la colonne *Gravité*. Vous verrez alors qu’elle contient les données relatives à l’incident.
 
@@ -134,9 +134,9 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
 
 1. Dans Microsoft Sentinel, sous *Configuration*, sélectionnez la page **Analytique**. 
 
-1. Sélectionnez l’onglet **Créer**, puis **la règle de requête NRT (préversion)**.
+1. Sélectionnez l’onglet **Créer**, puis **Règle de requête NRT**.
 
-1. L’Assistant Règle analytique s’ouvre alors. Pour le type d’onglet *Général* :
+1. L’Assistant Règle d’analytique s’ouvre alors. Pour le type d’onglet *Général* :
 
     |Paramètre|Valeur|
     |---|---|
@@ -173,7 +173,9 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
 
 1. Faites défiler vers le bas et sélectionnez le bouton **Suivant : Paramètres d’incident>**.
 
-1. Sous l’onglet *Paramètres d’incident*, conservez les valeurs par défaut et sélectionnez le bouton **Suivant : Vérifier et créer >**.
+1. Sous l’onglet *Paramètres d’incident*, conservez les valeurs par défaut et sélectionnez le bouton **Suivant : Réponse automatisée >**.
+
+1. Sous l’onglet *Réponse automatique*, sélectionnez le bouton **Suivant : examiner et créer**.
 
 1. Sous l’onglet *Vérifier et créer*, sélectionnez le bouton **Enregistrer** pour créer et enregistrer la nouvelle règle d’analytique planifiée.
 

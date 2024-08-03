@@ -80,14 +80,14 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
 
 1. Sélectionnez le bouton **Suivant : Définir la logique de la règle >**.
 
-1. Sous l’onglet *Définir la logique de la règle*, la *requête de règle* doit déjà être remplie avec votre requête KQL, tout comme les entités affichées sous *Amélioration des alertes – Mappage d’entités*.
+1. Sous l’onglet *Définir la logique* de règle, la *requête Règle* doit être déjà remplie avec votre requête KQL.
+
+1. Configurez les entités sous *Amélioration de l’alerte : mappage d’entités* à l’aide des paramètres du tableau ci-dessous.
 
     |Entité|Identificateur|Champ de données|
     |:----|:----|:----|
     |Compte|FullName|AccountCustomEntity|
     |Hôte|Nom d’hôte|HostCustomEntity|
-
-1. Si **Nom d’hôte** n’est pas sélectionné pour *Entité hôte*, choisissez un nom dans la liste déroulante et remplissez les champs à l’aide des paramètres du tableau précédent.
 
 1. Pour la *planification de la requête*, définissez les éléments suivants :
 

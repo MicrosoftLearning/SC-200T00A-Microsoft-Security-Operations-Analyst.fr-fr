@@ -40,8 +40,6 @@ Dans cette tâche, vous déployez le connecteur Microsoft Defender XDR.
 
 1. Dans la page des détails de la solution *Microsoft Defender XDR*, sélectionnez **Gérer**
 
->**Remarque :** La solution *Microsoft Defender XDR*installe le connecteur de données *Microsoft Defender XDR*, les requêtes de repérage, les classeurs et les règles analytiques.
-
 1. Sélectionnez la case à cocher du connecteur de données *Microsoft Defender XDR*, puis sélectionnez la **page Ouvrir le connecteur**.
 
 1. Dans la section *Configuration*, sous l’onglet *Instructions*, **désélectionnez** la case à cocher pour l’option *Désactiver toutes les règles de création d’incident Microsoft pour ces produits. Recommandé*, puis sélectionnez le bouton **Connecter des incidents et des alertes**.
@@ -58,7 +56,7 @@ Dans cette tâche, vous allez connecter un espace de travail Microsoft Sentinel 
 
 1. Ouvrez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Edge, accédez au portail Microsoft Defender XDR à l’adresse (https://security.microsoft.com).
+1. Dans le navigateur Edge, accédez au portail Microsoft Defender XDR à l’adresse <https://security.microsoft.com>.
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
@@ -80,7 +78,7 @@ Dans cette tâche, vous allez connecter un espace de travail Microsoft Sentinel 
 
 1. Vous devez voir le message *Connexion de l’espace de travail en cours* suivi d’un message *Connecté à l’espace de travail*.
 
-1. Cliquez sur le bouton **Fermer**. 
+1. Cliquez sur le bouton **Fermer**.
 
 1. Sur le portail **Defender XDR**, sur la **page d’accueil**, vous devez voir une bannière en haut avec le message *Votre SIEM et XDR unifié est prêt*. Sélectionnez le bouton **Démarrer la chasse**.
 
@@ -88,6 +86,6 @@ Dans cette tâche, vous allez connecter un espace de travail Microsoft Sentinel 
 
 1. Développez le volet de menu principal de gauche s’il est réduit et développez les nouveaux éléments de menu **Microsoft Sentinel**. Vous devez voir les sélections *Gestion des menaces*, *Gestion des contenus* et *Configuration*.
 
- >**Remarque :** Certaines fonctionnalités peuvent ne pas être disponibles dans la préversion publique et l’interface utilisateur peut différer des instructions du labo. En outre, la synchronisation entre Microsoft Sentinel et Microsoft Defender XDR peut prendre quelques minutes. Il est donc possible que vous ne voyez pas tous les *Connecteurs de données* installés, par exemple.
+ >**Remarque** : la synchronisation entre Microsoft Sentinel et Microsoft Defender XDR peut prendre quelques minutes. Il est donc possible que vous ne voyiez pas tous les *Connecteurs de données* installés, par exemple.
 
 ## Vous avez terminé le labo

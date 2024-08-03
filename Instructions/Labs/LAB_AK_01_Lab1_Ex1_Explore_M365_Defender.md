@@ -84,7 +84,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Lisez le contenu sous *Examinez et confirmez vos modifications* et sélectionnez **Confirmer** pour appliquer les modifications, puis cliquez sur **Terminé**.
 
-    >**Remarque :** si vous recevez le message suivant *« L’URI https://outlook.office365.com/psws/service.svc/AntiPhishPolicy n’est pas valide pour l’opération PUT. L’URI doit pointer vers une seule ressource pour les opérations PUT. »* sélectionnez **OK**, puis **annuler** pour revenir à la page principale. Vous verrez que la *Protection stricte est activée*.
+    >**Remarque :** si vous recevez le message suivant *« L’URI <https://outlook.office365.com/psws/service.svc/AntiPhishPolicy> n’est pas valide pour l’opération PUT. L’URI doit pointer vers une seule ressource pour les opérations PUT. »* sélectionnez **OK**, puis **annuler** pour revenir à la page principale. Vous verrez que la *Protection stricte est activée*.
 
 ### Tâche 3 : Préparation de l’espace de travail Microsoft Defender XDR
 
@@ -92,14 +92,12 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
     >**Remarque :** vous devrez peut-être faire défiler jusque tout en haut du menu.
 
-1. Sur la page portail **d’accueil**, la **bannière Obtenir votre SIEM et XDR dans un seul emplacement** s’affiche.
-
 1. Faites défiler les éléments de menu vers **Ressources** et sélectionnez **Appareils**.
 
 1. Le processus de déploiement de l’espace de travail Defender XDR doit commencer et vous devez voir les messages indiquant *le chargement et l’initialisation* brièvement affichés en haut de la page, puis vous verrez une image d’une tasse de café et un message qui lit : **Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons.** La procédure prend environ 5 minutes. *Laissez la page ouverte et assurez-vous que la procédure se termine, car elle est requise pour le labo suivant.*
 
     >**Remarque :** Ignorez les messages d’erreur contextuels indiquant que *certaines de vos données ne peuvent pas être récupérées*. Si le message « Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons » ne s’affiche pas, ou si la page « Paramètres > Microsoft Defender XDR > Compte » s’ouvre, mais que vous voyez le message *Échec du chargement de l’emplacement de stockage des données. Réessayez ultérieurement*, sélectionnez « Paramètres du service d’alerte » dans le menu « Général ».
 
-1. Une fois le nouvel espace terminé, vous verrez les paramètres généraux de Microsoft Defender XDR pour le compte, les notifications par e-mail, les paramètres du service d’alerte, les autorisations et les rôles et l’API Streaming. Vous verrez également que l’option **Fonctionnalités de préversion** est activée.
+1. Une fois l’initialisation de l’espace de travail terminée, la page du portail **Accueil** affiche une bannière **Obtenir votre SIEM et XDR en un seul endroit**. Dans **Paramètres**, les paramètres généraux de Microsoft Defender XDR pour le compte, les notifications par e-mail, les **fonctionnalités en préversion**, les paramètres du service d’alerte, les autorisations et les rôles, ainsi que l’API de diffusion en continu sont désormais activés.
 
 ## Vous avez terminé le labo

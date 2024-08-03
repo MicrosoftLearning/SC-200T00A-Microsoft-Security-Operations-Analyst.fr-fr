@@ -68,7 +68,7 @@ Dans cette tâche, vous créez une requête planifiée et vous la connectez au c
 
 1. Sélectionnez le bouton **Suivant : Réponse automatisée >** 
 
-1. Dans l’onglet *Réponse automatique*, sous *Règles d’automatisation*, sélectionnez **Ajouter**.
+1. Dans l’onglet *Réponse automatique*, sous *Règles d’automatisation*, sélectionnez **+Ajouter nouveau**.
 
 1. Pour le *Nom de la règle d’automatisation*, saisissez **Niveau 2**.
 
@@ -129,7 +129,7 @@ Dans cette tâche, vous testez votre nouvelle règle de requête planifiée.
 
 1. Sélectionnez l’incident et passez en revue les informations dans le panneau droit.
 
-1. Revenez à Microsoft Teams en sélectionnant l’onglet dans votre navigateur Microsoft Edge. Si vous l’avez fermé, ouvrez simplement un nouvel onglet et tapez https://teams.microsoft.com. Accédez à Teams  *SOC*, sélectionnez le canal *Nouvelles alertes*, puis onsultez le message publié concenrant l’incident.
+1. Revenez à Microsoft Teams en sélectionnant l’onglet dans votre navigateur Microsoft Edge. Si vous l’avez fermé, ouvrez simplement un nouvel onglet et tapez <https://teams.microsoft.com>. Accédez à Teams  *SOC*, sélectionnez le canal *Nouvelles alertes*, puis onsultez le message publié concenrant l’incident.
 
 
 ## Passer à l’Exercice 4

@@ -64,8 +64,10 @@ Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre in
 
     >**Conseil :** Tapez Ctrl+f dans la fenêtre de code pour afficher *Rechercher* et simplifier la recherche de *EventID : 4657*.
 
+1. Dans *Journaux d’activité*, ouvrez un nouvel onglet Requête.
+
 1. Revenez au panneau *Schéma et Filtre*, puis pointez sur **_Im_RegistryEvent_MicrosoftWindowsEventxxx**, *analyseur de filtrage ASIM de l’événement de Registre pour les événements Microsoft Windows et les événements de sécurité*, puis sélectionnez **Utiliser dans l’éditeur**.
 
-1. **Exécutez** la requête de fonction ASIM. Vous ne devez pas obtenir de résultat ni d’erreurs, il s’agit simplement d’une validation.
+1. **Exécutez** la requête de fonction ASIM. Si vous avez effectué les exercices de labo précédents, vous devez voir les résultats et les messages sans erreur.
 
 ## Passez à l’exercice 10
