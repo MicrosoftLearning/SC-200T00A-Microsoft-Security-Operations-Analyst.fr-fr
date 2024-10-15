@@ -1,6 +1,8 @@
 # Module 3 : atténuation de menaces avec Microsoft Defender pour le cloud
 
-**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md). 
+**Remarque :** la réussite de cette version de démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md).
+
+**Important :** cette version de démonstration n’est pas requise pour VTD-5002-FY25.
 
 ## Atténuer des alertes de sécurité
 

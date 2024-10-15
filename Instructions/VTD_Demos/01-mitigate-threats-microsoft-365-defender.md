@@ -1,8 +1,8 @@
 # Module 1 : atténuer les menaces avec Microsoft 365 Defender
 
-**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md). 
+**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md).
 
-## Utiliser le portail Microsoft 365 Defender
+## Utiliser le portail Microsoft Defender
 
 Dans cette tâche, vous allez vous familiariser avec les fonctionnalités du portail Microsoft 365 Defender.
 
@@ -40,5 +40,47 @@ Dans cette tâche, vous allez vous familiariser avec les fonctionnalités du por
 1. Le menu **Paramètres** vous permet de définir les paramètres généraux, tels que le fuseau horaire et les notifications par e-mail, ainsi que de spécifier des paramètres précis pour les points de terminaison, les identités et la découverte d’appareils.
 1. Sélectionnez **Paramètres**, puis **Points de terminaison**. Vous pouvez afficher et ajouter des **Licences** ici. Sélectionnez ensuite **Fonctionnalités avancées**. Faites défiler la liste complète des fonctionnalités, mais n’apportez pas de modifications maintenant.
 1. Quittez ensuite les **Paramètres** et dans la liste de menus principale, à gauche, sélectionnez **Plus de ressources**. Vous devez voir des cartes ou vignettes contenant des liens vers la **Conformité Microsoft Purview**, **Azure Active Directory** et d’autres fonctionnalités qui ne font pas directement partie de **Microsoft 365 Defender**. Sélectionnez le bouton **Ouvrir** pour afficher la **Conformité Microsoft Purview**. Le portail de conformité doit alors s’afficher.
+
+## Connecter Microsoft Sentinel et Microsoft Defender XDR
+
+Dans cette tâche, vous allez connecter un espace de travail Microsoft Sentinel à Microsoft Defender XDR.
+
+**Remarque :** il existe des différences de capacité entre le portail Microsoft Defender XDR et le portail Microsoft Sentinel. L’expérience et les étapes de l’interface utilisateur peuvent différer des instructions de labo.
+
+1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’*Administrateur* avec le mot de passe : **Pa55w.rd**.  
+
+1. Ouvrez le navigateur Microsoft Edge.
+
+1. Dans le navigateur Edge, accédez au portail Microsoft Defender XDR à l’adresse <https://security.microsoft.com>.
+
+1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
+
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
+
+    >**Conseil :** le compte de messagerie et le mot de passe du locataire de l’administrateur sont disponibles sous l’onglet Ressources.
+
+1. Sur le portail **Defender XDR**, sur la **page d’accueil**, vous devez voir une bannière en haut avec le message *Obtenir votre SIEM et XDR à un seul endroit*. Sélectionnez le bouton **Connecter un espace de travail**.
+
+1. Sur la page *Choisir un espace de travail*, sélectionnez l’espace de travail **Microsoft Sentinel** que vous avez créé précédemment.
+
+    >**Conseil :** Il doit avoir un nom comme *nomuniqueDefender*.
+
+1. Cliquez sur le bouton **Suivant**.
+
+    >**Remarque :** si le bouton *Suivant* est désactivé ou grisé et que vous voyez un message d’erreur indiquant que l’espace de travail Microsoft Sentinel n’est *pas intégré* à Defender XDR, essayez d’actualiser la page du portail Defender XDR, car la synchronisation peut prendre 5 à 10 minutes.
+
+1. Sur la page *Révision des modifications*, vérifiez que l’*Espace de travail* sélectionné est correct et passez en revue les éléments à puces sous la section *À quoi s’attendre lorsque l’espace de travail est connecté*. Cliquez sur le bouton **Connecter**.
+
+1. Vous devez voir le message *Connexion de l’espace de travail en cours* suivi d’un message *Connecté à l’espace de travail*.
+
+1. Cliquez sur le bouton **Fermer**.
+
+1. Sur le portail **Defender XDR**, sur la **page d’accueil**, vous devez voir une bannière en haut avec le message *Votre SIEM et XDR unifié est prêt*. Sélectionnez le bouton **Démarrer la chasse**.
+
+1. Dans *Chasse avancée*, un message doit s’afficher pour « Explorer votre contenu à partir de Sentinel ». Dans le volet de menu de gauche, notez les tables, fonctions et requêtes *Microsoft Sentinel* sous les onglets correspondants.
+
+1. Développez le volet de menu principal de gauche s’il est réduit et développez les nouveaux éléments de menu **Microsoft Sentinel**. Vous devez voir les sélections *Gestion des menaces*, *Gestion des contenus* et *Configuration*.
+
+ >**Remarque** : la synchronisation entre Microsoft Sentinel et Microsoft Defender XDR peut prendre quelques minutes. Il est donc possible que vous ne voyiez pas tous les *Connecteurs de données* installés, par exemple.
 
 ## Vous avez terminé le labo.

