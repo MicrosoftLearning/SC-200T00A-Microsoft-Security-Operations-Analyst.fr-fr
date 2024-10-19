@@ -1,6 +1,8 @@
 # Module 5 : configuration de votre environnement Microsoft Sentinel
 
-**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md). 
+**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md).
+
+**Important :** cette version de démonstration n’est pas requise pour VTD-5002-FY25.
 
 ## Explorer l'interface de Microsoft Sentinel
 

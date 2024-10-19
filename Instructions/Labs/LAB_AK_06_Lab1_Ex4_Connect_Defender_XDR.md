@@ -88,4 +88,4 @@ Dans cette tâche, vous allez connecter un espace de travail Microsoft Sentinel 
 
  >**Remarque** : la synchronisation entre Microsoft Sentinel et Microsoft Defender XDR peut prendre quelques minutes. Il est donc possible que vous ne voyiez pas tous les *Connecteurs de données* installés, par exemple.
 
-## Vous avez terminé le labo
+## Vous avez terminé le labo - Passez au parcours d’apprentissage 7 - Labo 1 - Exercice 2 - Créer un playbook dans Microsoft Sentinel
