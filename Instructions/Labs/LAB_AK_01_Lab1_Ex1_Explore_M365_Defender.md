@@ -12,8 +12,6 @@ lab:
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Defender XDR. Vous commencez par attribuer des stratégies de sécurité prédéfinies utilisées dans Exchange Online Protection (EOP) et Microsoft Defender for Office 365.
 
->**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20Microsoft%20365%20Defender)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques.
-
 >**Remarque :****Locataires WWL - Conditions d’utilisation** Si un locataire est fourni dans le cadre d’une formation dispensée par un instructeur, notez qu’il est mis à votre disposition dans le seul but de prendre en charge les labos pratiques de la formation. Vous ne devez ni partager ni utiliser les locataires en dehors des labos pratiques. Le locataire utilisé dans ce cours est un locataire d’essai. Au terme de la classe, le locataire ne pourra pas faire l’objet d’une prolongation et vous ne pourrez plus l’utiliser ni y accéder. Vous n’êtes pas autorisé à convertir un locataire en abonnement payant. Les locataires obtenus dans le cadre de ce cours sont la propriété de Microsoft Corporation. Nous nous réservons le droit d’y accéder et d’en reprendre possession à tout moment. 
 
 
@@ -34,7 +32,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Ouvrez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse (https://security.microsoft.com).
+1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse (<https://security.microsoft.com>).
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
@@ -70,7 +68,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Lisez le contenu sous *Examinez et confirmez vos modifications* et sélectionnez **Confirmer** pour appliquer les modifications, puis cliquez sur **Terminé**.
 
-    >**Remarque :** si vous recevez le message suivant *« L’URI https://outlook.office365.com/psws/service.svc/AntiPhishPolicy n’est pas valide pour l’opération PUT. L’URI doit pointer vers une seule ressource pour les opérations PUT. »* sélectionnez **OK**, puis **annuler** pour revenir à la page principale. Vous verrez que la *Protection standard est activée*.
+    >**Remarque :** si vous recevez le message suivant *« L’URI <https://outlook.office365.com/psws/service.svc/AntiPhishPolicy> n’est pas valide pour l’opération PUT. L’URI doit pointer vers une seule ressource pour les opérations PUT. »* sélectionnez **OK**, puis **annuler** pour revenir à la page principale. Vous verrez que la *Protection standard est activée*.
 
 1. Sous *Protection stricte*, sélectionnez **Gérer les paramètres de protection**. **Conseil :***la protection stricte* se trouve sous « E-mail & Collaboration - Stratégies et règles - Stratégies contre les menaces - Stratégies de sécurité prédéfinies ».
 

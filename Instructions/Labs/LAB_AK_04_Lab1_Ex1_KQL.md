@@ -12,10 +12,7 @@ lab:
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Azure Sentinel. Vous êtes chargé d’effectuer une analyse des données de journal pour rechercher des activités malveillantes, afficher des visualisations et effectuer des recherches de menaces. Pour interroger les données du journal, vous utilisez le langage de requête Kusto (KQL).
 
->**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20queries%20for%20Microsoft%20Sentinel%20using%20Kusto%20Query%20Language)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques.
-
->**Important :** ce labo implique d’entrer de nombreux scripts KQL dans Microsoft Sentinel. Les scripts ont été fournis dans un fichier au début de ce labo. Vous pouvez également les télécharger ici : https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
-
+>**Important :** ce labo implique d’entrer de nombreux scripts KQL dans Microsoft Sentinel. Les scripts ont été fournis dans un fichier au début de ce labo. Vous pouvez également les télécharger ici : <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
 ### Tâche 1 : accéder à la zone de test KQL
 
@@ -23,7 +20,7 @@ Dans cette tâche, vous allez accéder à un environnement Log Analytics dans l
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur ou administratrice avec le mot de passe : **Pa55w.rd**.  
 
-1. Accédez à https://aka.ms/lademo dans votre navigateur. Connectez-vous avec les informations d’identification de l’administrateur MOD.
+1. Accédez à <https://aka.ms/lademo> dans votre navigateur. Connectez-vous avec les informations d’identification de l’administrateur MOD.
 
 1. Fermez la fenêtre contextuelle de la vidéo Log Analytics qui s’affiche.
 
@@ -48,7 +45,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
 >**Important :** pour chaque requête, effacez l’instruction précédente de la fenêtre de requête ou ouvrez une nouvelle fenêtre de requête en sélectionnant **+** après le dernier onglet ouvert (jusqu’à 25).
 
-1. L’instruction suivante illustre l’opérateur **Search**, qui recherche la valeur dans toutes les colonnes de la table. 
+1. L’instruction suivante illustre l’opérateur **Search**, qui recherche la valeur dans toutes les colonnes de la table.
 
 1. Changez l’**intervalle de temps* et définissez-le sur *30 dernières minutes** dans la fenêtre de requête.
 
@@ -97,7 +94,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
  
     ```
 
-1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer des *variables*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer des *variables*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     let timeOffset = 1h;
@@ -107,7 +104,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
     | where EventID != discardEventId
     ```
 
-1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer une *liste dynamique*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer une *liste dynamique*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
@@ -121,7 +118,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     >**Conseil :** vous pouvez facilement mettre en forme la requête en sélectionnant les points de suspension (…) dans la fenêtre de requête et en sélectionnant **Mettre en forme la requête**.
 
-1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer une *table dynamique*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer une *table dynamique*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     let LowActivityAccounts =
@@ -332,7 +329,7 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
     | summarize count() by Type
     ```
 
-1. L’instruction suivant illustre l’opérateur **Join**, qui fusionne les lignes de deux tables pour en former une nouvelle en mettant en correspondance les valeurs des colonnes spécifiées de chaque table. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivant illustre l’opérateur **Join**, qui fusionne les lignes de deux tables pour en former une nouvelle en mettant en correspondance les valeurs des colonnes spécifiées de chaque table. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     SecurityEvent  
@@ -388,6 +385,8 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
     | parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
+
+>**Important :** les requêtes suivantes ne produisent actuellement pas de résultats dans l’environnement lademo utilisé pour ce labo. Les entrées de la table *SigninLogs* ont été supprimées. Toutefois, les requêtes KQL présentent des concepts et des cas d’usage importants. Veuillez donc prendre le temps de les examiner.
 
 1. L’instruction suivante illustre l’utilisation de champs **dynamiques**, qui sont spéciaux, car ils peuvent prendre n’importe quelle valeur d’autres types de données. Dans cet exemple, le champ DeviceDetail de la table SigninLogs est de type **dynamique**. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
 
@@ -445,4 +444,4 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
     PrivLogins  
     ```
 
-## Vous avez terminé le labo.
+## Vous avez terminé le labo

@@ -14,13 +14,11 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 Pour explorer les fonctionnalités d’atténuation des risques d’attaque Defender for Endpoint, vous allez vérifier que l’intégration de l’appareil a réussi et examiner les alertes et incidents créés pendant ce processus.
 
->**Remarque :** Une **[simulation de labo interactive](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Mitigate%20attacks%20with%20Microsoft%20Defender%20for%20Endpoint)** est disponible et vous permet de progresser à votre propre rythme. Il peut exister de légères différences entre la simulation interactive et le labo hébergé. Toutefois, les concepts et idées de base présentés sont identiques.
-
 ### Tâche 1 : Vérifier l’intégration de l’appareil
 
 Dans cette tâche, vous allez confirmer que l’appareil a été intégré avec succès et créer une alerte de test.
 
-1. Si vous n’êtes pas encore sur le portail Microsoft Defender XDR dans votre navigateur Microsoft Edge, accédez à https://security.microsoft.com) et connectez-vous en tant qu’administrateur pour votre tenant.
+1. Si vous n’êtes pas encore sur le portail Microsoft Defender XDR dans votre navigateur Microsoft Edge, accédez à (<https://security.microsoft.com>) et connectez-vous en tant qu’administrateur pour votre locataire.
 
 1. Dans le menu de gauche, sous la zone **Ressources** , sélectionnez **Appareils**. Veuillez patienter jusqu’à ce que WIN1 apparaisse sur la page Appareils avant de continuer. Sinon, vous devrez peut-être répéter cette tâche pour voir les alertes qui seront générées ultérieurement.
 
@@ -70,7 +68,7 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 1. Sous **Informational, activité  attendue**, sélectionnez **Test de sécurité**.
 
-1. Ajoutez des commentaires si vous le souhaitez, puis sélectionnez **Enregistrer** pour mettre à jour l’incident et quitter la page.
+1. Sélectionnez **Enregistrer** pour mettre à jour l’incident et terminer.
 
 1. Passez en revue le contenu des onglets  *Histoire d’attaque, Alertes, Ressources, Investigations, Preuve et réponse* et *Résumé*. Les appareils et les utilisateurs se trouvent sous l’onglet *Ressources*. Dans un vrai incident, l’onglet *Historique de l’attaque* affiche le *graphique de l’incident*. **Conseil :** Certains onglets risquent d’être masqués en raison de la taille de votre écran. Sélectionnez l’onglet représentant des points de suspension (...) pour les afficher.
 
