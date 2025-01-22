@@ -22,8 +22,6 @@ Dans cette tâche, vous allez activer et configurer Microsoft Defender pour le 
 
 1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
   
-    >**Note :** sélectionnez l’onglet **Ressources** pour le *Nom d’utilisateur* et le *Mot de passe* du labo. Utilisez le compte **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** pour ce labo.
-
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
 1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
@@ -56,7 +54,7 @@ Dans cette tâche, vous allez activer et configurer Microsoft Defender pour le 
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
-### Tâche 3 : comprendre le tableau de bord de Microsoft Defender pour le cloud
+### Tâche 2 : présentation du tableau de bord de Microsoft Defender pour le cloud
 
 1. Dans la barre de recherche du portail Microsoft Azure, saisissez *Defender*, puis sélectionnez **Microsoft Defender pour le cloud**.
 

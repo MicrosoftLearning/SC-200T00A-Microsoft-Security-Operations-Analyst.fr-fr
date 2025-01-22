@@ -22,6 +22,8 @@ Microsoft Sentinel vous permet de créer des workbooks personnalisés à partir 
 
 Dans cette tâche, vous allez explorer les modèles de classeur Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Dans le navigateur Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
@@ -32,7 +34,7 @@ Dans cette tâche, vous allez explorer les modèles de classeur Microsoft Senti
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez votre espace de travail Microsoft Sentinel.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 1. Sélectionnez **Classeurs** dans la section *Gestion des menaces* du menu de navigation.
 

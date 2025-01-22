@@ -18,6 +18,8 @@ Un playbook peut vous aider à automatiser et orchestrer votre réponse aux mena
 
 Dans cette tâche, vous allez créer une application logique utilisée comme playbook dans Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
@@ -26,7 +28,7 @@ Dans cette tâche, vous allez créer une application logique utilisée comme pla
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez votre espace de travail Microsoft Sentinel.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 1. Dans *Microsoft Sentinel*, accédez au **Hub de contenu**.
 

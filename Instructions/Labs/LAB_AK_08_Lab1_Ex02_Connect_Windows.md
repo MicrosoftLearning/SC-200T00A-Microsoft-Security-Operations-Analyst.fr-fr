@@ -66,81 +66,81 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Sélectionnez **Créer**. Patientez quelques minutes pendant la création de la ressource.
 
-### Tâche 2 : installer Azure Arc sur un serveur local
+<!--- ### Task 2: Install Azure Arc on an On-Premises Server
 
-Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour faciliter l’intégration.
+In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
->**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez les références de nom de machine virtuelle.
+>**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
-1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.  
+1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
 
-1. Ouvrez le navigateur Microsoft Edge et accédez au Portail Azure à l’adresse <https://portal.azure.com>.
+1. Open the Microsoft Edge browser and navigate to the Azure portal at <https://portal.azure.com>.
 
-1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
+1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
 
-1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
 
-1. Dans la barre de recherche du Portail Azure, tapez *Arc*, puis sélectionnez **Azure Arc**.
+1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
-1. Dans le volet de navigation sous **Ressources Azure Arc**, sélectionnez **Machines**
+1. In the navigation pane under **Azure Arc resources** select **Machines**
 
-1. Sélectionnez **+ Ajouter/Créer**, puis **Ajouter une machine**.
+1. Select **+ Add/Create**, then select **Add a machine**.
 
-1. Dans la section « Ajouter un serveur unique », sélectionnez **Générer un script**.
+1. Select **Generate script** from the "Add a single server" section.
 
-1. Dans la page *Ajouter un serveur avec Azure Arc* , sélectionnez le groupe de ressources que vous avez créé précédemment sous *Détails du projet*. **Conseil :***RG-Defender*
+1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
 
-    >**Remarque :** si vous n’avez pas encore créé de groupe de ressources, ouvrez un autre onglet, créez le groupe de ressources et recommencez.
+    >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
-1. Pour la *Région*, sélectionnez **USA Est** dans la liste déroulante.
+1. For *Region*, select **(US) East Us** from the drop-down list.
 
-1. Passez en revue les *Détails du serveur* et les options de la *méthode de connectivité*. Conservez les valeurs par défaut et sélectionnez **Suivant** pour accéder à l’onglet Balises.
+1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
 
-1. Passez en revue les balises disponibles par défaut. Sélectionnez **Suivant** pour accéder à l’onglet Télécharger et exécuter le script.
+1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-1. Faites défiler la page et sélectionnez le bouton **Télécharger**. **Conseil :** si votre navigateur bloque le téléchargement, prenez des mesures dans le navigateur pour l’autoriser. Dans le navigateur Microsoft Edge, sélectionnez le bouton de points de suspension (...) si nécessaire, puis **Conserver**.
+1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
-1. Cliquez avec le bouton droit sur Démarrer Windows et sélectionnez **Windows PowerShell (admin)**.
+1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
 
-1. Entrez *Administrator* pour le nom d’utilisateur et *Passw0rd!*. pour le « Mot de passe » si une invite UAC apparaît.
+1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
 
-1. Entrez : cd C:\Users\Administrator\Downloads
+1. Enter: cd C:\Users\Administrator\Downloads
 
-    >**Important :** si ce répertoire n’existe pas, cela signifie probablement que vous n’êtes pas le bon ordinateur. Revenez au début de la tâche 4 et connectez-vous à nouveau à la machine virtuelle WINServer.
+    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
-1. Tapez *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* et appuyez sur Entrée.
+1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
 
-1. Entrez **A** pour Oui pour tout, puis appuyez sur Entrée.
+1. Enter **A** for Yes to All and press enter.
 
-1. Tapez *.\OnboardingScript.ps1* et appuyez sur Entrée.  
+1. Type *.\OnboardingScript.ps1* and press enter.  
 
-    >**Important :** si vous obtenez l’erreur *« Le terme .\OnboardingScript.ps1 n’est pas reconnu... »*, vérifiez que vous effectuez les étapes de la tâche 4 dans la machine virtuelle WINServer. Il se peut également que le nom du fichier ait changé à la suite de plusieurs téléchargements. Recherchez *« .\OnboardingScript (1).ps1 »* ou d’autres numéros de fichier dans le répertoire actif.
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
-1. Entrez **R** pour exécuter une seule fois et appuyez sur Entrée (cela peut prendre quelques minutes).
+1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
-1. Le processus d’installation ouvre un nouvel onglet dans le navigateur Microsoft Edge pour authentifier l’agent Azure Arc. Sélectionnez votre compte d’administrateur, attendez que le message « Authentification terminée » s’affiche, puis revenez à la fenêtre Windows PowerShell.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
 
-1. Une fois l’installation terminée, revenez à la page Portail Azure où vous avez téléchargé le script, puis sélectionnez **Fermer**. Fermez **Ajouter des serveurs avec Azure Arc** pour revenir à la page **Machines** Azure Arc.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
-1. Sélectionnez **Actualiser** jusqu’à ce que le nom du serveur WINServer s’affiche et que l’état soit *Connecté*.
+1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
-    >**Remarque** : cela peut prendre quelques minutes.
+    >**Note:** This could take a couple of minutes. --->
 
-### Tâche 3 : connecter une machine virtuelle Windows Azure
+### Tâche 2 : connecter une machine virtuelle Windows Azure
 
 Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez l’espace de travail Microsoft Sentinel que vous avez créé précédemment.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
-1. 1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion de contenu*, puis sélectionnez **Hub de contenu**.
+1. Dans le menu de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion du contenu*, puis sélectionnez **Hub de contenu**.
 
 1. Dans le *hub de contenu*, recherchez la solution **Événements de sécurité Windows ** et sélectionnez-la dans la liste.
 
-1. Dans la page de solution *Événements de sécurité Windows*, sélectionnez **Installer**.
-
-1. Une fois l’installation terminée, sélectionnez **Gérer**.
+1. Dans la page de solution *Événements de sécurité Windows*, sélectionnez **Gérer**.
 
     >**Remarque :** la solution *Événements de sécurité Windows* installe les connecteurs de données *Événements de sécurité Windows via AMA* et *Événements de sécurité via l’ancien agent*. Plus 2 classeurs, 20 règles analytiques et 43 requêtes de repérage.
 

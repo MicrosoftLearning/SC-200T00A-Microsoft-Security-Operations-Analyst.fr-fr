@@ -20,6 +20,8 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 Dans cette tâche, vous allez activer une règle de sécurité Microsoft.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
 1. Dans le navigateur Microsoft Edge, accédez au Portail Azure sur (<https://portal.azure.com>).
@@ -30,7 +32,7 @@ Dans cette tâche, vous allez activer une règle de sécurité Microsoft.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez l’espace de travail Microsoft Sentinel fourni.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 1. Dans la zone Configuration, sélectionnez **Analyses**.
 
