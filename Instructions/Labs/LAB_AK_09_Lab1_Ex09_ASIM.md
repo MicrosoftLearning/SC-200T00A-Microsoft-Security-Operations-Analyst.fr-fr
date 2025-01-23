@@ -20,6 +20,8 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre inclus dans le déploiement de Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
 1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
@@ -30,7 +32,7 @@ Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre in
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez votre espace de travail Microsoft Sentinel.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 <!--- 1. In the Edge browser, open a new tab (Ctrl+T) and navigate to the Microsoft Sentinel GitHub ASIM page <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
 
@@ -50,7 +52,7 @@ Dans cette tâche, vous passez en revue les analyseurs de schéma de Registre in
 
 1. After the deployment completes return to the *Microsoft Sentinel* tab. --->
 
-1. Dans le menu de gauche *Général*, sélectionnez **Journaux**.
+1. Sélectionnez **Journaux** dans la section *Général* du menu de navigation.
 
 1. Ouvrez le volet *Schéma et filtre* en sélectionnant **>>** si nécessaire.
 

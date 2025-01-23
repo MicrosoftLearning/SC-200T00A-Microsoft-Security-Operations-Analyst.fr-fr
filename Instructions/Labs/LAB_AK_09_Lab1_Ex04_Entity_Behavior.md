@@ -20,6 +20,8 @@ Vous devez configurer Microsoft Sentinel pour effectuer une analyse du comporte
 
 Dans cette tâche, vous allez explorer l’analyse du comportement des entités dans Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
 1. Dans le navigateur Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
@@ -30,7 +32,7 @@ Dans cette tâche, vous allez explorer l’analyse du comportement des entités 
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez votre espace de travail Microsoft Sentinel.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 1. Sélectionnez la page **Comportement des entités**.
 
