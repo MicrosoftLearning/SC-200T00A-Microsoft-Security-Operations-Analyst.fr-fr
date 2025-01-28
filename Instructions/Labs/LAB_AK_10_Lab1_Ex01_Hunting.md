@@ -14,9 +14,13 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 >**Important :** les exercices de laboratoire du parcours d’apprentissage #10 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
->**Note :** les données de journal créées dans les exercices de labo du parcours d’apprentissage précédent *Repérer les menaces *ne seront pas disponibles dans ce labo sans réexécution de l’**attaque 3** sur le serveur WIN1 dans l’exercice 5.
+>**Note :** les données de journal créées dans les exercices de labo du parcours d’apprentissage 9 ne seront pas disponibles dans ce labo sans réexécution des tâches 1 et 2 de l’exercice 5 et de l’*attaque 3* sur le serveur WIN1 dans l’exercice 6. Vous pouvez ouvrir ces instructions dans un nouvel onglet de navigateur en sélectionnant ces liens :
 
-### Temps estimé pour terminer ce labo : 30 minutes
+**[Labo 09, exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
+
+**[Labo 09, exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)**
+
+### Temps estimé pour terminer ce labo : 40 minutes
 
 ### Tâche 1 : créer une requête de repérage
 

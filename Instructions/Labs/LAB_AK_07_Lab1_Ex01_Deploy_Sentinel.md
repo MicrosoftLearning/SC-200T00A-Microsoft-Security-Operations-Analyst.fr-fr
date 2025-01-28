@@ -22,8 +22,6 @@ Créez un espace de travail Log Analytics, y compris l’option de région. En s
 
 1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
   
-    >**Note :** sélectionnez l’onglet **Ressources** pour le *Nom d’utilisateur* et le *Mot de passe* du labo. Utilisez le compte **<LabUser-XXXXXXXX@LODSPRODXXX.onmicrosoft.com>** pour ce labo.
-
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
 1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.

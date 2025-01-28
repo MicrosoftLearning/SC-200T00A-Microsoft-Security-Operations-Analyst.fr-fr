@@ -20,6 +20,8 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sentinel.
 
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions du *hub de contenu* requises ont été installées.
+
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Ouvrez le navigateur Microsoft Edge.
@@ -32,7 +34,7 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
-1. Sélectionnez l’espace de travail Microsoft Sentinel que vous avez créé dans l'atelier précédent.
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
 
 1. Passez à la tâche suivante.
 
@@ -40,13 +42,11 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defender pour le cloud.
 
-1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section **Gestion de contenu**, puis sélectionnez **Hub de contenu**.
+   >**Important :** pour *Activer* la synchronisation bidirectionnelle, passez en revue le parcours d’apprentissage 5, l’exercice 1, la tâche 1, puis sélectionnez **Configuration** dans le menu de navigation *Microsoft Defender pour le cloud* pour vérifier que tous les abonnements Azure éligibles sont intégrés.
+
+1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section **Gestion du contenu**, puis sélectionnez **Hub de contenu**.
 
 1. Dans le *hub de contenu*, recherchez la solution **Microsoft Defender pour le cloud**, puis sélectionnez-la dans la liste.
-
-1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Installer**.
-
-1. Une fois l’installation terminée, recherchez la solution **Microsoft Defender pour le cloud** et sélectionnez-la.
 
 1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Gérer**.
 
@@ -56,8 +56,6 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Dans la section *Configuration*, sous l’onglet *Instructions*, **cochez** la case correspondant à l’abonnement « Pass Azure - Parrainage » et faites glisser l’option **État** vers la droite.
 
-    >**Remarque :** s’il revient au statut Déconnecté, consultez le Parcours d’apprentissage 3, Exercice 1, Tâche 1 pour attribuer les autorisations appropriées sur votre compte.
-
 1. Le *statut* doit maintenant être **Connecté** et la « Synchronisation bidirectionnelle » doit être *Activée*.
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
@@ -66,13 +64,11 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 Dans cette tâche, vous allez connecter le connecteur de données *Activité Azure*.
 
-1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion de contenu*, puis sélectionnez **Hub de contenu**.
+1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion du contenu*, puis sélectionnez **Hub de contenu**.
 
 1. Dans le *Hub de contenu*, recherchez la solution **Activité Azure** et sélectionnez-la dans la liste.
 
-1. Dans la page de la solution *Activité Azure*, sélectionnez **Installer**.
-
-1. Une fois l’installation terminée, sélectionnez **Gérer**.
+1. Dans la page des détails de la solution *Activité Azure*, sélectionnez **Gérer**.
 
     >**Remarque :** la solution *Activité Azure* installe le connecteur de données *Activité Azure*, 12 règles analytiques, 14 requêtes de repérage, 1 classeur.
 
