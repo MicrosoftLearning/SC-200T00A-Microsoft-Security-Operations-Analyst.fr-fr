@@ -18,7 +18,7 @@ Vous allez simuler les attaques que vous utiliserez ultérieurement pour détect
 
 ### Tâche 1 : attaque de persistance avec l’ajout de la clé de Registre
 
->**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez les références de nom de machine virtuelle.
+>**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez le nom de l’ordinateur virtuel dans l’onglet des références.
 
 Dans cette tâche, vous allez effectuer des attaques sur l’hôte connecté à Azure Arc avec l’agent Azure Monitor configuré.
 
@@ -123,6 +123,5 @@ Dans cette tâche, vous allez effectuer des attaques sur l’hôte connecté à 
     ```
 
 >**Important :** ne fermez pas ces fenêtres. Laissez ce script PowerShell s’exécuter en arrière-plan. La commande doit générer des entrées de journal pendant quelques heures. Vous pouvez passer à la tâche suivante et aux exercices suivants pendant l’exécution de ce script. Les données créées par cette tâche seront utilisées dans le labo Repérage des menaces ultérieurement. Ce processus ne crée pas de quantités substantielles de données ou de traitement.
-
 
 ## Passez à l’exercice 7
