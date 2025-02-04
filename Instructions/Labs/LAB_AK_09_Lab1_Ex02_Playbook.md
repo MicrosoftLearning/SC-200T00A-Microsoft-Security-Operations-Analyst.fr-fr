@@ -60,6 +60,8 @@ Dans cette tâche, vous allez créer une application logique utilisée comme pla
 
 Dans cette tâche, vous allez mettre à jour le nouveau guide opérationnel que vous avez créé avec les informations de connexion appropriées.
 
+1. Une fois la tâche précédente terminée, vous devez vous trouver sur la page *Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Concepteur d’applications logiques*. Si ce n’est pas le cas, effectuez les étapes 1 à 5 ci-dessous.
+
 1. Dans la barre de recherche du portail Azure, tapez Sentinel, puis sélectionnez Microsoft Sentinel.
 
 1. Sélectionnez votre espace de travail Microsoft Sentinel.
@@ -68,9 +70,9 @@ Dans cette tâche, vous allez mettre à jour le nouveau guide opérationnel que 
 
 1. Sélectionnez Actualiser dans la barre de commandes si vous ne voyez aucun guide opérationnel. Vous devez voir le playbook créé à l’étape précédente.
 
-1. Sélectionnez le nom du guide opérationnel **Defender_XDR_Ransomware_Playbook_for_SecOps_Tasks**.
+1. Sélectionnez le lien du nom du guide opérationnel **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**.
 
-1. Dans la page Application logique pour **Defender_XDR_Ransomware_Playbook_for_SecOps_Tasks**, dans le menu de commandes, sélectionnez Modifier.
+1. Dans le menu de commandes de la page Concepteur d’applications logiques de **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, sélectionnez Modifier.
 
     >**Remarque :** il peut être nécessaire d’actualiser la page.
 
@@ -80,13 +82,13 @@ Dans cette tâche, vous allez mettre à jour le nouveau guide opérationnel que 
 
 1. Sélectionnez Ajouter et sélectionnez Se connecter. Dans la nouvelle fenêtre, sélectionnez les informations d’identification d’administrateur de votre abonnement Azure lorsque vous y êtes invité. La dernière ligne du bloc doit maintenant indiquer « Connecté à votre-identifiant-d’administrateur ».
 
-1. Dans le fractionnement logique, en bas, sélectionnez Ajouter une tâche à l’incident.
+<!--- 1. Below within the logic split (+ sign), select Add an action to incident.--->
 
 1. Sélectionnez Enregistrer sur la barre de commandes. L’application logique sera utilisée dans un prochain labo.
 
 ### Tâche 3 : créer une règle d’automatisation
 
-1. Dans Microsoft Sentinel, accédez à Automatisation, dans Configuration.
+1. Dans Microsoft Sentinel, développez *Configuration* dans le menu de navigation, puis sélectionnez *Automatisation*.
 
 1. Sélectionnez Créer, puis choisissez Règle d’automatisation.
 
@@ -96,7 +98,7 @@ Dans cette tâche, vous allez mettre à jour le nouveau guide opérationnel que 
 
 1. Laissez le nom de la règle analytique sur Tous.
 
-1. Cliquez sur Ajouter, puis choisissez Et.
+1. Sélectionnez **+ Ajouter** et choisissez *Condition (Et)*.
 
 1. Sélectionnez Tactiques dans la liste déroulante.
 
@@ -120,6 +122,6 @@ Dans cette tâche, vous allez mettre à jour le nouveau guide opérationnel que 
 
 1. Sélectionnez **Appliquer** en bas.
 
-À partir de là, en fonction de votre rôle, vous allez soit continuer à effectuer davantage d’exercices d’architecte, soit passer aux exercices d’analyste.
+Vous avez maintenant créé un guide opérationnel et une règle d’automatisation dans Microsoft Sentinel.
 
 ## Passez à l’exercice 3

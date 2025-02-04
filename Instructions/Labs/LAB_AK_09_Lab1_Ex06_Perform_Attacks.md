@@ -57,7 +57,6 @@ Dans cette tâche, vous allez effectuer des attaques sur l’hôte connecté à 
     net localgroup administrators theusernametoadd /add
     ```
 
-
 ### Tâche 3 : Attaque de contrôle et commande avec DNS
 
 1. Copiez et exécutez cette commande pour créer un script qui simulera une requête DNS sur un serveur C2 :

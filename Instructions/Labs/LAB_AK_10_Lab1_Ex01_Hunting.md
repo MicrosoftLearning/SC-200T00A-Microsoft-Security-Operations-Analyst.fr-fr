@@ -14,13 +14,157 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 >**Important :** les exercices de laboratoire du parcours d’apprentissage #10 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
->**Note :** les données de journal créées dans les exercices de labo du parcours d’apprentissage 9 ne seront pas disponibles dans ce labo sans réexécution des tâches 1 et 2 de l’exercice 5 et de l’*attaque 3* sur le serveur WIN1 dans l’exercice 6. Vous pouvez ouvrir ces instructions dans un nouvel onglet de navigateur en sélectionnant ces liens :
+Les données de journal créées dans les exercices de labo du parcours d’apprentissage 9 ne seront pas disponibles dans ce labo sans réexécution des tâches préalables suivantes.
 
-**[Labo 09, exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
+<!--- **[Lab 09 Exercise 5](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex05_Attacks.html)**
 
-**[Labo 09, exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)**
+**[Lab 09 Exercise 6](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_09_Lab1_Ex06_Perform_Attacks.html)** --->
 
-### Temps estimé pour terminer ce labo : 40 minutes
+### Temps estimé pour terminer ce labo : 45 - 60 minutes
+
+### Tâche préalable 1 : se connecter à un serveur local
+
+Dans cette tâche, vous allez connecter un serveur local à votre abonnement Azure. Azure Arc a été préinstallé sur ce serveur. Le serveur sera utilisé dans les exercices suivants pour exécuter des attaques simulées que vous détecterez et étudierez ultérieurement dans Microsoft Sentinel.
+
+>**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez le nom de l’ordinateur virtuel dans l’onglet des références.
+
+1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.  
+
+Comme décrit ci-dessus, Azure Arc a été préinstallé sur la machine **WINServer**. Vous allez maintenant connecter cette machine à votre abonnement Azure.
+
+1. Sur la machine *WINServer*, sélectionnez l’icône de *recherche* et entrez **cmd**.
+
+1. Dans les résultats de la recherche, cliquez sur *Invite de commandes* avec le bouton droit, puis sélectionnez **Exécuter en tant qu’administrateur**.
+
+1. Dans la fenêtre d’invite de commandes, tapez la commande suivante : *N’appuyez pas sur Entrée* :
+
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
+
+1. Remplacez la **chaîne d’ID d’abonnement** par l’*ID d’abonnement* fourni par votre hébergeur de labo (*onglet Ressources). Veillez à conserver les guillemets.
+
+1. Appuyez sur **Entrée** pour exécuter la commande (cela peut prendre quelques minutes).
+
+    >**Remarque** : si vous voyez la fenêtre de sélection de navigateur *Comment voulez-vous ouvrir ceci ?*, sélectionnez **Microsoft Edge**. 
+
+1. Dans la boîte de dialogue *Connexion*, entrez l’**e-mail du locataire** et le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**. Attendez le message *Authentification terminée*, fermez l’onglet du navigateur et revenez à la fenêtre *Invite de commandes*.
+
+1. Une fois les commandes exécutées, laissez la fenêtre *Invite de commandes* ouverte et entrez la commande suivante pour vérifier que la connexion a réussi :
+
+    ```cmd
+    azcmagent show
+    ```
+
+1. Dans la sortie de la commande, vérifiez que l’*état de l’agent* est **Connecté**.
+
+## Tâche préalable 2 : connecter une machine Windows non-Azure
+
+Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine locale connectée à Azure Arc.  
+
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
+1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur ou administratrice avec le mot de passe : **Pa55w.rd**.  
+
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
+
+1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
+
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+
+1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
+
+1. Sélectionnez le **defenderWorkspace** Microsoft Sentinel.
+
+1. Dans le menu de navigation de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Configuration* et sélectionnez **Connecteurs de données**.
+
+1. Dans les *Connecteurs de données*, recherchez la solution **Événements de sécurité Windows via le connecteur AMA** et sélectionnez-la dans la liste.
+
+1. Sélectionnez *Événements de sécurité Windows via le connecteur AMA* dans le volet d’informations, puis choisissez **Ouvrir la page du connecteur**.
+
+    >**Remarque :** la solution *Événements de sécurité Windows* installe les connecteurs de données *Événements de sécurité Windows via AMA* et *Événements de sécurité via l’ancien agent*. Plus 2 classeurs, 20 règles analytiques et 43 requêtes de repérage.
+
+1. Dans la section *Configuration*, sous l’onglet *Instructions*, sélectionnez **Créer une règle de collecte de données**.
+
+1. Entrez **AZWINDCR** pour le nom de la règle, puis sélectionnez **Suivant : Ressources**.
+
+1. Développez votre *Abonnement* sous *Étendue* dans l’onglet *Ressources*.
+
+    >**Conseil :** Vous pouvez développer l’ensemble de la hiérarchie *Étendue* en sélectionnant « > » devant la colonne *Étendue*.
+
+1. Développez le groupe de ressources **defender-RG**, puis sélectionnez **WINServer**.
+
+1. Sélectionnez **Suivant : collecter** et laissez l’option *Tous les événements de sécurité* sélectionné.
+
+1. Sélectionnez **Suivant : Vérifier + créer**.
+
+1. Sélectionnez **Créer** une fois que *Validation réussie* s’affiche.
+
+### Tâche préalable 3 : attaque de contrôle et commande avec DNS
+
+1. Copiez et exécutez cette commande pour créer un script qui simulera une requête DNS sur un serveur C2 :
+
+    ```CommandPrompt
+    notepad c2.ps1
+    ```
+
+1. Sélectionnez **Oui** pour créer un fichier et copier le script PowerShell suivant dans *c2.ps1*.
+
+    >**Remarque :** le collage dans le fichier de machine virtuelle peut ne pas afficher la longueur complète du script. Vérifiez que le script correspond aux instructions contenues dans le fichier *c2.ps1*.
+
+    ```PowerShell
+    param(
+        [string]$Domain = "microsoft.com",
+        [string]$Subdomain = "subdomain",
+        [string]$Sub2domain = "sub2domain",
+        [string]$Sub3domain = "sub3domain",
+        [string]$QueryType = "TXT",
+        [int]$C2Interval = 8,
+        [int]$C2Jitter = 20,
+        [int]$RunTime = 240
+    )
+    $RunStart = Get-Date
+    $RunEnd = $RunStart.addminutes($RunTime)
+    $x2 = 1
+    $x3 = 1 
+    Do {
+        $TimeNow = Get-Date
+        Resolve-DnsName -type $QueryType $Subdomain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+        if ($x2 -eq 3 )
+        {
+            Resolve-DnsName -type $QueryType $Sub2domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x2 = 1
+        }
+        else
+        {
+            $x2 = $x2 + 1
+        }    
+        if ($x3 -eq 7 )
+        {
+            Resolve-DnsName -type $QueryType $Sub3domain".$(Get-Random -Minimum 1 -Maximum 999999)."$Domain -QuickTimeout
+            $x3 = 1
+        }
+        else
+        {
+            $x3 = $x3 + 1
+        }
+        $Jitter = ((Get-Random -Minimum -$C2Jitter -Maximum $C2Jitter) / 100 + 1) +$C2Interval
+        Start-Sleep -Seconds $Jitter
+    }
+    Until ($TimeNow -ge $RunEnd)
+    ```
+
+1. Dans le menu Bloc-notes, sélectionnez **Fichier**, puis **Enregistrer**. 
+
+1. Revenez à la fenêtre d’invite de commandes, tapez la commande suivante et appuyez sur Entrée. 
+
+    >**Remarque :** vous verrez les erreurs de résolution DNS. Ceci est normal.
+
+    ```CommandPrompt
+    Start PowerShell.exe -file c2.ps1
+    ```
+
+>**Important :** ne fermez pas ces fenêtres. Laissez ce script PowerShell s’exécuter en arrière-plan. La commande doit générer des entrées de journal pendant quelques heures. Vous pouvez passer à la tâche suivante et aux exercices suivants pendant l’exécution de ce script. Les données créées par cette tâche seront utilisées dans le labo Repérage des menaces ultérieurement. Ce processus ne crée pas de quantités substantielles de données ou de traitement.
 
 ### Tâche 1 : créer une requête de repérage
 
@@ -30,7 +174,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
@@ -116,7 +260,7 @@ Dans cette tâche, vous allez créer une requête de repérage, ajouter un signe
 
 1. Sélectionnez l’onglet **Signets** dans le volet central.
 
-1. Sélectionnez le signet que vous venez de créer dans la liste des résultats.
+1. Sélectionnez le signet que vous avez créé dans la liste des résultats.
 
 1. Dans le volet droit, faites défiler vers le bas et sélectionnez le bouton **Examiner**. **Conseil :** l’affichage du graphique d’examen peut prendre quelques minutes.
 
@@ -163,7 +307,7 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
     | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam
     ```
 
-1. Sélectionnez **Afficher les résultats de la requête >** pour vous assurer que votre requête ne contient pas d’erreurs.
+1. Sélectionnez **Afficher les résultats de la requête >** pour vous assurer que votre requête ne contient pas d’erreurs.
 
 1. Fermez la fenêtre *Journaux* en cliquant sur **X** en haut à droite de la fenêtre, puis sélectionnez **OK** pour ignorer les modifications. 
 
@@ -187,7 +331,7 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
 
 Dans cette tâche, vous allez effectuer un travail de recherche pour rechercher un serveur C2.
 
-<!--- >**Note:** The *Restore* operation incurs costs that can deplete your Azure Pass subscription credits. For that reason, you will not be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment. --->
+**Note :** l’opération *Restaurer* entraîne des coûts qui peuvent entamer vos crédits d’abonnement Azure. Pour cette raison, vous n’effectuerez pas l’opération de restauration dans ce labo. Toutefois, vous pouvez suivre les étapes ci-dessous pour effectuer l’opération de restauration dans votre propre environnement.
 
 1. Dans Microsoft Sentinel, sous *Général*, sélectionnez la page **Rechercher**.
 
@@ -251,7 +395,7 @@ Dans cette tâche, vous allez effectuer un travail de recherche pour rechercher 
 
 1. Passez en revue les résultats retournés.
 
-1. En fonction des résultats, déterminez s’il existe suffisamment de preuves fortes pour valider l’hypothèse. Si ce n’est pas le cas, fermez le repérage et marquez-le comme invalidé.
+1. En fonction des résultats, déterminez s’il existe suffisamment de preuves solides pour valider l’hypothèse. Si ce n’est pas le cas, fermez le repérage et marquez-le comme invalidé.
 
 1. Étapes alternatives :
     - Accédez à Microsoft Sentinel.

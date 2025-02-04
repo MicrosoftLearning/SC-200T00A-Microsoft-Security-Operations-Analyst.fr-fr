@@ -20,7 +20,7 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sentinel.
 
->**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions du *hub de contenu* requises ont été installées.
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
@@ -42,7 +42,7 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defender pour le cloud.
 
-   >**Important :** pour *Activer* la synchronisation bidirectionnelle, passez en revue le parcours d’apprentissage 5, l’exercice 1, la tâche 1, puis sélectionnez **Configuration** dans le menu de navigation *Microsoft Defender pour le cloud* pour vérifier que tous les abonnements Azure éligibles sont intégrés.
+   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
 
 1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section **Gestion du contenu**, puis sélectionnez **Hub de contenu**.
 
@@ -54,9 +54,15 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Activez la case à cocher du connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, puis sélectionnez **Ouvrir la page du connecteur**.
 
-1. Dans la section *Configuration*, sous l’onglet *Instructions*, **cochez** la case correspondant à l’abonnement « Pass Azure - Parrainage » et faites glisser l’option **État** vers la droite.
+1. Dans la section *Configuration*, **cochez** la case pour l’*abonnement MOC-XXXXXXXXXXXXX*, puis sélectionnez le lien **Se connecter**, ou faites glisser l’option **État** à droite.
 
-1. Le *statut* doit maintenant être **Connecté** et la « Synchronisation bidirectionnelle » doit être *Activée*.
+1. Pour activer la synchronisation bidirectionnelle, sélectionnez le lien **Activer Microsoft Defender pour tous les abonnements**.
+
+1. Dans la page *Microsoft Defender pour le cloud - Prise en main*, la case à cocher de l’*abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée, et le *plan Microsoft Defender* doit afficher *Activé - Partiel (30 jours d’essai restants)*.
+
+1. Cliquez sur le bouton **X (Fermer)** dans le coin supérieur droit pour fermer la page *Prise en main*. Vous devriez retourner sur la page de configuration de *Microsoft Defender pour le cloud*.
+
+1. L’*État* de l’*abonnement MOC-XXXXXXXXXXX* doit maintenant être **Connecté**, et la *Synchronisation bidirectionnelle* doit être *Activée*.
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
@@ -76,7 +82,7 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 1. Dans la zone  *Configuration*, sous l’onglet *Instructions*, faites défiler jusqu'à « 2. Connecter vos abonnements… », sélectionnez **Lancer l’Assistant Attribution Azure Policy>**.
 
-1. Dans l’onglet **Informations de base**, sous **Étendue**, sélectionnez le bouton en forme de points de suspension (…), puis sélectionnez votre abonnement « Pass Azure - Parrainage » dans la liste déroulante et cliquez sur **Sélectionner**.
+1. Dans l’onglet **Informations de base**, sélectionnez le bouton représentant des points de suspension (…) sous **Étendue**, puis choisissez votre abonnement *MOC Subscription-XXXXXXXXXXX* dans la liste déroulante et enfin, cliquez sur **Sélectionner**.
 
 1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 
