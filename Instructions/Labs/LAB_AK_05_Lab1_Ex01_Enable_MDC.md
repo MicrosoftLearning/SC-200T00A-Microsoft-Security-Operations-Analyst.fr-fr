@@ -72,7 +72,14 @@ Dans cette tâche, vous allez activer et configurer Microsoft Defender pour le 
 
 1. Passez en revue les ressources Azure qui sont désormais protégées avec les plans de Defender pour le cloud.
 
-    >**Important :** Si tous les plans Defender sont dans un état *Désactivé*, sélectionnez **Activer tous les plans**. Sélectionnez le *plan 1 à 200 $/mois de Microsoft Defender pour API*, puis **Enregistrer**. Sélectionnez **Enregistrer** en haut de la page et attendez que les notifications « *Les plans Defender (pour vos ressources) dans votre abonnement ont été enregistrés* » s’affichent.
+<!---
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans**. Select the *$200/month Microsoft Defender for APIs Plan 1* and then select **Save**. Select **Save** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.--->
+
+1. Dans la section *Gestion de la posture de sécurité cloud (CSPM)*, sélectionnez **Activé** pour le *CSPM Defender*.
+
+1. Dans la section *Protection de la charge de travail cloud (CWP)*, sélectionnez **Activé** pour le *plan 2 des serveurs*.
+
+1. Sélectionnez le bouton **Enregistrer** en haut de la page.
 
 1. Dans la zone Paramètres (en regard d’Enregistrer), sélectionnez l’onglet **Paramètres et surveillance**.
 
@@ -107,6 +114,8 @@ Dans cette tâche, vous allez activer et configurer Microsoft Defender pour le 
 1. Dans la barre de menu supérieure, sélectionnez **Abonnements Azure**. Vous accédez alors aux paramètres d’environnement dans lesquels vous pouvez choisir parmi les abonnements disponibles.
 
 1. Revenez à la page **Vue d’ensemble** et examinez la vignette **Posture de sécurité**. Vous pouvez voir votre *Niveau de sécurité* actuel, ainsi que le nombre de recommandations et de contrôles terminés. Sélectionner cette vignette vous redirige vers une vue d’exploration détaillée des abonnements.
+
+    >**Note :** le Niveau de sécurité et d’autres informations sur la vignette *Posture de sécurité* peuvent prendre jusqu’à 24 heures pour être calculés. Il se peut qu’ils ne soient pas entièrement renseignés pendant ce labo.
 
 1. Dans la vignette **Conformité réglementaire**, vous pouvez obtenir des informations sur votre posture de conformité en fonction de l’évaluation continue des environnements cloud Azure et cloud hybride. Cette vignette présente les normes suivantes : le benchmark de sécurité du cloud Microsoft et la norme de conformité réglementaire la plus basse. Pour afficher les données, nous devons d’abord ajouter des stratégies de sécurité.
 
