@@ -35,7 +35,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Ouvrez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse (<https://security.microsoft.com>).
+1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse <https://security.microsoft.com>.
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 

@@ -14,13 +14,47 @@ Les règles analytiques recherchent des événements ou des ensembles d'événem
 
 >**Important :** les exercices de laboratoire du parcours d’apprentissage #9 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
-### Temps estimé pour terminer ce labo : 30 minutes
-
-### Tâche 1 : créer une requête planifiée
-
-Dans cette tâche, vous créez une requête planifiée et vous la connectez au canal Teams que vous avez créé au cours de l’exercice précédent.
+### Temps estimé pour terminer ce labo : 45 minutes
 
 >**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
+<!--- >>**Important:** To sucessfully complete this task you wil need to rerun Task 3 of **[Lab 08 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.html)** to connect the Azure Activity data connector. --->
+
+Pour effectuer correctement cette tâche, vous devez effectuer les tâches préalables suivantes.
+
+### Tâche préalable : connecter le connecteur de données Activité Azure
+
+Dans cette tâche, vous allez connecter le connecteur de données *Activité Azure*.
+
+1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion du contenu*, puis sélectionnez **Hub de contenu**.
+
+1. Dans le *Hub de contenu*, recherchez la solution **Activité Azure** et sélectionnez-la dans la liste.
+
+1. Dans la page des détails de la solution *Activité Azure*, sélectionnez **Gérer**.
+
+    >**Remarque :** la solution *Activité Azure* installe le connecteur de données *Activité Azure*, 12 règles analytiques, 14 requêtes de repérage, 1 classeur.
+
+1. Sélectionnez le connecteur de données *Activité Azure*, puis **Ouvrir la page du connecteur**.
+
+1. Dans la zone  *Configuration*, sous l’onglet *Instructions*, faites défiler jusqu'à « 2. Connecter vos abonnements… », sélectionnez **Lancer l’Assistant Attribution Azure Policy>**.
+
+1. Dans l’onglet **Informations de base**, sélectionnez le bouton représentant des points de suspension (…) sous **Étendue**, puis choisissez votre abonnement *MOC Subscription-XXXXXXXXXXX* dans la liste déroulante et enfin, cliquez sur **Sélectionner**.
+
+1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
+
+1. Sélectionnez l’onglet **Correction** et cochez la case **Créer une tâche de correction**. Cette action applique la stratégie aux ressources Azure existantes.
+
+1. Sélectionnez le bouton **Vérifier + créer** pour passer en revue la configuration.
+
+1. Sélectionnez **Créer** pour terminer.
+
+1. Attendez que le connecteur de données *Activité Azure* affiche un état *Connecté* avant de continuer.
+
+### Tâche 1 : créer une règle de requête planifiée
+
+Dans cette tâche, vous créez une *règle de requête planifiée d’analytique Microsoft Sentinel*.
+
+>**Note :** les tâches suivantes fonctionnent actuellement mieux dans le portail Azure en version préliminaire : <https://preview.portal.azure.com/>.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
@@ -38,7 +72,7 @@ Dans cette tâche, vous créez une requête planifiée et vous la connectez au c
 
 1. Dans le panneau Résumé de la règle, vérifiez que vous recevez des données en examinant l’icône verte sous *Sources de données : activité Azure*.
 
-    >**Remarque :** si vous ne le voyez pas dans un état connecté, assurez-vous que vous avez terminé la tâche 3 du laboratoire du chemin d’apprentissage 6, exercice 1.
+    >**Note :** si vous ne le voyez pas dans un état connecté et que vous avez exécuté la *tâche préalable* ci-dessus, vous devrez peut-être attendre plus longtemps que le processus se termine.
 
 1. Sélectionnez **Créer la règle** pour continuer.
 
@@ -113,7 +147,7 @@ Dans cette tâche, vous testez votre nouvelle règle de requête planifiée.
 
 1. Dans la fenêtre *Bienvenue dans Azure Cloud Shell*, sélectionnez **PowerShell**.
 
-1. Sur la page *Prise en main*, sélectionnez **Monter le compte de stockage**, puis sélectionnez votre **Pass Azure - Sponsorship** à partir de l’élément de menu déroulant *Abonnement du compte de stockage* et sélectionnez le bouton **Appliquer**.
+1. Sur la page *Prise en main*, sélectionnez **Monter un compte de stockage**, puis sélectionnez votre **abonnement MOC-XXXXXXXXXXX** à partir de l’élément de menu déroulant *Abonnement du compte de stockage* et sélectionnez le bouton **Appliquer**.
 
     >**Important :** Ne sélectionnez pas l'option de bouton radio *Aucun compte de stockage requis*. Cela entraîne l’échec de la création de l’incident.
 
