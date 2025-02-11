@@ -56,29 +56,25 @@ Dans cette tâche, vous passez en revue la configuration de conformité régleme
 
     >**Remarque :** revenez ultérieurement à la *Conformité réglementaire* pour passer en revue les nouveaux contrôles et recommandations standard.
 
-### Tâche 2 : explorer la posture de sécurité et les recommandations
+### Tâche 2 : explorer les recommandations en matière de sécurité
 
-Dans cette tâche, vous passez en revue la gestion de la posture de sécurité cloud.  Le calcul des informations relatives au Niveau de sécurité peut prendre 24 heures. Il est recommandé d’effectuer à nouveau cette tâche dans 24 heures.
+Dans cette tâche, vous passez en revue les recommandations de la gestion de la posture de sécurité cloud.
 
-1. Dans *Sécurité du cloud*, sélectionnez **Posture de sécurité** parmi les éléments du menu de gauche.
-
-1. Le *Score de sécurité* est défini par défaut sur l’*Environnement Azure*.
-
-1. Sous l’onglet *Environnement*, sélectionnez le lien **Afficher les recommandations >**.
+1. Dans la section *Général*, sélectionnez **Recommandations** dans le menu de navigation.
 
 1. Sélectionnez **Ajouter un filtre**, puis **Type de ressource**.
 
 1. Cochez la case **Machines - Azure Arc**, puis sélectionnez le bouton **Appliquer**.
 
-    >**Remarque :** Si vous ne voyez pas **Machines - Azure Arc**, vérifiez que vous avez terminé le Parcours d’apprentissage 3 - Labo 1 - Exercice 1 Tâche 4.
+    >**Note :** si vous ne voyez pas répertorié **Machines - Azure Arc**, actualisez la page.
 
-1. Sélectionnez une recommandation où l’état n’est pas *« Terminé »*.
+1. Sélectionnez une recommandation où l’état n’est pas *Terminé*. Vous devrez peut-être faire défiler vers la droite pour voir la colonne *État*.
 
 1. Passez en revue la recommandation et, dans l’onglet **Prendre des mesures**, défilez vers le bas jusqu’à **Délégué**, puis sélectionnez **Attribuer un propriétaire et définir la date d’échéance**.
 
 1. Dans la fenêtre **Créer une affectation**, conservez la définition du *Type* sur *Defender pour le cloud* et développez les **Détails d’affectation**.
 
-1. Dans la zone *Adresse e-mail* `Set owner`, tapez votre e-mail d’administrateur. **Conseil :** copiez l’adresse e-mail à partir des instructions de l’onglet *Ressources*.
+1. Dans la zone *Adresse e-mail*, saisissez l’adresse e-mail de l’administrateur. **Conseil :** copiez l’adresse e-mail à partir des instructions de l’onglet *Ressources*.
 
 1. Explorez les options *Définir la période de correction* et *Définir les notifications par e-mail*, puis sélectionnez **Créer**.
 

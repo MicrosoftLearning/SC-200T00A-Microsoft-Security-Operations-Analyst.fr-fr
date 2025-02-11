@@ -10,7 +10,9 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod4_L1_Ex1.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Azure Sentinel. Vous êtes chargé d’effectuer une analyse des données de journal pour rechercher des activités malveillantes, afficher des visualisations et effectuer des recherches de menaces. Pour interroger les données du journal, vous utilisez le langage de requête Kusto (KQL).
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Sentinel. Vous êtes chargé d’effectuer une analyse des données de journal pour rechercher des activités malveillantes, afficher des visualisations et faire la chasse aux menaces. Pour interroger les données du journal, vous utilisez le langage de requête Kusto (KQL).
+
+>**Note :** selon l’*initiative pour un avenir sûr* (SFI) de Microsoft, toutes les informations pouvant être considérées comme des *informations d’identification personnelle* (PII), telles que des emplacements, des noms d’utilisateur, des adresses IP, des ID de ressource, etc.. ont été supprimées des tables de démonstration LA telles que *SigninLogs*. Cela peut produire des messages *Aucun résultat n’a été trouvé* pour certaines requêtes.
 
 >**Important :** ce labo implique d’entrer de nombreux scripts KQL dans Microsoft Sentinel. Les scripts ont été fournis dans un fichier au début de ce labo. Vous pouvez également les télécharger ici : <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
@@ -19,6 +21,8 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 ### Tâche 1 : accéder à la zone de test KQL
 
 Dans cette tâche, vous allez accéder à un environnement Log Analytics dans lequel vous pouvez vous entraîner à écrire des instructions KQL.
+
+  >**Note :** si vous recevez le message indiquant qu’*aucun résultat n’a été trouvé* pour la période par défaut, remplacez l’*intervalle de temps* par *7 derniers jours*.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur ou administratrice avec le mot de passe : **Pa55w.rd**.  
 
@@ -40,7 +44,6 @@ Dans cette tâche, vous allez accéder à un environnement Log Analytics dans l
 
 1. En regard du premier enregistrement, sélectionnez le bouton **>** pour développer les informations de la ligne.
 
-
 ### Tâche 2 : exécuter des instructions KQL simples
 
 Dans cette tâche, vous allez créer des instructions KQL simples.
@@ -59,7 +62,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     >**Remarque :** L’utilisation de l’opérateur *Search* sans tables spécifiques ou clauses éligibles est moins efficace que le filtrage de texte spécifique à une table ou à une colonne.
 
-1. L’instruction suivante illustre l’opérateur **search** dans les tables répertoriées dans la clause **In**. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre l’opérateur **search** dans les tables répertoriées dans la clause **In**. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     search in (SecurityEvent,App*) "new"
@@ -67,7 +70,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
 1. Changez l’*intervalle de temps* et définissez-le sur **Dernières 24 heures** dans la fenêtre de requête.
 
-1. Les instructions suivantes illustrent l’opérateur **Where**, qui filtre selon un prédicat spécifique. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. Les instructions suivantes illustrent l’opérateur **Where**, qui filtre selon un prédicat spécifique. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     >**Important :** vous devez sélectionner **Exécuter** après avoir entré chaque requête des blocs de code ci-dessous.
 
@@ -175,7 +178,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
 ### Tâche 3 : analyser les résultats dans KQL avec l’opérateur de synthèse
 
-Dans cette tâche, vous allez générer des instructions KQL pour agréger des données. L’opérateur de **Synthèse** regroupe les lignes en fonction du **regroupement** de colonnes et calcule les agrégations sur chaque groupe
+Dans cette tâche, vous allez créer des instructions KQL pour agréger des données. L’opérateur de **Synthèse** regroupe les lignes en fonction du **regroupement** de colonnes et calcule les agrégations sur chaque groupe
 
 1. L’instruction suivante illustre la fonction **count()**, qui renvoie le compte du groupe. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
 
@@ -213,7 +216,7 @@ Dans cette tâche, vous allez générer des instructions KQL pour agréger des d
     | where applicationCount >= threshold
     ```
 
-1. L’instruction suivante illustre la fonction **arg_max()**, qui renvoie une ou plusieurs expressions lorsque l’argument est maximisé. L’instruction suivante renvoie la ligne la plus récente de la table SecurityEvent pour l’ordinateur SQL10.NA.contosohotels.com. Le * dans la fonction arg_max demande toutes les colonnes de la ligne. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre la fonction **arg_max()**, qui renvoie une ou plusieurs expressions lorsque l’argument est maximisé. L’instruction suivante retourne la ligne la plus récente de la table SecurityEvent pour l’ordinateur SQL10.NA.contosohotels.com. Le * dans la fonction arg_max demande toutes les colonnes de la ligne. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
 
     ```KQL
     SecurityEvent  
@@ -231,7 +234,7 @@ Dans cette tâche, vous allez générer des instructions KQL pour agréger des d
 
 1. Les instructions suivantes illustrent l’importance de comprendre les résultats en fonction de l’ordre du *canal*. Dans la fenêtre Requête, entrez les requêtes suivantes et exécutez-les individuellement : 
 
-    1. La **Requête 1** aura des Comptes pour lesquels la dernière activité était une connexion. La table SecurityEvent sera d’abord résumée et renverra la ligne la plus récente pour chaque Compte. Seules les lignes avec l’ID d’événement égal à 4624 (connexion) sont retournées.
+    1. La **requête 1** a des comptes pour lesquels la dernière activité était une connexion. La table SecurityEvent sera d’abord résumée et renverra la ligne la plus récente pour chaque Compte. Seules les lignes avec l’ID d’événement égal à 4624 (connexion) sont retournées.
 
         ```KQL
         SecurityEvent  
@@ -239,7 +242,7 @@ Dans cette tâche, vous allez générer des instructions KQL pour agréger des d
         | where EventID == 4624  
         ```
 
-    1. La **Requête 2** aura la connexion la plus récente pour les comptes qui se sont connectés. La table SecurityEvent sera filtrée pour inclure uniquement EventID = 4624. Ces résultats sont résumés pour la ligne de connexion la plus récente par compte.
+    1. La **requête 2** a la connexion la plus récente pour les comptes qui se sont connectés. La table SecurityEvent est filtrée pour inclure uniquement EventID = 4624. Ces résultats sont résumés pour la ligne de connexion la plus récente par compte.
 
         ```KQL
         SecurityEvent  
@@ -295,9 +298,11 @@ Dans cette tâche, vous allez créer des visualisations à l’aide d’instruct
 
 Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables.
 
+>**Important :** les entrées de la table *SigninLogs* ont été supprimées. Certaines des requêtes suivantes *ne produisent pas actuellement de résultats* dans l’environnement de démonstration LA utilisé pour ce labo. Toutefois, les requêtes KQL présentent des concepts et des cas d’usage importants. Veuillez donc prendre le temps de les examiner.
+
 1. Changez l’**intervalle de temps** et définissez-le sur **Dernière heure** dans la fenêtre de requête. Cela limite nos résultats pour les instructions suivantes.
 
-1. L’instruction suivante illustre l’opérateur **Union**, qui prend deux tables ou plus et retourne toutes leurs lignes. Il est essentiel de comprendre comment les résultats sont passés et affectés par le caractère de barre verticale. Dans la fenêtre de requête, entrez les instructions suivantes et sélectionnez **Exécuter** pour chaque requête séparément afin d’afficher les résultats : 
+1. L’instruction suivante illustre l’opérateur **Union**, qui prend deux tables ou plus et retourne toutes leurs lignes. Il est essentiel de comprendre comment les résultats sont passés et affectés par le caractère de barre verticale. Dans la fenêtre Requête, entrez les instructions suivantes et sélectionnez **Exécuter** pour chaque requête séparément afin d’afficher les résultats :
 
     1. La **requête 1** retourne toutes les lignes de SecurityEvent et toutes les lignes de SigninLogs.
 
@@ -314,7 +319,7 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
         | summarize count() 
         ```
 
-    1. La **requête 3** retourne toutes les lignes de SecurityEvent et une (dernière) ligne de SigninLogs. La dernière ligne de SigninLogs aura le compte récapitulatif du nombre total de lignes.
+    1. La **requête 3** retourne toutes les lignes de SecurityEvent et une (dernière) ligne de SigninLogs. La dernière ligne de SigninLogs a le compte récapitulatif du nombre total de lignes.
 
         ```KQL
         SecurityEvent  
@@ -330,7 +335,7 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
     | summarize count() by Type
     ```
 
-1. L’instruction suivant illustre l’opérateur **Join**, qui fusionne les lignes de deux tables pour en former une nouvelle en mettant en correspondance les valeurs des colonnes spécifiées de chaque table. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivant illustre l’opérateur **Join**, qui fusionne les lignes de deux tables pour en former une nouvelle en mettant en correspondance les valeurs des colonnes spécifiées de chaque table. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     SecurityEvent  
@@ -386,7 +391,7 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
     | project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
     ```
 
->**Important :** les requêtes suivantes ne produisent actuellement pas de résultats dans l’environnement lademo utilisé pour ce labo. Les entrées de la table *SigninLogs* ont été supprimées. Toutefois, les requêtes KQL présentent des concepts et des cas d’usage importants. Veuillez donc prendre le temps de les examiner.
+    >**Important :** les requêtes suivantes *ne produisent actuellement pas de résultats* dans l’environnement de démonstration LA utilisé pour ce labo. Les entrées de la table *SigninLogs* ont été supprimées. Toutefois, les requêtes KQL présentent des concepts et des cas d’usage importants. Veuillez donc prendre le temps de les examiner.
 
 1. L’instruction suivante illustre l’utilisation de champs **dynamiques**, qui sont spéciaux, car ils peuvent prendre n’importe quelle valeur d’autres types de données. Dans cet exemple, le champ DeviceDetail de la table SigninLogs est de type **dynamique**. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
 
@@ -408,7 +413,7 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
 
     >**Important :** bien que le type dynamique apparaisse au format JSON, il peut contenir des valeurs qui ne sont pas représentées par le modèle JSON, car elles n’existent pas dans JSON. Par conséquent, lors de la sérialisation de valeurs dans une représentation JSON, les valeurs que JSON ne peut pas représenter sont sérialisées en valeurs de chaîne. 
 
-1. Les instructions suivantes illustrent les opérateurs pour manipuler le JSON stocké dans des champs de chaîne. De nombreux journaux envoient des données au format JSON, ce qui vous oblige à savoir comment transformer des données JSON en champs pouvant être interrogés. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. Les instructions suivantes illustrent les opérateurs pour manipuler le JSON stocké dans des champs de chaîne. De nombreux journaux envoient des données au format JSON, ce qui vous oblige à savoir comment transformer des données JSON en champs pouvant être interrogés. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     SigninLogs 
@@ -436,7 +441,7 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
     (where AuthDetails.authenticationMethod == "Password")
     ```
 
-1. Une **fonction** est une requête de journal qui peut être utilisée dans d’autres requêtes de journal avec le nom enregistré comme commande. Pour créer une **fonction**, après avoir exécuté votre requête, sélectionnez le bouton **Enregistrer**, puis **Enregistrer comme fonction** dans la liste déroulante. Entrez le nom de votre choix (par exemple : *PrivLogins*) dans la zone **Nom de la fonction**, puis entrez une **catégorie héritée** (par exemple : *Général*) et sélectionnez **Enregistrer**. La fonction sera disponible dans KQL à l’aide de l’alias de la fonction :
+1. Une **fonction** est une requête de journal qui peut être utilisée dans d’autres requêtes de journal avec le nom enregistré comme commande. Pour créer une **fonction**, après avoir exécuté votre requête, sélectionnez le bouton **Enregistrer**, puis **Enregistrer comme fonction** dans la liste déroulante. Entrez le nom de votre choix (par exemple : *PrivLogins*) dans la zone **Nom de la fonction**, puis entrez une **catégorie héritée** (par exemple : *Général*) et sélectionnez **Enregistrer**. La fonction est disponible dans KQL à l’aide de l’alias de la fonction :
 
     >**Remarque :** vous ne pourrez pas le faire dans l’environnement lademo utilisé pour ce labo, car votre compte dispose uniquement des autorisations Lecteur, mais il est important d’améliorer l’efficacité de vos requêtes. 
 
@@ -444,4 +449,4 @@ Dans cette tâche, vous allez utiliser des champs de chaîne structurés et non 
     PrivLogins  
     ```
 
-## Vous avez terminé le labo.
+## Vous avez terminé le labo
