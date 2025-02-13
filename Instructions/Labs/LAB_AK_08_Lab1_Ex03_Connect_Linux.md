@@ -98,9 +98,9 @@ Dans cette tâche, vous allez connecter un hôte Linux à Microsoft Sentinel av
 
 1. Dans la page de la solution *Syslog*, sélectionnez **Gérer**.
 
-    >**Remarque :** la solution *Syslog* installe deux connecteurs de données *Syslog*, 7 règles analytiques, 9 requêtes de repérage, 2 analyseurs et 21 classeurs.
+    >**Remarque :** la solution *Syslog* installe le connecteur de données *Syslog*, 5 règles analytiques, 9 requêtes de repérage et 1 classeur.
 
-1. Sélectionnez le connecteur de données *Syslog via l’agent hérité*, puis **Ouvrir la page du connecteur** dans le panneau d’informations du connecteur.
+1. Sélectionnez le connecteur de données *Syslog*, puis **Ouvrir la page du connecteur** dans le panneau d’informations du connecteur.
 
 1. Dans la section *Configuration*, développez **Installer l’agent sur une machine Linux non Azure**.
 
