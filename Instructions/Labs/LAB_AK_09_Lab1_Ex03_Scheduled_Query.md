@@ -32,13 +32,13 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 1. Dans la page des détails de la solution *Activité Azure*, sélectionnez **Gérer**.
 
-    >**Remarque :** la solution *Activité Azure* installe le connecteur de données *Activité Azure*, 12 règles analytiques, 14 requêtes de repérage, 1 classeur.
-
 1. Sélectionnez le connecteur de données *Activité Azure*, puis **Ouvrir la page du connecteur**.
 
 1. Dans la zone  *Configuration*, sous l’onglet *Instructions*, faites défiler jusqu'à « 2. Connecter vos abonnements… », sélectionnez **Lancer l’Assistant Attribution Azure Policy>**.
 
 1. Dans l’onglet **Informations de base**, sélectionnez le bouton représentant des points de suspension (…) sous **Étendue**, puis choisissez votre abonnement *MOC Subscription-XXXXXXXXXXX* dans la liste déroulante et enfin, cliquez sur **Sélectionner**.
+
+    >**Note :*** ne sélectionnez pas* de groupe de ressources facultatif.
 
 1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 

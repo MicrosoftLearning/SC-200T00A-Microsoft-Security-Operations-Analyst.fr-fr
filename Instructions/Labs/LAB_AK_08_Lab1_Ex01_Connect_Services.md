@@ -58,13 +58,15 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 1. Pour activer la synchronisation bidirectionnelle, sélectionnez le lien **Activer Microsoft Defender pour tous les abonnements**.
 
+    >**Remarque :** vous devrez peut-être faire défiler vers la droite pour afficher le lien.
+
 1. Dans la page *Microsoft Defender pour le cloud - Prise en main*, la case à cocher de l’*abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée, et le *plan Microsoft Defender* doit afficher *Activé - Partiel (30 jours d’essai restants)*.
 
 1. Cliquez sur le bouton **X (Fermer)** dans le coin supérieur droit pour fermer la page *Prise en main*. Vous devriez retourner sur la page de configuration de *Microsoft Defender pour le cloud*.
 
 1. L’*État* de l’*abonnement MOC-XXXXXXXXXXX* doit maintenant être **Connecté**, et la *Synchronisation bidirectionnelle* doit être *Activée*.
 
-    <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
+    >**Remarque :** il peut être nécessaire d’actualiser la page.
 
 ### Tâche 3 : connecter le connecteur de données Activité Azure
 
@@ -76,13 +78,15 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 1. Dans la page des détails de la solution *Activité Azure*, sélectionnez **Gérer**.
 
-    >**Remarque :** la solution *Activité Azure* installe le connecteur de données *Activité Azure*, 12 règles analytiques, 14 requêtes de repérage, 1 classeur.
+    >**Remarque :** la solution *Activité Azure* installe le connecteur de données *Activité Azure*, 13 règles analytiques, 14 requêtes de repérage, 1 classeur.
 
 1. Sélectionnez le connecteur de données *Activité Azure*, puis **Ouvrir la page du connecteur**.
 
 1. Dans la zone  *Configuration*, sous l’onglet *Instructions*, faites défiler jusqu'à « 2. Connecter vos abonnements… », sélectionnez **Lancer l’Assistant Attribution Azure Policy>**.
 
 1. Dans l’onglet **Informations de base**, sélectionnez le bouton représentant des points de suspension (…) sous **Étendue**, puis choisissez votre abonnement *MOC Subscription-XXXXXXXXXXX* dans la liste déroulante et enfin, cliquez sur **Sélectionner**.
+
+    >**Remarque :*** ne sélectionnez pas* de groupe de ressources facultatif.
 
 1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 
