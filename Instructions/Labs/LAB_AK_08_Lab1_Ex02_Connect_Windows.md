@@ -66,71 +66,51 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Sélectionnez **Créer**. Patientez quelques minutes pendant la création de la ressource.
 
-<!--- ### Task 2: Install Azure Arc on an On-Premises Server
+### Tâche 2 : connexion d'un serveur local à Azure
 
-In this task, you install Azure Arc on an on-premises server to make onboarding easier.
+Dans cette tâche, vous allez connecter un serveur local à votre abonnement Azure. Azure Arc a été préinstallé sur ce serveur. Le serveur sera utilisé dans les exercices suivants pour exécuter des attaques simulées que vous détecterez et étudierez ultérieurement dans Microsoft Sentinel.
 
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+>**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment.
 
-1. Log in to **WINServer** virtual machine as Administrator with the password: **Passw0rd!** if necessary.  
+1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.  
 
-1. Open the Microsoft Edge browser and navigate to the Azure portal at <https://portal.azure.com>.
+    >**Remarque :** comme décrit ci-dessus, Azure Arc a été préinstallé sur la machine **WINServer**. Vous allez maintenant connecter cette machine à votre abonnement Azure.
 
-1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
+1. Sur la machine *WINServer*, sélectionnez l’icône de *recherche* et entrez **cmd**.
 
-1. In the **Enter password** dialog box, copy, and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
+1. Dans les résultats de la recherche, cliquez sur *Invite de commandes* avec le bouton droit, puis sélectionnez **Exécuter en tant qu’administrateur**.
 
-1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
+1. Dans la fenêtre d’invite de commandes, tapez la commande suivante : *N’appuyez pas sur Entrée* :
 
-1. In the navigation pane under **Azure Arc resources** select **Machines**
+    ```cmd
+    azcmagent connect -g "defender-RG" -l "EastUS" -s "Subscription ID string"
+    ```
 
-1. Select **+ Add/Create**, then select **Add a machine**.
+1. Remplacez la **chaîne d’ID d’abonnement** par l’*ID d’abonnement* fourni par votre hébergeur de labo (*onglet Ressources). Veillez à conserver les guillemets.
 
-1. Select **Generate script** from the "Add a single server" section.
+1. Appuyez sur **Entrée** pour exécuter la commande (cela peut prendre quelques minutes).
 
-1. In the *Add a server with Azure Arc* page, select the Resource group you created earlier under *Project details*. **Hint:** *RG-Defender*
+    >**Remarque** : si vous voyez la fenêtre de sélection de navigateur *Comment voulez-vous ouvrir ceci ?*, sélectionnez **Microsoft Edge**. 
 
-    >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
+1. Dans la boîte de dialogue *Connexion*, entrez l’**e-mail du locataire** et le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**. Attendez le message *Authentification terminée*, fermez l’onglet du navigateur et revenez à la fenêtre *Invite de commandes*.
 
-1. For *Region*, select **(US) East Us** from the drop-down list.
+1. Une fois les commandes exécutées, laissez la fenêtre *Invite de commandes* ouverte et entrez la commande suivante pour vérifier que la connexion a réussi :
 
-1. Review the *Server details* and *Connectivity method* options. Keep the default values and select **Next** to get to the Tags tab.
+    ```cmd
+    azcmagent show
+    ```
 
-1. Review the default available tags. Select **Next** to get to the Download and run script tab.
+1. Dans la sortie de la commande, vérifiez que l’*état de l’agent* est **Connecté**.
 
-1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
-
-1. Right-click the Windows Start button and select **Windows PowerShell (Admin)**.
-
-1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
-
-1. Enter: cd C:\Users\Administrator\Downloads
-
-    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
-
-1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
-
-1. Enter **A** for Yes to All and press enter.
-
-1. Type *.\OnboardingScript.ps1* and press enter.  
-
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
-
-1. Enter **R** to Run once and press enter (this may take a couple minutes).
-
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
-
-1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
-
-1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
-
-    >**Note:** This could take a couple of minutes. --->
-
-### Tâche 2 : connecter une machine virtuelle Windows Azure
+### Tâche 3 : connecter une machine virtuelle Windows Azure
 
 Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à Microsoft Sentinel.
 
->**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+
+1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur ou administratrice avec le mot de passe : **Pa55w.rd**.  
+
+1. Si nécessaire, ouvrez le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>, puis connectez-vous avec les informations d’identification fournies.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
@@ -146,15 +126,17 @@ Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à M
 
 1. Sélectionnez le connecteur de données *Événements de sécurité Windows via AMA*, puis sélectionnez la page **Ouvrir le connecteur** dans le panneau d’informations du connecteur.
 
-1. Dans la section *Configuration*, sous l’onglet *Instructions*, sélectionnez **Créer une règle de collecte de données**.
+1. Dans la section *Configuration*, sélectionnez **Créer une règle de collecte de données**.
 
 1. Entrez **AZWINDCR** pour le nom de la règle, puis sélectionnez **Suivant : Ressources**.
 
-1. Sélectionnez **+ Ajouter une ou plusieurs ressources** pour sélectionner la machine virtuelle que nous avons créée.
+1. Développez votre *Abonnement MOC* sous *Étendue* dans l’onglet *Ressources*.
 
-1. Développez **RG-AZWIN01**, puis sélectionnez **AZWIN01**.
+    >**Conseil :** Vous pouvez développer l’ensemble de la hiérarchie *Étendue* en sélectionnant « > » devant la colonne *Étendue*.
 
-1. Sélectionnez **Appliquer**, puis **Suivant : Collecter**.
+1. Développez **defender-RG**, puis sélectionnez **AZWIN01**.
+
+1. Sélectionnez **Suivant : Collecter**.
 
 1. Passez en revue l’option de collecte des différents événements de sécurité. Conservez *tous les événements de sécurité*, puis sélectionnez **Suivant : Vérifier + créer**.
 
@@ -170,17 +152,15 @@ Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine virtuel
 
 1. Vérifiez que vous êtes dans le connecteur de données *Événements de sécurité Windows via AMA* dans votre espace de travail Microsoft Sentinel.
 
-1. Sous l’onglet **Instructions**, dans la section *Configuration*, modifiez la *règle de collecte de données* **AZWINDCR** en sélectionnant l’icône en forme de *crayon*.
+1. Sous l’onglet *Configuration*, modifiez la *règle de collecte de données* **AZWINDCR** en sélectionnant l’icône en forme de *crayon*.
 
-1. Sélectionnez **Suivant : Ressources**et développez votre *Abonnement* sous *Étendue* sous l’onglet *Ressources* .
+1. Sélectionnez **Suivant : Ressources** et développez votre *Abonnement MOC* sous *Étendue* sous l’onglet *Ressources*.
 
     >**Conseil :** Vous pouvez développer l’ensemble de la hiérarchie *Étendue* en sélectionnant « > » devant la colonne *Étendue*.
 
-1. Développez **RG-Defender** (ou le groupe de ressources que vous avez créé), puis sélectionnez **WINServer**.
+1. Développez **defender-RG** (ou le groupe de ressources que vous avez créé), puis sélectionnez **WINServer**.
 
     >**Important :** si vous ne voyez pas WINServer, reportez-vous au Parcours d’apprentissage 3, Exercice 1, Tâche 4 où vous avez installé Azure Arc sur ce serveur.
-
-1. Sélectionnez **Appliquer**.
 
 1. Sélectionnez **Suivant : Collecter**, puis **Suivant : Vérifier + créer**.
 

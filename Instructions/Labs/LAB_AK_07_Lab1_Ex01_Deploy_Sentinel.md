@@ -48,7 +48,11 @@ Créez un espace de travail Log Analytics, y compris l’option de région. En s
 
 Déployez Microsoft Sentinel dans l’espace de travail.
 
-1. Une fois le déploiement de l’espace de travail terminé, sélectionnez **Actualiser** pour afficher le nouvel espace de travail.
+1. Une fois le déploiement de l’espace de travail terminé, sélectionnez **Accueil** dans le menu « navigation » de Microsoft Azure.
+
+1. Vous devez voir **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
+
+1. Sélectionnez **+ Créer** dans le menu.
 
 1. Sélectionnez l’espace de travail auquel vous souhaitez ajouter Sentinel (créé lors de la tâche 1).
 
@@ -62,7 +66,7 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 1. Développez la section *Paramètres* dans le menu de navigation, puis sélectionnez **Utilisation et coûts estimés**.
 
-1. Sélectionnez **Rétention des données**.
+1. Sélectionnez **Conservation des données** dans le menu.
 
 1. Modifiez la période de rétention en la portant à **180 jours**.
 
@@ -90,6 +94,10 @@ Dans cette tâche, vous allez créer une watchlist dans Microsoft Sentinel.
 
 1. Fermez le Bloc-notes.
 
+1. Sélectionnez **Accueil** dans le menu « navigation » de Microsoft Azure.
+
+1. Vous devez voir **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
+
 1. Dans Microsoft Sentinel, sélectionnez l’option **Watchlist** sous la zone Configuration.
 
 1. Sélectionnez **+ Nouveau** dans la barre de commandes.
@@ -114,6 +122,8 @@ Dans cette tâche, vous allez créer une watchlist dans Microsoft Sentinel.
 
 1. L’écran revient à la page Watchlist.
 
+1. Sélectionnez **Actualiser** dans le menu pour afficher la nouvelle liste de suivi.
+
 1. Sélectionnez la watchlist *HighValueHosts* et, dans le volet droit, sélectionnez **Voir dans les journaux**.
 
     >**Important :** l’affichage de la watchlist peut prendre jusqu’à dix minutes. **Passez à la tâche suivante et exécutez cette commande sur le labo suivant**.
@@ -130,21 +140,29 @@ Dans cette tâche, vous allez créer un indicateur dans Microsoft Sentinel.
 
 1. Sélectionnez **+ Ajouter** dans la barre de commandes.
 
-1. Passez en revue les différents types d’indicateurs disponibles dans la liste déroulante *Types*. Sélectionnez ensuite **domain-name**. 
+1. Sélectionnez l’**objet de veille**.
+
+1. Dans la liste déroulante *Type d’objet*, sélectionnez **Indicateur**.
+
+1. Sélectionnez la liste déroulante **+ Nouvel observable**, puis sélectionnez **Nom de domaine**.
 
 1. Dans Domaine, entrez le nom de domaine, par exemple : *contoso.com*.
 
-1. Pour les *types de menaces*, sélectionnez **+ Ajouter** et saisissez **malicious-activity**. Sélectionnez **Appliquer**.
+1. Pour le champ **Nom**, entrez la même valeur que celle utilisée pour le domaine.
 
-1. Entrez une **Description**.
-
-1. Pour le **nom**, entrez la même valeur que celle utilisée pour le domaine.
+1. Dans les *types d’indicateurs*, sélectionnez **malicious-activity**.
 
 1. Définissez la valeur du champ **Valide à partir du** sur la date du jour.
 
-1. Sélectionnez **Appliquer**.
+1. Faites défiler jusqu’à la **description** et entrez *Ce domaine est connu pour être malveillant*.
 
-1. Sélectionnez l’option **Journaux** dans la zone Général. Vous pouvez désactiver l’option « Toujours afficher les requêtes » et fermer la fenêtre *Requêtes* pour exécuter les instructions KQL.
+1. Sélectionnez **Ajouter**.
+
+1. Sélectionnez **Journaux** dans la section *Général* du menu de navigation *Sentinel*. Vous pouvez désactiver l’option « Toujours afficher les requêtes » et fermer la fenêtre *Requêtes* pour exécuter les instructions KQL.
+
+    >**Remarque :** dans l’onglet *Nouvelle requête 1* par défaut, la requête **_GetWatchList('HighValueHosts')** doit toujours être présente et génère désormais des résultats si elle est exécutée.
+
+1. Sélectionnez le symbole *+* pour créer un onglet de requête.
 
 1. Exécutez la commande KQL suivante.
 
@@ -154,7 +172,7 @@ Dans cette tâche, vous allez créer un indicateur dans Microsoft Sentinel.
 
     >**Remarque :** l’affichage de l’indicateur peut prendre jusqu’à cinq minutes.
 
-1. Faites défiler les résultats vers la droite jusqu’à la colonne DomainName. Vous pouvez également exécuter l’instruction KQL suivante pour afficher simplement la colonne DomainName. 
+1. Faites défiler les résultats vers la droite jusqu’à la colonne DomainName. Vous pouvez également exécuter l’instruction KQL suivante pour afficher simplement la colonne DomainName.
 
     ```KQL
     ThreatIntelligenceIndicator 
@@ -171,11 +189,15 @@ Dans cette tâche, vous allez modifier la période de rétention de la table Sec
 
 1. Dans l’espace de travail Log Analytics, sélectionnez l’option **Tables** dans la zone *Paramètres*.
 
-1. Recherchez et sélectionnez la table **SecurityEvent**, puis sélectionnez le bouton en forme de points de suspension (…).
+1. Recherchez et sélectionnez la table **SecurityEvent**, puis sélectionnez le lien en forme de points de suspension (…).
+
+    >**Remarque :** vous devrez peut-être faire défiler vers la droite pour afficher le lien.
 
 1. Sélectionnez **Gérer la table**.
 
-1. Sélectionnez **180 jours** pour la *période totale de rétention*. Notez que la *période d’archivage* n’est que de 150 jours, car elle utilise 30 jours de la *rétention interactive* (par défaut).
+1. Remplacez la *période de rétention interactive* par **90 jours**.
+
+1. Rétablissez la *période de rétention totale* de **180 jours** (si nécessaire). Notez que la *période d’archivage* est maintenant définie sur *90 jours*, car *Azure Monitor* traite automatiquement les 90 jours restants de rétention totale comme une rétention à faible coût et à long terme.
 
 1. Sélectionnez **Enregistrer** pour appliquer la modification.
 
