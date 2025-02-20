@@ -113,7 +113,7 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
     |Nom de la règle d'automatisation|Démarrage de RegKey|
     |Déclencheur|Lorsqu’un incident est créé|
     |Actions |Exécuter des playbooks|
-    |playbook |PostMessageTeams-OnIncident|
+    |playbook |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
     >**Remarque :** vous avez déjà attribué des autorisations au playbook. Il sera donc disponible.
 

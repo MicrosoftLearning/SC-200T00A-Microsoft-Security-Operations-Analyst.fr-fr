@@ -24,7 +24,7 @@ Dans cette tâche, vous allez activer une règle de sécurité Microsoft.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
 
-1. Dans le navigateur Microsoft Edge, accédez au Portail Azure sur (<https://portal.azure.com>).
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse <https://portal.azure.com>.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 

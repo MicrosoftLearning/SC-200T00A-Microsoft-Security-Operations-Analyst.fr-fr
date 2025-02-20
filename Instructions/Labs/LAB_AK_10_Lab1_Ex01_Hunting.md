@@ -102,6 +102,14 @@ Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine locale 
 
 ### Tâche préalable 3 : attaque de contrôle et commande avec DNS
 
+>**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez le nom de l’ordinateur virtuel dans l’onglet des références.
+
+1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.
+
+1. Sur la machine *WINServer*, sélectionnez l’icône de *recherche* et entrez **cmd**.
+
+1. Dans les résultats de la recherche, cliquez sur *Invite de commandes* avec le bouton droit, puis sélectionnez **Exécuter en tant qu’administrateur**.
+
 1. Copiez et exécutez cette commande pour créer un script qui simulera une requête DNS sur un serveur C2 :
 
     ```CommandPrompt
