@@ -40,7 +40,7 @@ Dans cette tâche, vous allez accéder à un environnement Log Analytics dans l
 
 1. Notez que vous avez atteint le nombre maximal de résultats (30 000).
 
-1. Changez l’**intervalle de temps* et définissez-le sur *30 dernières minutes** dans la fenêtre de requête.
+1. Modifiez l’*intervalle de temps* et définissez-le sur **7 derniers jours** dans la fenêtre de requête.
 
 1. En regard du premier enregistrement, sélectionnez le bouton **>** pour développer les informations de la ligne.
 
@@ -76,26 +76,26 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     ```
 
     >**Remarque :** l’*intervalle de temps* affiche désormais *Défini dans la requête*, car nous filtrons avec la colonne TimeGenerated.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4624
+    | where TimeGenerated > ago(7d) and EventID == 4624
     ```
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | where AccountType =~ "user"
     ```
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID in (4624, 4625)
+    | where TimeGenerated > ago(7d) and EventID in (4624, 4625)
  
     ```
 
@@ -117,7 +117,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
       @"NT AUTHORITY\SYSTEM"
     ];
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where Account in (suspiciousAccounts)
     ```
 
@@ -139,7 +139,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     ```
@@ -148,7 +148,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc
@@ -158,7 +158,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc 
@@ -169,7 +169,7 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) 
+    | where TimeGenerated > ago(7d) 
     | where ProcessName != "" and Process != "" 
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process)) 
     | order by StartDir desc, Process asc 
@@ -184,7 +184,7 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4688  
+    | where TimeGenerated > ago(7d) and EventID == 4688  
     | summarize count() by Process, Computer
     ```
 
@@ -192,7 +192,7 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h) and EventID == 4624  
+    | where TimeGenerated > ago(7d) and EventID == 4624  
     | summarize cnt=count() by AccountType, Computer
     ```
 
@@ -200,7 +200,7 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize dcount(IpAddress)
     ```
 
@@ -256,7 +256,7 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | summarize make_list(Account) by Computer
     ```
@@ -265,7 +265,7 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | where EventID == 4624  
     | summarize make_set(Account) by Computer
     ```
@@ -279,7 +279,7 @@ Dans cette tâche, vous allez créer des visualisations à l’aide d’instruct
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize count() by Account
     | render barchart
     ```
@@ -288,7 +288,7 @@ Dans cette tâche, vous allez créer des visualisations à l’aide d’instruct
 
     ```KQL
     SecurityEvent  
-    | where TimeGenerated > ago(1h)
+    | where TimeGenerated > ago(7d)
     | summarize count() by bin(TimeGenerated, 1m)
     | render timechart
     ```
@@ -300,7 +300,7 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
 
 >**Important :** les entrées de la table *SigninLogs* ont été supprimées. Certaines des requêtes suivantes *ne produisent pas actuellement de résultats* dans l’environnement de démonstration LA utilisé pour ce labo. Toutefois, les requêtes KQL présentent des concepts et des cas d’usage importants. Veuillez donc prendre le temps de les examiner.
 
-1. Changez l’**intervalle de temps** et définissez-le sur **Dernière heure** dans la fenêtre de requête. Cela limite nos résultats pour les instructions suivantes.
+1. Modifiez l’**intervalle de temps** et définissez-le sur **7 derniers jours** dans la fenêtre de requête. Cela limite nos résultats pour les instructions suivantes.
 
 1. L’instruction suivante illustre l’opérateur **Union**, qui prend deux tables ou plus et retourne toutes leurs lignes. Il est essentiel de comprendre comment les résultats sont passés et affectés par le caractère de barre verticale. Dans la fenêtre Requête, entrez les instructions suivantes et sélectionnez **Exécuter** pour chaque requête séparément afin d’afficher les résultats :
 
@@ -352,7 +352,7 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
 
     >**Important** : la première table spécifiée dans la jointure est considérée comme la table de gauche. La table après l’opérateur **Join** est la table de droite. Lorsque vous utilisez des colonnes de tables, le nom $left.Column et le nom $right.Column permettent de distinguer les colonnes auxquelles les tables font référence. L’opérateur **Join** prend en charge une gamme complète de types : flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, rightsemi.
 
-1. Changez l’**intervalle de temps** et définissez-le sur **Dernières 24 heures** dans la fenêtre de requête.
+1. Vous pouvez laisser l’**intervalle de temps** défini sur **7 derniers jours** dans la fenêtre de requête.
 
 ### Tâche 6 : utiliser des données de chaîne dans KQL
 
