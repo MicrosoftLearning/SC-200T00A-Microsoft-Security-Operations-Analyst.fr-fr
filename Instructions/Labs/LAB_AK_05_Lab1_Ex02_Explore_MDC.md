@@ -34,6 +34,8 @@ Dans cette tâche, vous passez en revue la configuration de conformité régleme
 
 1. Dans *Sécurité du cloud*, sélectionnez **Conformité réglementaire** parmi les éléments du menu de gauche.
 
+    >**Note :** vous devrez peut-être actualiser cette page si vous ne voyez pas les onglets de la *barre d’outils*.
+
 1. Sélectionnez **Gérer les normes de conformité** sur la barre d’outils.
 
 1. Sélectionnez votre abonnement.
@@ -110,4 +112,4 @@ Dans cette tâche, vous chargez des exemples d’alertes de sécurité et passez
 
     - Passez en revue les informations *Entreprendre une action*. Notez que les sections disponibles pour entreprendre des actions dépendent du type d’alerte : inspecter le contexte de ressource, atténuer la menace, empêcher les futures attaques, déclencher une réponse automatique et supprimer des alertes similaires.
 
-## Vous avez terminé le labo.
+## Vous avez terminé le labo

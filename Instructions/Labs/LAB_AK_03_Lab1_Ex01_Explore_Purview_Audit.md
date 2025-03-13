@@ -20,7 +20,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Ouvrez le navigateur Microsoft Edge.
 
-1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse <https://security.microsoft.com>.
+1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender XDR à l’adresse (<https://security.microsoft.com>).
 
 1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
@@ -30,9 +30,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 1. Dans le volet **Autres ressources**, sélectionnez le bouton **Ouvrir** sur la vignette *Portail Microsoft Purview*.
 
-1. Lorsque le portail Microsoft Purview s’ouvre, un message s’affiche indiquant que *le portail de conformité est supprimé*. Ce message expirera et vous redirigera vers le nouveau *portail Microsoft Purview*.
-
-1. Dans le message *Bienvenue sur le nouveau portail Microsoft Purview*, sélectionnez l’option pour accepter les conditions de divulgation de flux de données et la déclaration de confidentialité, puis sélectionnez **Essayer maintenant**.
+1. Dès l’ouverture du portail Microsoft Purview, un message à propos du *nouveau portail Microsoft Purview s’affiche*. Sélectionnez l’option permettant d’accepter les conditions de divulgation de flux de données et la déclaration de confidentialité, puis sélectionnez **Essayer maintenant**.
 
     ![Capture d’écran de l’écran Bienvenue sur le nouveau portail de conformité Microsoft Purview.](../Media/welcome-purview-portal.png)
 
