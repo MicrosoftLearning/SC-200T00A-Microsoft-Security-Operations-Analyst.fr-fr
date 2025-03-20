@@ -8,41 +8,37 @@ Ce document est destiné aux présentateurs qui se préparent à enseigner pour 
 
 ## Conditions préalables à la démonstration
 
-Les labos de ce cours nécessitent à la fois un locataire sous licence Microsoft 365 E5 ainsi qu’un abonnement Azure.
+Les labos de ce cours nécessitent un locataire sous licence Microsoft 365 E5 avec une licence Microsoft Defender pour point de terminaison P2 et un abonnement Azure.
 
-* Vous pouvez demander des Pass Azure de Microsoft Learning pour vous.
-* Assurez-vous que vous demandez ces pass au moins deux semaines avant d’effectuer les démonstrations. Après avoir reçu le pass, vous devez l’activer. 
-* Le Pass Azure fonctionne de la même manière qu’un Abonnement d’essai Microsoft Azure accessible au public. Cela signifie qu’il existe des limitations à ce que vous pouvez faire avec ce pass.
+* Comme le cours SC-200 Analyste des opérations de sécurité Microsoft, ces démonstrations sont conçues pour être exécutées dans un environnement d’hébergement de labo autorisé.
 * Les instructions de labo sont dans le [référentiel GitHub de Microsoft Learning SC-200](https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Instructions/VTD_Demos/).
-* Vérifiez que le nouveau navigateur Microsoft Edge est installé sur l’ordinateur que vous utiliserez pour les démonstrations.
+* Vérifiez que le nouveau navigateur Microsoft Edge est installé sur l’ordinateur que vous utilisez pour les démonstrations.
 
-## Activer le Pass Azure
-
->**Remarque :** certaines versions de démonstration nécessitent un abonnement Azure connecté à un locataire Microsoft 365 E5. Vous pouvez utiliser votre propre abonnement Azure et votre propre locataire Microsoft 365 E5 si les Pass Azure ne sont pas disponibles. Visitez le site web du [Programme pour les développeurs Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program/) pour demander à en faire partie et configurer un abonnement gratuit de développeur Microsoft 365 E5.
+>**Note :** comme indiqué précédemment, certaines démonstrations nécessitent un abonnement Azure connecté à un locataire Microsoft 365 E5. Vous pouvez utiliser votre propre abonnement Azure et votre propre locataire Microsoft 365 E5. Visitez le site web du [Programme pour les développeurs Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program/) pour demander à en faire partie et configurer un abonnement gratuit de développeur Microsoft 365 E5.
 
 ## Déployer Defender pour point de terminaison
 
 ### Obtenir vos informations d’identification Microsoft 365
 
-Une fois que vous avez lancé le labo, un locataire d’essai gratuit sera mis à votre disposition dans l’environnement de labo virtuel Microsoft. Ce locataire reçoit automatiquement un nom d’utilisateur et un mot de passe uniques. Vous devez récupérer ce nom d’utilisateur et ce mot de passe pour pouvoir vous connecter à Azure et à Microsoft 365 dans l’environnement de labo virtuel Microsoft.
+Une fois que vous avez lancé le labo hébergé, un locataire d’essai gratuit est mis à votre disposition dans l’environnement de labo virtuel Microsoft. Ce locataire dispose automatiquement d’un nom d’utilisateur unique et d’un mot de passe. Vous devez récupérer ce nom d’utilisateur et ce mot de passe pour pouvoir vous connecter à Azure et à Microsoft 365 dans l’environnement de labo virtuel Microsoft.
 
-Étant donné que ce cours peut être proposé par des partenaires de formation à l’aide de l’un de plusieurs fournisseurs d’hébergement de labo autorisés, les étapes réelles impliquées pour récupérer l’ID de locataire associé à votre locataire peuvent varier en fonction du fournisseur d’hébergement de labo. Par conséquent, votre instructeur vous fournira les instructions nécessaires sur la façon de récupérer ces informations pour votre cours. Les informations dont vous aurez besoin pour le cours sont les suivantes :
+Étant donné que ce cours peut être proposé par des partenaires de formation à l’aide de l’un de plusieurs fournisseurs d’hébergement de labo autorisés, les étapes réelles impliquées pour récupérer l’ID de locataire associé à votre locataire peuvent varier en fonction du fournisseur d’hébergement de labo. Par conséquent, votre instructeur vous fournit les instructions nécessaires sur la façon de récupérer ces informations pour votre cours. Les informations dont vous aurez besoin pour le cours sont les suivantes :
 
-    - **ID de suffixe du locataire.** Cet ID concerne les comptes onmicrosoft.com que vous utiliserez pour vous connecter à Microsoft 365 pendant les labos. Il est au format **{username}@M365xZZZZZZ.onmicrosoft.com**, où ZZZZZZ est votre ID de suffixe de locataire unique, fourni par votre fournisseur d’hébergement de labo. Enregistrez cette valeur ZZZZZZ  pour une utilisation ultérieure. Lorsque l’une des étapes du labo vous dirige vers les portails Microsoft 365, vous devez entrer la valeur ZZZZZZ que vous avez obtenue ici.
-    - **Mot de passe du locataire.** Il s’agit du mot de passe du compte d’administrateur communiqué par votre fournisseur d’hébergement de labo.
-    
+-**ID de suffixe du locataire.** Cet ID concerne les comptes onmicrosoft.com que vous utilisez pour vous connecter à Microsoft 365 pendant les labos. Il est au format **{username}@M365xZZZZZZ.onmicrosoft.com**, où ZZZZZZ est votre ID de suffixe de locataire unique, fourni par votre fournisseur d’hébergement de labo. Enregistrez cette valeur ZZZZZZ  pour une utilisation ultérieure. Lorsque l’une des étapes du labo vous dirige vers les portails Microsoft 365, vous devez entrer la valeur ZZZZZZ que vous avez obtenue ici.
+
+-**Mot de passe du locataire.** Il s’agit du mot de passe du compte d’administrateur communiqué par votre fournisseur d’hébergement de labo.
 
 ### Initialiser Microsoft Defender pour point de terminaison
 
-Dans cette tâche, vous allez effectuer l’initialisation de Microsoft Defender pour point de terminaison.
+Dans cette tâche, vous effectuez l’initialisation de Microsoft Defender pour point de terminaison.
 
-1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle WIN1 en tant qu'administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Dans le navigateur Edge, accédez au portail Microsoft Defender à l’adresse https://security.microsoft.com).
+1. Dans le navigateur Microsoft Edge, accédez au portail Microsoft Defender à l’adresse (https://security.microsoft.com)).
 
-1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de messagerie du locataire associé au nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
+1. Dans la boîte de dialogue **Se connecter** , copiez et collez le compte de messagerie du locataire pour le nom d’utilisateur administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrez le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
 
 Dans le portail **Microsoft Defender**, dans le menu de navigation, sélectionnez **Accueil** à gauche.
 
@@ -58,7 +54,7 @@ Dans le portail **Microsoft Defender**, dans le menu de navigation, sélectionne
 
 1. Une fois l’initialisation de l’espace de travail terminée, la page du portail **Accueil** affiche une bannière **Obtenir votre SIEM et XDR en un seul endroit**. Dans **Paramètres**, les paramètres généraux de Microsoft Defender XDR pour le compte, les notifications par e-mail, les **fonctionnalités en préversion**, les paramètres du service d’alerte, les autorisations et les rôles, ainsi que l’API de diffusion en continu sont désormais activés.
 
-1. Une fois le nouvel espace créé, les paramètres généraux de Microsoft 365 Defender s’affichent, vous permettant de définir les options relatives au compte, aux notifications par e-mail, aux paramètres du service d’alerte, aux autorisations et aux rôles, ainsi qu’à l’API de diffusion en continu. L’option **Fonctionnalités en préversion** est également activée.
+1. Une fois le nouvel espace créé, les paramètres généraux de Microsoft 365 Defender s’affichent, vous permettant de définir les options relatives au compte, aux notifications par e-mail, aux paramètres du service d’alerte, aux autorisations et aux rôles, ainsi qu’à l’API de diffusion en continu. Vous verrez également que l’option **Fonctionnalités de préversion** est activée.
 
     >**Remarque :** dans l’environnement de labo hébergé, votre emplacement de stockage de données doit être sélectionné pour vous. Il doit également se trouver dans la zone géographique appropriée pour laquelle ce locataire de formation est géré. Vous pouvez toujours sélectionner la durée de conservation des données, mais ce n’est pas obligatoire.
 
@@ -87,7 +83,7 @@ Dans le portail **Microsoft Defender**, dans le menu de navigation, sélectionne
 
 ### Configurer un rôle
 
-Dans cette tâche, vous allez configurer des rôles et les attribuer à des groupes d’appareils.
+Dans cette tâche, vous configurez des rôles et les attribuez à des groupes d’appareils.
 
 1. Dans le portail Microsoft 365 Defender, dans la barre de menus gauche, sélectionnez **Paramètres**. 
 
@@ -112,7 +108,7 @@ Dans cette tâche, vous allez configurer des rôles et les attribuer à des grou
 
 ### Configurer des groupes d’appareils
 
-Dans cette tâche, vous allez configurer des groupes d’appareils et spécifier le contrôle d’accès et l’automatisation.
+Dans cette tâche, vous configurez des groupes d’appareils et spécifiez le contrôle d’accès et l’automatisation.
 
 1. Sélectionnez **Paramètres** dans la barre de menus de gauche. 
 
@@ -167,15 +163,15 @@ In this task, you will load sample security alerts and review the alert details.
 
 ## Déployer l’espace de travail Microsoft Sentinel pour la démonstration dans le module 4
 
-Dans cette tâche, vous allez créer un espace de travail Microsoft Sentinel.
+Dans cette tâche, vous créez un espace de travail Microsoft Sentinel.
 
- >**Remarque :** vous devez disposer d’un Pass Azure ou d’un autre abonnement Azure actif pour la démonstration suivante.
+ >**Note :** vous devez disposer d’un autre abonnement Azure actif pour la démonstration suivante.
 
-1. Dans le navigateur Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer un mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
@@ -205,17 +201,17 @@ Dans cette tâche, vous allez créer un espace de travail Microsoft Sentinel.
 
 ### Tâche 1 : Accéder à l’espace de travail Microsoft Sentinel
 
-Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sentinel.
+Dans cette tâche, vous accédez à votre espace de travail Microsoft Sentinel.
 
-1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur ou Administratrice avec le mot de passe : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle WIN1 en tant qu’administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Ouvrez le navigateur, recherchez, téléchargez et installez le nouveau navigateur Microsoft Edge. Démarrez le nouveau navigateur Edge.
+1. Ouvrez le navigateur, recherchez, téléchargez et installez le nouveau navigateur Microsoft Edge. Ouvrez le nouveau navigateur Microsoft Edge.
 
-1. Dans le navigateur Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
+1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer un mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
@@ -223,7 +219,7 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 ### Tâche 2 : connecter le connecteur Activité Azure
 
-Dans cette tâche, vous allez connecter le connecteur de données *Activité Azure*.
+Dans cette tâche, vous connectez le connecteur de données *Activité Azure*.
 
 1. Dans les menus de gauche de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion de contenu*, puis sélectionnez **Hub de contenu**.
 
@@ -239,9 +235,9 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 1. Dans la zone  *Configuration*, sous l’onglet *Instructions*, faites défiler jusqu'à « 2. Connecter vos abonnements… », sélectionnez **Lancer l’Assistant Attribution Azure Policy>**.
 
-1. Dans l’onglet **Informations de base**, sous **Étendue**, sélectionnez le bouton en forme de points de suspension (…), puis sélectionnez votre abonnement « Pass Azure - Parrainage » dans la liste déroulante et cliquez sur **Sélectionner**.
+1. Sous l’onglet **Informations de base**, sélectionnez le bouton de points de suspension (...) sous **Étendue**, sélectionnez votre abonnement Azure hébergé dans la liste déroulante, puis sélectionnez **Sélectionner**.
 
-1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
+1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action applique la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 
 1. Sélectionnez l’onglet **Correction** et cochez la case **Créer une tâche de correction**. Cette action applique la stratégie aux ressources Azure existantes.
 
@@ -253,7 +249,7 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
-1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur ou administratrice avec le mot de passe : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle **WIN1** en tant qu’administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Dans le navigateur Microsoft Edge, accédez au portail Azure à l’adresse https://portal.azure.com.
 
@@ -301,7 +297,7 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 ### Tâche 4 : connecter une machine virtuelle Windows Azure
 
-Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à Microsoft Sentinel.
+Dans cette tâche, vous connectez une machine virtuelle Windows Azure à Microsoft Sentinel.
 
 1. Dans la barre de recherche du portail Azure, tapez *Sentinel*, puis sélectionnez **Microsoft Sentinel**.
 
@@ -335,19 +331,19 @@ Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à M
 
 1. Attendez une minute, puis sélectionnez **Actualiser** pour voir apparaître la nouvelle règle de collecte de données.
 
-### Tâche 5 : installer Azure Arc et connecter un serveur local
+### Tâche 5 : installer Azure Arc et connecter un serveur local
 
 Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour faciliter l’intégration.
 
 >**Important :** les étapes suivantes sont effectuées sur une machine différente de celle que vous utilisiez précédemment. Recherchez les références de nom de machine virtuelle.
 
-1. Connectez-vous à la machine virtuelle **WINServer** en tant qu'Administrateur avec le mot de passe suivant : **Passw0rd!** (le cas échéant).  
+1. Connectez-vous à la machine virtuelle **WINServer** en tant qu’administrateur avec le mot de passe suivant : **Passw0rd!** si nécessaire.  
 
 1. Ouvrez le navigateur Microsoft Edge et accédez au Portail Azure à l’adresse https://portal.azure.com.
 
 1. Dans la boîte de dialogue **Connexion**, copiez et collez le compte de **messagerie du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Suivant**.
 
-1. Dans la boîte de dialogue **Entrer un mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
+1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le **mot de passe du locataire** fourni par l’hébergeur du labo, puis sélectionnez **Connexion**.
 
 1. Dans la barre de recherche du Portail Azure, tapez *Arc*, puis sélectionnez **Azure Arc**.
 
@@ -367,7 +363,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Passez en revue les balises disponibles par défaut. Sélectionnez **Suivant** pour accéder à l’onglet Télécharger et exécuter le script.
 
-1. Faites défiler la page et sélectionnez le bouton **Télécharger**. **Conseil :** si votre navigateur bloque le téléchargement, prenez des mesures dans le navigateur pour l’autoriser. Dans le navigateur Edge, sélectionnez le bouton de points de suspension (...) si nécessaire, puis sélectionnez **Conserver**.
+1. Faites défiler la page et sélectionnez le bouton **Télécharger**. **Conseil :** si votre navigateur bloque le téléchargement, prenez des mesures dans le navigateur pour l’autoriser. Dans le navigateur Microsoft Edge, sélectionnez le bouton de points de suspension (...) si nécessaire, puis **Conserver**.
 
 1. Cliquez avec le bouton droit sur Démarrer Windows et sélectionnez **Windows PowerShell (admin)**.
 
@@ -387,7 +383,7 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
 1. Entrez **R** pour exécuter une seule fois et appuyez sur Entrée (cela peut prendre quelques minutes).
 
-1. Le processus d’installation ouvre un nouvel onglet dans le navigateur Edge pour authentifier l’agent Azure Arc. Sélectionnez votre compte d’administrateur, attendez que le message « Authentification terminée » s’affiche, puis revenez à la fenêtre Windows PowerShell.
+1. Le processus d’installation ouvre un nouvel onglet dans le navigateur Microsoft Edge pour authentifier l’agent Azure Arc. Sélectionnez votre compte d’administrateur, attendez que le message « Authentification terminée » s’affiche, puis revenez à la fenêtre Windows PowerShell.
 
 1. Une fois l’installation terminée, revenez à la page Portail Azure où vous avez téléchargé le script, puis sélectionnez **Fermer**. Fermez **Ajouter des serveurs avec Azure Arc** pour revenir à la page **Machines** Azure Arc.
 
@@ -395,9 +391,9 @@ Dans cette tâche, vous allez installer Azure Arc sur un serveur local pour fac
 
     >**Remarque** : cela peut prendre quelques minutes.
 
-### Tâche 6 : protéger un serveur local
+### Tâche 6 : protéger un serveur local
 
-Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine virtuelle Windows non-Azure connectée à Azure Arc.  
+Dans cette tâche, vous ajoutez à Microsoft Sentinel une machine virtuelle Windows non-Azure connectée à Azure Arc.  
 
    >**Remarque :** le connecteur de données *Événements de sécurité Windows via AMA* nécessite Azure Arc pour les appareils non-Azure.
 
@@ -421,7 +417,7 @@ Dans cette tâche, vous allez ajouter à Microsoft Sentinel une machine virtuel
 
 Dans cette tâche, vous déployez le connecteur Microsoft Defender XDR.
 
-1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle WIN1 en tant qu’administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Dans le navigateur Microsoft Edge, accédez au Portail Azure sur (<https://portal.azure.com>).
 
@@ -606,7 +602,7 @@ You should still be connected to the WIN2 virtual machine.  The following instru
 
 Dans cette tâche, vous allez effectuer des attaques sur un hôte avec Microsoft Defender pour point de terminaison configuré.
 
-1. Connectez-vous à la machine virtuelle `WIN1` en tant qu’administrateur avec le mot de passe : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle `WIN1` en tant qu’administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Dans la recherche de la barre des tâches, entrez *Commande*.  L’invite de commandes s’affiche dans les résultats de la recherche.  Cliquez avec le bouton de droite sur l’invite de commande et sélectionnez **Exécuter en tant qu’administrateur**. Vérifiez les invites de contrôle de compte d’utilisateur qui s’affichent.
 
@@ -626,7 +622,7 @@ Dans cette tâche, vous allez effectuer des attaques sur un hôte avec Microsoft
 
 ### Tâche 2 : créer une attaque C2 (commande et contrôle)
 
-1. Connectez-vous à la machine virtuelle `WIN1` en tant qu’administrateur avec le mot de passe : **Pa55w.rd**.  
+1. Connectez-vous à la machine virtuelle `WIN1` en tant qu’administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
 1. Dans la recherche de la barre des tâches, entrez *Commande*.  L’invite de commandes s’affiche dans les résultats de la recherche.  Cliquez avec le bouton de droite sur l’invite de commande et sélectionnez **Exécuter en tant qu’administrateur**. Vérifiez les invites de contrôle de compte d’utilisateur qui s’affichent.
 
@@ -695,7 +691,7 @@ Sélectionnez **Oui** pour créer un fichier, puis copiez le script PowerShell s
     Until ($TimeNow -ge $RunEnd)
     ```
 
-À l’invite de commandes, entrez ce qui suit, et entrez la commande dans chaque ligne en appuyant sur la touche Entrée après chaque ligne :
+À l’invite de commandes, entrez ce qui suit : Entrez la commande dans chaque ligne en appuyant sur la touche ENTRÉE après chaque ligne :
 
     ```PowerShell
     .\c2.ps1
@@ -710,7 +706,7 @@ Dans cette tâche, vous allez effectuer des attaques sur un hôte avec le connec
 
 1. Sélectionnez la machine virtuelle `AZWIN01` que vous avez créée précédemment.  
 
-1. Dans le menu gauche, faites défiler jusqu’à **Opérations**, et sélectionnez **Exécuter une commande**.
+1. Dans le menu de navigation de gauche, faites défiler jusqu’à **Opérations**, et sélectionnez **Exécuter une commande**.
 
 1. Dans le volet **Exécuter une commande**, sélectionnez **RunPowerShellScript**.
 
