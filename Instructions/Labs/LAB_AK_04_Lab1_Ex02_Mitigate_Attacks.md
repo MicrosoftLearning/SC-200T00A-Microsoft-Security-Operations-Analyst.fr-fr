@@ -58,7 +58,7 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 1. Effacez le filtre *Gravité de l’alerte* en sélectionnant la croix **X** à droite du filtre.
 
-1. Un nouvel incident nommé *[TestAlert] Ligne de commande PowerShell suspecte* apparaît dans le volet de droite. Sélectionnez le nom de l’incident pour charger ses informations.
+1. Un nouvel incident appelé *Incident d’exécution sur un point de terminaison* apparaît dans le volet droit. Sélectionnez le nom de l’incident pour charger ses informations.
 
 1. Sélectionnez le lien **Gérer l’incident** (avec une icône de crayon) et un nouveau panneau de fenêtre s’affiche.
 
@@ -78,13 +78,13 @@ Dans cette tâche, vous allez examiner les alertes et les incidents générés p
 
 >**Avertissement :** Cette attaque simulée constitue une excellente source d’apprentissage via la pratique. Effectuez uniquement l’attaque dans les instructions fournies pour ce labo lors de l’utilisation du cours fourni au tenant Azure.  Vous pouvez effectuer d’autres attaques simulées *après* avoir effectué ce cours de formation avec ce tenant.
 
-Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 et vérifier la détection et l’atténuation de l’attaque par Microsoft Defender for Endpoint.
+Dans cette tâche, vous allez simuler une attaque sur la machine virtuelle WIN1 et vérifier la détection et l’atténuation de l’attaque par Microsoft Defender pour point de terminaison.
 
 1. Sur la machine virtuelle WIN1, tapez **PowerShell** dans la barre de recherche, puis *faites un clic droit sur***Windows PowerShell** et choisissez *Exécuter en tant qu’administrateur*.
 
 1. Lorsque la fenêtre « Contrôle de compte d’utilisateur » apparaît, sélectionnez **Oui** pour autoriser l’exécution de l’application.
 
-1. Pour exécuter le script, dans **Windows PowerShell (Admin)**, naviguez jusqu’au dossier *\Users\Admin\Desktop\Allfiles* et tapez *.\AttackScript.ps1* puis appuyez sur **Entrée** pour l’exécuter. Ensuite, tapez **R** et appuyez sur **Entrée** pour *exécuter une fois*.
+1. Pour exécuter le script, dans **Windows PowerShell (Admin)**, naviguez jusqu’au dossier *\Users\Admin\Desktop\Allfiles* et tapez *.\AttackScript.ps1*, puis appuyez sur **Entrée** pour l’exécuter. Ensuite, tapez **R** et appuyez sur **Entrée** pour *exécuter une fois*.
 
 1. Le script génère plusieurs lignes de sortie et un message indiquant *Impossible de résoudre les contrôleurs de domaine dans le domaine*. Quelques secondes plus tard, l’application *Bloc-notes* s’ouvre. Un code d’attaque simulé est injecté dans Bloc-notes. Laissez l’instance Bloc-notes générée automatiquement ouverte pour expérimenter le scénario complet. Le code d’attaque simulé va tenter de communiquer avec une adresse IP externe (simulant un serveur C2).
 

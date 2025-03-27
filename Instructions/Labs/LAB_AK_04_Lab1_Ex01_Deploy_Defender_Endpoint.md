@@ -120,9 +120,9 @@ Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisen
 
 1. Cliquez sur **Suivant**.
 
-1. Sous l’onglet Appareils, pour la condition de système d’exploitation, sélectionnez **Windows 10**, puis **Suivant**.
+1. Sous l’onglet Périphériques, pour la condition de système d’exploitation, sélectionnez **Windows 11**, puis **Suivant**.
 
-    >**Remarque :** certains fournisseurs d’hébergement de labo peuvent avoir configuré des images *Windows 11* pour WIN1. Vous pouvez sélectionner l’un ou l’autre, ou les deux.
+    >**Note :** certains fournisseurs d’hébergement de labo peuvent avoir configuré des images *Windows 10* pour WIN1. Vous pouvez sélectionner l’un ou l’autre, ou les deux.
 
 1. Sous l’onglet Aperçu des appareils, le bouton *Afficher l’aperçu* peut afficher la machine virtuelle WIN1, mais il est probable que les données ne soient pas encore remplies. Sélectionnez **Suivant** pour continuer.
 
