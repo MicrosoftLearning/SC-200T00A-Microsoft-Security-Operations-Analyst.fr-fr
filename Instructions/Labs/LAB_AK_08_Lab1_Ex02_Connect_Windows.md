@@ -126,7 +126,7 @@ Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à M
 
 1. Sélectionnez le connecteur de données *Événements de sécurité Windows via AMA*, puis sélectionnez la page **Ouvrir le connecteur** dans le panneau d’informations du connecteur.
 
-1. Dans la section *Configuration*, sélectionnez **Créer une règle de collecte de données**.
+1. Dans la section *Configuration*, sélectionnez le bouton **+Créer une règle de collecte de données**.
 
 1. Entrez **AZWINDCR** pour le nom de la règle, puis sélectionnez **Suivant : Ressources**.
 
