@@ -10,7 +10,7 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez apprendre à connecter des données de journal provenant de nombreuses sources de données dans votre organisation. La source de données suivante est des machines virtuelles Windows à l’intérieur et à l’extérieur d’Azure, comme les environnements locaux ou d’autres clouds publics.
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez apprendre à connecter des données de journal provenant de nombreuses sources de données dans votre organisation. Les sources de données suivantes sont les machines virtuelles Windows situées à l’intérieur et à l’extérieur d’Azure, telles que les environnements locaux ou autres clouds publics.
 
 >**Important :** les exercices de laboratoire du parcours d’apprentissage #8 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
@@ -40,7 +40,7 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Sélectionnez **Dev/Test**, puis **Continuer pour créer une machine virtuelle**.
 
-1. Sélectionnez **Créer** pour le *groupe de ressources*, entrez RG-AZWIN01 pour le nom, et sélectionnez **OK**.
+1. Sélectionnez **Créer** pour le *Groupe de ressources*, saisissez RG-AZWIN01 pour le nom, puis sélectionnez **OK**.
 
     >**Remarque :** il s’agit d’un nouveau groupe de ressources à des fins de suivi. 
 
@@ -66,7 +66,7 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Sélectionnez **Créer**. Patientez quelques minutes pendant la création de la ressource.
 
-### Tâche 2 : connexion d'un serveur local à Azure
+### Tâche 2 : connecter un serveur local à Azure
 
 Dans cette tâche, vous allez connecter un serveur local à votre abonnement Azure. Azure Arc a été préinstallé sur ce serveur. Le serveur sera utilisé dans les exercices suivants pour exécuter des attaques simulées que vous détecterez et étudierez ultérieurement dans Microsoft Sentinel.
 
@@ -104,7 +104,7 @@ Dans cette tâche, vous allez connecter un serveur local à votre abonnement Azu
 
 ### Tâche 3 : connecter une machine virtuelle Windows Azure
 
-Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à Microsoft Sentinel.
+Dans cette tâche, vous connectez une machine virtuelle Windows Azure à Microsoft Sentinel.
 
 >**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
 
@@ -134,7 +134,7 @@ Dans cette tâche, vous allez connecter une machine virtuelle Windows Azure à M
 
     >**Conseil :** Vous pouvez développer l’ensemble de la hiérarchie *Étendue* en sélectionnant « > » devant la colonne *Étendue*.
 
-1. Développez **defender-RG**, puis sélectionnez **AZWIN01**.
+1. Développez **RG-AZWIN01**, puis sélectionnez **AZWIN01**.
 
 1. Sélectionnez **Suivant : Collecter**.
 

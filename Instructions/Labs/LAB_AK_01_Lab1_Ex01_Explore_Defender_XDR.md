@@ -89,11 +89,7 @@ Dans cette tâche, vous allez attribuer des stratégies de sécurité prédéfin
 
 ### Tâche 3 : Préparation de l’espace de travail Microsoft Defender XDR
 
-1. Dans le portail **Microsoft Defender**, dans le menu de navigation, sélectionnez **Accueil** à gauche.
-
-    >**Remarque :** vous devrez peut-être faire défiler jusque tout en haut du menu.
-
-1. Faites défiler les éléments de menu vers **Ressources** et sélectionnez **Appareils**.
+1. Sur la *page d’accueil* du portail **Microsoft Defender**, faites défiler les éléments du menu de navigation jusqu’à la section **Ressources**, puis sélectionnez **Appareils**.
 
 1. Le processus de déploiement de l’espace de travail Defender XDR doit commencer et vous devez voir les messages indiquant *le chargement et l’initialisation* brièvement affichés en haut de la page, puis vous verrez une image d’une tasse de café et un message qui lit : **Tenez bon ! Nous préparons de nouveaux espaces pour vos données et nous les connectons.** La procédure prend environ 5 minutes. *Laissez la page ouverte et assurez-vous que la procédure se termine, car elle est requise pour le labo suivant.*
 

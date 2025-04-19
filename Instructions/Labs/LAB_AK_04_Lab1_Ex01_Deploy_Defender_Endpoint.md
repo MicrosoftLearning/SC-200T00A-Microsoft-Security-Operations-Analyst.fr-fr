@@ -78,28 +78,45 @@ Dans cette tâche, vous allez intégrer un appareil à Microsoft Defender pour
 
 Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes d’appareils.
 
-1. Dans la barre de menus de gauche du portail Microsoft Defender XDR, développez la section **Système**, puis sélectionnez **Paramètres**. Ensuite, sélectionnez **Points de terminaison**.
+1. Dans le menu de navigation du portail Microsoft Defender XDR, développez la section **Système**, sélectionnez **Paramètres**, puis **Microsoft Defender XDR**.
 
-1. Sous la zone des autorisations, sélectionnez **Rôles**.
+1. Dans la section *Compte*, sélectionnez **Autorisations et rôles**.
 
-1. Sélectionnez le bouton **Activer les rôles** .
+1. Faites défiler la page vers le bas et sélectionnez le lien **Accéder aux autorisations et aux rôles**.
 
-1. Sélectionnez **+ Ajouter un rôle**.
+1. Sur la page *Autorisations et rôles*, sélectionnez **+ Créer un rôle personnalisé**.
 
-1. Dans la boîte de dialogue Ajouter un rôle, entrez les informations suivantes :
+1. Sur la page *Informations de base*, dans la boîte de dialogue Ajouter un rôle, entrez les informations suivantes :
 
-    |Paramètres généraux|Valeur|
+    |Paramètre de base|Valeur|
     |---|---|
     |Nom de rôle|**Support de niveau 1**|
-    |Autorisations|Fonctionnalités de réponse en direct – Avancées|
 
 1. Cliquez sur **Suivant**.
 
-1. Dans la page **Groupes d’utilisateurs attribués**, tapez **sg-IT** dans le formulaire *Filtrer les groupes d’utilisateurs*, puis sélectionnez **Ajouter les groupes sélectionnés**. Vérifiez qu’il apparaît sous *Groupes d’utilisateurs Azure AD avec ce rôle*.
+1. Sur la page **Autorisations**, sélectionnez les autorisations suivantes :
+
+    |Groupe d’autorisations|Description|  |Opérations de sécurité|Gère les opérations quotidiennes et répond aux incidents et aux avis|
+
+1. Sur la page contextuelle des *Opérations de sécurité*, cochez la case d’option **Toutes les autorisations de lecture et de gestion**.
+
+1. Sélectionnez **Appliquer**, puis **Suivant**.
+
+1. Sur la page **Affecter des utilisateurs et des sources de données**, sélectionnez le bouton **Créer une affectation**.
+
+1. Dans la boîte de dialogue *Ajouter une affectation*, entrez les informations suivantes :
+
+    |Paramètres d’affectation|Valeur|
+    |---|---|
+    |Nom de l’attribution|**Support de niveau 1**|
+    |Employees|****sg-IT**|
+    |Sources de données|**Conserver la valeur par défaut**|
+
+1. Sélectionnez **Ajouter**, puis **Suivant**.
 
 1. Sélectionnez **Envoyer**, puis **Terminé** lorsque vous avez terminé.
 
-    >**Remarque :** si vous recevez l’erreur *« L’utilisateur ne peut pas effectuer cette action, car son UserAuthEnforcementMode est Rbac et cette action nécessite l’une des opérations suivantes : RbacV2 »,* sélectionnez **OK** et réessayez.
+<!--- 1. On the *Permissions and roles* page, select the **Activate workloads** button. --->
 
 ### Tâche 4 : configurer des groupes d’appareils
 
@@ -116,7 +133,7 @@ Dans cette tâche, vous allez configurer des groupes d’appareils qui autorisen
     |Paramètres généraux|Valeur|
     |---|---|
     |Nom du groupe d’appareils|**Regular**|
-    |Niveau de correction|Complet - Corrige automatiquement les menaces|
+    |Niveau de correction|Correction complète|
 
 1. Cliquez sur **Suivant**.
 
