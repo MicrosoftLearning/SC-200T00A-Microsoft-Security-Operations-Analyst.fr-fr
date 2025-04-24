@@ -38,7 +38,7 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
 1. Dans l’onglet **Informations de base**, sélectionnez le bouton représentant des points de suspension (…) sous **Étendue**, puis choisissez votre abonnement *MOC Subscription-XXXXXXXXXXX* dans la liste déroulante et enfin, cliquez sur **Sélectionner**.
 
-    >**Note :*** ne sélectionnez pas* de groupe de ressources facultatif.
+    >**Remarque :*** ne sélectionnez pas* de groupe de ressources facultatif.
 
 1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 
