@@ -96,7 +96,9 @@ Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes
 
 1. Sur la page **Autorisations**, sélectionnez les autorisations suivantes :
 
-    |Groupe d’autorisations|Description|  |Opérations de sécurité|Gère les opérations quotidiennes et répond aux incidents et aux avis|
+    |Groupes d’autorisations|Description|
+    |---|---|
+    |Opérations de sécurité|Gère les opérations quotidiennes et répond aux incidents et aux avis|
 
 1. Sur la page contextuelle des *Opérations de sécurité*, cochez la case d’option **Toutes les autorisations de lecture et de gestion**.
 
@@ -109,7 +111,7 @@ Dans cette tâche, vous allez configurer des rôles à utiliser avec des groupes
     |Paramètres d’affectation|Valeur|
     |---|---|
     |Nom de l’attribution|**Support de niveau 1**|
-    |Employees|****sg-IT**|
+    |Employees|**sg-IT**|
     |Sources de données|**Conserver la valeur par défaut**|
 
 1. Sélectionnez **Ajouter**, puis **Suivant**.
