@@ -127,6 +127,8 @@ Dans cette tâche, vous allez créer une détection pour la première attaque de
 
 Dans cette tâche, vous allez créer une détection pour la deuxième attaque de l’exercice précédent.
 
+>**Note :** nous avons configuré la stratégie de sécurité locale sur l’ordinateur WINServer pour consigner les événements 4732. Cette dernière est configurée dans la *Configuration avancée de la stratégie d’audit > Stratégies d’audit système - Objet de stratégie de groupe local > Gestion des comptes > Auditer la gestion des groupes de sécurité : réussite et échec*.
+
 1. Dans le portail Microsoft Sentinel, sélectionnez **Journaux** dans la section Général au cas où vous vous seriez éloigné de cette page.
 
 1. **Exécutez** l’instruction KQL suivante pour identifier toute entrée qui fait référence aux administrateurs :
@@ -217,7 +219,7 @@ Dans cette tâche, vous allez créer une détection pour la deuxième attaque de
    |Nom de la règle d'automatisation|SecurityEvent : ajout d’utilisateurs aux administrateurs locaux|
    |Déclencheur|Lorsqu’un incident est créé|
    |Actions |Exécuter des playbooks|
-   |playbook |PostMessageTeams-OnIncident|
+   |playbook |Defender_XDR_Ransomware_Playbook_SecOps-Tasks|
 
    >**Remarque :** vous avez déjà attribué des autorisations au playbook. Il sera donc disponible.
 

@@ -30,11 +30,11 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Sélectionnez **+ Créer une ressource**. **Conseil :** si vous étiez déjà dans le portail Azure, vous devrez peut-être sélectionner *Microsoft Azure* dans la barre supérieure pour accéder à l’accueil.
 
-1. Dans la zone **Rechercher dans les services et la Place de marché**, entrez *Windows 10* et sélectionnez **Microsoft Window 10** dans la liste déroulante.
+1. Dans la zone **Rechercher dans les services et la Place de marché**, entrez *Windows 11* et sélectionnez **Window 11** dans la liste déroulante.
 
-1. Sélectionnez la zone de **Microsoft Window 10**.
+1. Sélectionnez la zone de **Window 11**.
 
-1. Ouvrez la liste déroulante *Abonnement* et sélectionnez **Windows 10 Entreprise, version 22H2**.
+1. Ouvrez la liste déroulante *Abonnement* et sélectionnez **Windows 11 Entreprise, version 22H2**.
 
 1. Sélectionnez **Démarrer avec une configuration prédéfinie** pour continuer.
 
@@ -48,15 +48,15 @@ Dans cette tâche, vous allez créer une machine virtuelle Windows dans Azure.
 
 1. Laissez **USA Est** comme valeur par défaut pour la *région*.
 
-1. Faites défiler la page vers le bas et passez en revue l’*image* de la machine virtuelle. Si elle est vide, sélectionnez **Windows 10 Entreprise, version 22H2**.
+1. Faites défiler la page vers le bas et passez en revue l’*image* de la machine virtuelle. Si elle est vide, sélectionnez **Windows 11 Entreprise, version 22H2**.
 
-1. Passez en revue la *taille* de la machine virtuelle. Si elle est vide, sélectionnez **Afficher toutes les tailles**, choisissez la première taille de machine virtuelle sous *Utilisée par la plupart des utilisateurs Azure*, puis sélectionnez **Sélectionner**.
+1. Passez en revue la *taille* de la machine virtuelle. Si elle est vide, sélectionnez **Afficher toutes les tailles**, choisissez la première taille de machine virtuelle (série D), puis choisissez **Sélectionner**.
 
     >**Remarque :** si le message suivant s’affiche : *Cette image n’est pas prise en charge pour Azure Automanage. Pour désactiver cette fonctionnalité, accédez à l’onglet Gestion. Sinon, sélectionnez une image prise en charge.* Accédez à l’onglet Gestion et désactivez « Automanage ». Le processus de création aboutira par la suite.
 
 1. Faites défiler la page vers le bas et entrez un *nom d’utilisateur* de votre choix. **Conseil :** évitez les mots réservés tels qu’administrateur ou racine.
 
-1. Entrez un *mot de passe* de votre choix. **Conseil :** il peut être plus facile de réutiliser votre mot de passe de locataire. Il se trouve sous l’onglet Ressources.
+1. Entrez un *mot de passe* de votre choix. **Conseil :** il peut être plus facile de réutiliser votre mot de passe LabUser. Il se trouve sous l’onglet Ressources. Vous devrez peut-être le saisir deux fois.
 
 1. Faites défiler la page vers le bas et sélectionnez la case à cocher sous *Licences* pour confirmer que vous disposez de la licence éligible.
 
