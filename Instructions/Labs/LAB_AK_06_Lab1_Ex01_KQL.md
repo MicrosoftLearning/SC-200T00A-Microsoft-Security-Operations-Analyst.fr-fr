@@ -12,9 +12,14 @@ lab:
 
 Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Sentinel. Vous êtes chargé d’effectuer une analyse des données de journal pour rechercher des activités malveillantes, afficher des visualisations et faire la chasse aux menaces. Pour interroger les données du journal, vous utilisez le langage de requête Kusto (KQL).
 
->**Note :** selon l’*initiative pour un avenir sûr* (SFI) de Microsoft, toutes les informations pouvant être considérées comme des *informations d’identification personnelle* (PII), telles que des emplacements, des noms d’utilisateur, des adresses IP, des ID de ressource, etc.. ont été supprimées des tables de démonstration LA telles que *SigninLogs*. Cela peut produire des messages *Aucun résultat n’a été trouvé* pour certaines requêtes.
+>**Important :** l’espace de travail Log Analytics de [LA Demo](https://aka.ms/lademo) utilisé pour ce labo est en cours de transition. Si vous ne parvenez pas à accéder à l’environnement ou si vous recevez un message d’erreur, vous pouvez essayer d’exécuter les requêtes dans votre propre abonnement Azure avec Microsoft Sentinel déployé. Si vous n’avez pas d’abonnement Azure, [créez un compte gratuit avant de commencer](https://azure.microsoft.com/free/?azure-portal=true).
 
->**Important :** ce labo implique d’entrer de nombreux scripts KQL dans Microsoft Sentinel. Les scripts ont été fournis dans un fichier au début de ce labo. Vous pouvez également les télécharger ici : <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
+>**Note :** si vous choisissez d’utiliser l’espace de travail Log Analytics [LA Demo](https://aka.ms/lademo) pour ce labo, la définition d’un intervalle de temps personnalisé dans la fenêtre Requête est requise. Nous vous recommandons de définir l’intervalle de temps personnalisé sur le 1er avril 2025.
+
+<!--- 
+>**Note:** Per Microsoft's *Secure Future Initiative* (SFI), any information that could be considered *Personally Identifiable Information* (PII), such as locations, usernames, IP addresses, resource IDs etc.. have been removed from the LA Demo tables such as *SigninLogs*. This may produce *No results were found* messages for some queries. --->
+
+>**Conseil :** ce labo implique d’entrer de nombreux scripts KQL dans Microsoft Sentinel. Les scripts ont été fournis dans un fichier au début de ce labo. Vous pouvez également les télécharger ici : <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles>
 
 ### Temps estimé pour terminer ce labo : 60 minutes
 

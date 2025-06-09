@@ -77,7 +77,7 @@ Dans cette tâche, vous allez découvrir l’utilisation des notebooks dans Micr
 
 1. Sélectionnez le bouton **Vérifier + créer** au bas de l’écran, faites défiler vers le bas, puis sélectionnez **Créer**. Fermez toutes les fenêtres de commentaires qui peuvent s’afficher. Cela ne prend que quelques minutes. Une notification (icône en forme de cloche) s’affiche une fois l’opération effectuée, et l’icône de gauche de l’*Instance de calcul* passe du bleu au vert.
 
-1. Une fois le calcul créé et en cours d’exécution, vérifiez que le noyau à utiliser est *Python 3.8 - Pytorch et TensorFlow*. **Conseil :** ceci s’affiche à droite de la barre de commandes.
+1. Une fois le calcul créé et en cours d’exécution, vérifiez que le noyau à utiliser est *Python 3.10 - Pytorch et TensorFlow*. **Conseil :** ceci s’affiche à droite de la barre de commandes.
 
 1. Cliquez sur le bouton **Authentifier** et patientez jusqu’à la fin de l’authentification.
 
