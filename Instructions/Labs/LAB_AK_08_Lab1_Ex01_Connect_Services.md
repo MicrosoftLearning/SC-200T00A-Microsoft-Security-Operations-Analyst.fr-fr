@@ -10,7 +10,7 @@ lab:
 
 ![Vue d’ensemble du labo](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex1.png)
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez apprendre à connecter des données de journal provenant de nombreuses sources de données dans votre organisation. L’organisation a des données provenant de Microsoft 365, de Microsoft 365 Defender, des ressources Azure, des machines virtuelles non-Azure, etc. Vous commencez à connecter les sources Microsoft en premier.
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise ayant mis en œuvre Microsoft Sentinel. Vous devez apprendre à connecter des données de journal provenant de nombreuses sources de données dans votre organisation. L’organisation dispose des données provenant de Microsoft 365, Microsoft Defender XDR, de ressources Azure, de machines virtuelles nonazure, etc. Vous commencez à connecter les sources Microsoft en premier.
 
 >**Important :** les exercices de laboratoire du parcours d’apprentissage #8 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
@@ -18,9 +18,9 @@ Vous êtes un analyste des opérations de sécurité travaillant dans une entrep
 
 ### Tâche 1 : Accéder à l’espace de travail Microsoft Sentinel
 
-Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sentinel.
+Dans cette tâche, vous accéderez à votre espace de travail Microsoft Sentinel.
 
->**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
+>**Remarque :** Microsoft Sentinel a été prédéployé dans votre abonnement Azure avec le nom **defenderWorkspace** et les solutions *Content Hub* requises ont été installées.
 
 1. Connectez-vous à la machine virtuelle **WIN1** en tant qu'Admin avec le mot de passe suivant : **Pa55w.rd**.  
 
@@ -40,29 +40,29 @@ Dans cette tâche, vous allez accéder à votre espace de travail Microsoft Sent
 
 ### Tâche 2 : connecter le connecteur de données Microsoft Defender pour le cloud.
 
-Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defender pour le cloud.
-
-   <!--- >>**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded. --->
+Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defender for Cloud.
 
 1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section **Gestion du contenu**, puis sélectionnez **Hub de contenu**.
 
 1. Dans le *hub de contenu*, recherchez la solution **Microsoft Defender pour le cloud**, puis sélectionnez-la dans la liste.
 
-1. Dans la page des détails de la solution *Microsoft Defender pour le cloud*, sélectionnez **Gérer**.
+1. Dans la page des détails de la solution Microsoft Defender for cloud, sélectionnez **Gérer**.
 
     >**Remarque :** la solution *Microsoft Defender pour le cloud* installe le connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (préversion)* et une règle analytique. Le connecteur de données *Microsoft Defender pour le cloud basé sur le locataire (Préversion)* est utilisé quand un tenant a plusieurs abonnements.
 
 1. Activez la case à cocher du connecteur de données *Microsoft Defender pour le cloud basé sur un abonnement (hérité)*, puis sélectionnez **Ouvrir la page du connecteur**.
 
-1. Dans la section *Configuration*, **cochez** la case pour l’*abonnement MOC-XXXXXXXXXXXXX*, puis sélectionnez le lien **Se connecter**, ou faites glisser l’option **État** à droite.
+1. Dans la section *Configuration*, **cochez** la case pour l’*Abonnement MOC-XXXXXXXXXXXXX*, puis sélectionnez le lien **Se connecter**.
 
 1. Pour activer la synchronisation bidirectionnelle, sélectionnez le lien **Activer Microsoft Defender pour tous les abonnements**.
 
     >**Remarque :** vous devrez peut-être faire défiler vers la droite pour afficher le lien.
 
-1. Dans la page *Microsoft Defender pour le cloud - Prise en main*, la case à cocher de l’*abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée, et le *plan Microsoft Defender* doit afficher *Activé - Partiel (30 jours d’essai restants)*.
+1. Dans la page *Microsoft Defender for cloud – Prise en main*, la case à cocher de l’*Abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée et le *plan Microsoft Defender* doit s’afficher *Désactivé (30 jours d’essai restants)*.
 
 1. Cliquez sur le bouton **X (Fermer)** dans le coin supérieur droit pour fermer la page *Prise en main*. Vous devriez retourner sur la page de configuration de *Microsoft Defender pour le cloud*.
+
+1. Faites glisser l’option **État** vers la droite.
 
 1. L’*État* de l’*abonnement MOC-XXXXXXXXXXX* doit maintenant être **Connecté**, et la *Synchronisation bidirectionnelle* doit être *Activée*.
 
@@ -70,7 +70,7 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Defe
 
 ### Tâche 3 : connecter le connecteur de données Activité Azure
 
-Dans cette tâche, vous allez connecter le connecteur de données *Activité Azure*.
+Dans cette tâche, vous connectez le connecteur de données *Activité Azure*.
 
 1. Dans le menu de navigation de Microsoft Sentinel, faites défiler jusqu’à la section *Gestion du contenu*, puis sélectionnez **Hub de contenu**.
 
@@ -88,7 +88,7 @@ Dans cette tâche, vous allez connecter le connecteur de données *Activité Azu
 
     >**Remarque :*** ne sélectionnez pas* de groupe de ressources facultatif.
 
-1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action appliquera la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
+1. Sélectionnez l’onglet **Paramètres**, choisissez votre espace de travail *nomuniqueDefender* dans la liste déroulante **Espace de travail Log Analytics principal**. Cette action applique la configuration de l’abonnement pour envoyer les informations à l’espace de travail Log Analytics.
 
 1. Sélectionnez l’onglet **Correction** et cochez la case **Créer une tâche de correction**. Cette action applique la stratégie aux ressources Azure existantes.
 
