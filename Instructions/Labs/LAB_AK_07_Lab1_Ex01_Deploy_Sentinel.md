@@ -8,7 +8,7 @@ lab:
 
 ## Scénario de labo
 
-Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Azure Sentinel. Vous êtes responsable de la configuration de l’environnement Microsoft Sentinel pour répondre aux besoins de l’entreprise de réduire les coûts, de respecter les réglementations en matière de conformité et de fournir l’environnement le plus adapté aux tâches quotidiennes de votre équipe de sécurité.
+Vous êtes un analyste des opérations de sécurité travaillant dans une entreprise qui implémente Microsoft Sentinel. Vous êtes responsable de la configuration de l’environnement Microsoft Sentinel pour répondre aux besoins de l’entreprise de réduire les coûts, de respecter les réglementations en matière de conformité et de fournir l’environnement le plus gérable pour que votre équipe de sécurité effectue ses tâches quotidiennes.
 
 >**Important :** les exercices de labo du parcours d’apprentissage #7 se trouvent dans un *environnement autonome*. Si vous quittez le labo sans enregistrer, vous devrez réexécuter certaines configurations.
 
@@ -54,7 +54,7 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 1. Sélectionnez **+ Créer** dans le menu.
 
-1. Sélectionnez l’espace de travail auquel vous souhaitez ajouter Sentinel (créé lors de la tâche 1).
+1. Sélectionnez l’espace de travail auquel vous souhaitez ajouter Microsoft Sentinel (créé à l’étape 1).
 
 1. Sélectionnez **Ajouter**.
 
@@ -74,7 +74,7 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 ### Tâche 4 : créer une watchlist
 
-Dans cette tâche, vous allez créer une watchlist dans Microsoft Sentinel.
+Dans cette tâche, vous allez créer une liste de suivi dans Microsoft Sentinel.
 
 1. Dans la zone de recherche située en bas de l’écran Windows 10, entrez *Bloc-notes*. Sélectionnez **Bloc-notes** dans les résultats.
 
@@ -96,7 +96,9 @@ Dans cette tâche, vous allez créer une watchlist dans Microsoft Sentinel.
 
 1. Sélectionnez **Accueil** dans le menu « navigation » de Microsoft Azure.
 
-1. Vous devez voir **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
+1. Vous devriez voir la vignette **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
+
+1. Sélectionnez l’espace de travail Microsoft Sentinel**defenderWorkspace**.
 
 1. Dans Microsoft Sentinel, sélectionnez l’option **Watchlist** sous la zone Configuration.
 
@@ -112,9 +114,9 @@ Dans cette tâche, vous allez créer une watchlist dans Microsoft Sentinel.
 
 1. Sélectionnez **Suivant : Source >**.
 
-1. Sélectionnez **Parcourir les fichiers** sous *Charger un fichier* et recherchez le fichier *HighValue.csv* que vous venez de créer.
+1. Sélectionnez **Parcourir les fichiers** sous *Charger un fichier*, puis parcourez le fichier *HighValue.csv* que vous avez créé.
 
-1. Dans le *champ SearchKey*, sélectionnez **Nom d’hôte**.
+1. Dans le *champ SearchKey,* sélectionnez **Nom d’hôte**.
 
 1. Sélectionnez **Suivant : Vérifier et créer >**.
 
@@ -148,7 +150,7 @@ Dans cette tâche, vous allez créer un indicateur dans Microsoft Sentinel.
 
 1. Dans Domaine, entrez le nom de domaine, par exemple : *contoso.com*.
 
-1. Pour le champ **Nom**, entrez la même valeur que celle utilisée pour le domaine.
+1. Dans le champ **Nom**, entrez la même valeur que celle utilisée pour le domaine.
 
 1. Dans les *types d’indicateurs*, sélectionnez **malicious-activity**.
 
@@ -197,7 +199,7 @@ Dans cette tâche, vous allez modifier la période de rétention de la table Sec
 
 1. Remplacez la *période de rétention interactive* par **90 jours**.
 
-1. Rétablissez la *période de rétention totale* de **180 jours** (si nécessaire). Notez que la *période d’archivage* est maintenant définie sur *90 jours*, car *Azure Monitor* traite automatiquement les 90 jours restants de rétention totale comme une rétention à faible coût et à long terme.
+1. Rétablissez la *période de rétention totale* de **180 jours** (si nécessaire). Notez que la *Période d’archivage* est définie sur *90 jours*, car *Azure Monitor* considère automatiquement les 90 jours restants de la durée de conservation totale des données comme une conservation à long terme et à faible coût.
 
 1. Sélectionnez **Enregistrer** pour appliquer la modification.
 
