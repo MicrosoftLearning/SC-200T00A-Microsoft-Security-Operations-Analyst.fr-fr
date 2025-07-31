@@ -26,7 +26,7 @@ Créez un espace de travail Log Analytics, y compris l’option de région. En s
 
 1. Dans la boîte de dialogue **Entrer le mot de passe**, copiez et collez le mot de passe du locataire de l’administrateur fourni par votre fournisseur d’hébergement de labo, puis sélectionnez **Se connecter**.
 
-1. Dans la barre de recherche du portail Azure, saisissez « Microsoft Sentinel », puis sélectionnez-le.
+1. Dans la barre de recherche du portail Azure, tapez « Microsoft Sentinel », puis sélectionnez
 
 1. Sélectionnez **+ Créer**.
 
@@ -50,11 +50,11 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 1. Une fois le déploiement de l’espace de travail terminé, sélectionnez **Accueil** dans le menu « navigation » de Microsoft Azure.
 
-1. Vous devez voir **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
+1. Vous devriez voir la vignette **Microsoft Sentinel** dans la section *Services Azure* du portail. Sélectionnez-le.
 
 1. Sélectionnez **+ Créer** dans le menu.
 
-1. Sélectionnez l’espace de travail auquel vous souhaitez ajouter Microsoft Sentinel (créé à l’étape 1).
+1. Sélectionnez l'espace de travail *defenderWorkspace* que vous avez créé dans la tâche 1.
 
 1. Sélectionnez **Ajouter**.
 
@@ -62,7 +62,9 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 1. Dans le menu de navigation de Microsoft Azure, sélectionnez **Accueil**.
 
-1. Dans la barre de recherche du portail Azure, saisissez « Espaces de travail Log Analytics », puis sélectionnez l’espace de travail créé lors de la tâche 1.
+1. Dans la barre de recherche du portail Azure, tapez « Log Analytics » et sélectionnez **Espaces de travail Log Analytics **depuis la section *Services*.
+
+1. Sélectionnez l'espace de travail *defenderWorkspace* que vous avez créé dans la tâche 1.
 
 1. Développez la section *Paramètres* dans le menu de navigation, puis sélectionnez **Utilisation et coûts estimés**.
 
@@ -74,7 +76,7 @@ Déployez Microsoft Sentinel dans l’espace de travail.
 
 ### Tâche 4 : créer une watchlist
 
-Dans cette tâche, vous allez créer une liste de suivi dans Microsoft Sentinel.
+Dans cette tâche, vous créez une liste de surveillance dans Microsoft Sentinel.
 
 1. Dans la zone de recherche située en bas de l’écran Windows 10, entrez *Bloc-notes*. Sélectionnez **Bloc-notes** dans les résultats.
 
@@ -136,7 +138,7 @@ Dans cette tâche, vous allez créer une liste de suivi dans Microsoft Sentinel
 
 ### Tâche 5 : créer un indicateur de menaces
 
-Dans cette tâche, vous allez créer un indicateur dans Microsoft Sentinel.
+Dans cette tâche, vous créez un indicateur dans Microsoft Sentinel.
 
 1. Dans Microsoft Sentinel, sélectionnez l’option **Renseignement sur les menaces** dans la zone Gestion des menaces.
 
