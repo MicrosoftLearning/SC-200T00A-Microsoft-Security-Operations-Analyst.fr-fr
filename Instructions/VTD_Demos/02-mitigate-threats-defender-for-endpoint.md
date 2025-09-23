@@ -6,7 +6,7 @@
 
 Dans cette tâche, vous allez exécuter deux attaques simulées pour explorer les fonctionnalités de Microsoft Defender for Endpoint.
 
-1. Si vous n’êtes pas déjà sur le portail Microsoft Defender XDR dans votre navigateur, accédez à Microsoft Defender XDR à l’adresse (https://security.microsoft.com) connecté en tant qu’administrateur pour votre locataire.
+1. Si vous n’êtes pas déjà sur le portail Microsoft Defender XDR dans votre navigateur, accédez à Microsoft Defender XDR à l’adresse (<https://security.microsoft.com>) en vous connectant en tant qu’administrateur pour votre locataire.
 
 Vous exécuterez les attaques *simulées* à l’aide de *PowerShell* sur *WIN1* pour explorer les fonctionnalités de Microsoft Defender pour point de terminaison.
 
