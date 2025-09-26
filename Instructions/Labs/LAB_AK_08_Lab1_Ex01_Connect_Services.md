@@ -54,19 +54,19 @@ Dans cette tâche, vous allez connecter le connecteur de données Microsoft Def
 
 1. Dans la section *Configuration*, **cochez** la case pour l’*Abonnement MOC-XXXXXXXXXXXXX*, puis sélectionnez le lien **Se connecter**.
 
+1. L’**État** doit maintenant être **Connecté**.
+
 1. Pour activer la synchronisation bidirectionnelle, sélectionnez le lien **Activer Microsoft Defender pour tous les abonnements**.
 
     >**Remarque :** vous devrez peut-être faire défiler vers la droite pour afficher le lien.
 
-1. Dans la page *Microsoft Defender for cloud – Prise en main*, la case à cocher de l’*Abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée et le *plan Microsoft Defender* doit s’afficher *Désactivé (30 jours d’essai restants)*.
+1. Dans la page *Microsoft Defender pour le cloud - Prise en main*, la case à cocher de l’*abonnement MOC-XXXXXXXXXXXXX* doit être sélectionnée, et le *plan Microsoft Defender* doit afficher *Activé - Partiel (30 jours d’essai restants)*.
 
 1. Cliquez sur le bouton **X (Fermer)** dans le coin supérieur droit pour fermer la page *Prise en main*. Vous devriez retourner sur la page de configuration de *Microsoft Defender pour le cloud*.
 
-1. Faites glisser l’option **État** vers la droite.
+1. L’*État* de l’*abonnement MOC-XXXXXXXXXXX* doit maintenant être *Connecté*, et la *Synchronisation bidirectionnelle* doit être **Activée**.
 
-1. L’*État* de l’*abonnement MOC-XXXXXXXXXXX* doit maintenant être **Connecté**, et la *Synchronisation bidirectionnelle* doit être *Activée*.
-
-    >**Remarque :** il peut être nécessaire d’actualiser la page.
+    >**Remarque :** Vous devrez peut-être réessayer cette procédure pour voir *Synchronisation bidirectionnelle activée*. Après avoir réexécuté les étapes, essayez de définir le menu déroulant *Synchronisation bidirectionnelle* sur **Activé**.
 
 ### Tâche 3 : connecter le connecteur de données Activité Azure
 

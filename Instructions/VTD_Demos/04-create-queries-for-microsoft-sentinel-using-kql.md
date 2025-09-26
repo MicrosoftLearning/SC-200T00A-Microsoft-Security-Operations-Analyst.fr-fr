@@ -1,16 +1,22 @@
 # Module 4 : créer des requêtes pour Microsoft Sentinel avec le langage de requête Kusto (KQL)
 
-**Remarque** : la réussite de cette démonstration dépend de l’exécution correcte de toutes les étapes décrites dans le [document sur les conditions préalables](00-prerequisites.md). 
+<!--- **Note** Successful completion of this demo depends on completing all of the steps in the  [Pre-requisites document](00-prerequisites.md). --->
+
+>**Important :** Nous vous recommandons d’effectuer les requêtes pour ce labo dans l’environnement de démonstration Zava (anciennement Alpine Ski House). Vous pouvez également utiliser l’environnement de labo SC-200 avec le labo 06 - [Créer des requêtes pour Microsoft Sentinel à l’aide du langage de requête Kusto (KQL)](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_06_Lab1_Ex01_KQL.html/). Ce dernier nécessite 30 minutes de temps de déploiement.
 
 ## Accéder à la zone de test KQL
 
-Dans cette tâche, vous allez accéder à un environnement Log Analytics dans lequel vous pouvez vous entraîner à écrire des instructions KQL.
+Dans cette tâche, vous accéderez à un environnement Microsoft Sentinel Log Analytics où vous pourrez vous entraîner à écrire des instructions KQL.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Accédez à https://aka.ms/lademo dans votre navigateur. Connectez-vous avec les informations d’identification de l’administrateur MOD. 
+1. Accédez à <https://security.microsoft.com> dans votre navigateur. Connectez-vous avec les informations d’identification d’utilisateur Zava ou Alpine Ski House.
 
-1. Explorez les tables disponibles dans l’onglet situé sur le côté gauche de l’écran.
+1. Développez la section **Enquête et réponse** dans le volet de navigation à gauche.
+
+1. Développez la section **Repérage** et sélectionnez **Repérage avancé**.
+
+1. Explorez les tables disponibles répertoriées dans l’onglet *Schéma* situé à gauche de l’écran. Notez les tables *Microsoft Sentinel* et *Security and Audit*.
 
 1. Dans l’éditeur de requête, entrez la requête suivante, puis sélectionnez le bouton Exécuter.  Vous devez voir les résultats de la requête dans la fenêtre inférieure.
 
@@ -25,6 +31,8 @@ Dans cette tâche, vous allez accéder à un environnement Log Analytics dans l
 Dans cette tâche, vous allez créer des instructions KQL simples.
 
 1. L’opérateur `search` fournit une expérience de recherche dans plusieurs tables ou plusieurs colonnes. Les requêtes suivantes illustrent l’utilisation de l’opérateur `search` :
+
+    > **Remarque :** L’opérateur `search` est très gourmand en ressources. Limitez l’*Intervalle de temps* à *3 dernières heures* et utilisez *limit | 100*.
 
 ```KQL
 search "err" 
