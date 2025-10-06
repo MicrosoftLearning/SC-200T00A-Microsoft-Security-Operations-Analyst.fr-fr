@@ -35,7 +35,11 @@ Dans cette tâche, vous allez passer en revue le processus permettant de vérifi
 
 Une fois que vous avez affecté le rôle Administrateur d’accès utilisateur dans Azure, vous pouvez affecter à un utilisateur l’accès nécessaire pour approvisionner des références SKU pour Copilot.  Dans le cadre de cet exercice uniquement, qui consiste à vous montrer les étapes impliquées, vous vous attribuerez l’accès nécessaire.  Les étapes qui suivent vous guideront tout au long du processus.
 
-1. Ouvrez l’environnement simulé en sélectionnant ce lien : **[Portail Azure](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.
+1. Vérifiez que vous disposez du rôle Administrateur de l’accès utilisateur attribué à votre compte.
+
+1. Ouvrez l’environnement simulé en sélectionnant ce lien : <https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true>.
+
+    <!--- Open the simulated environment by selecting this link: **[Azure portal](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true)**.--->
 
 1. Vous allez commencer par activer la gestion des accès pour les ressources Azure. Pour accéder à ce paramètre :
     1. Dans le portail Azure, sélectionnez **Microsoft Entra ID**.
@@ -85,7 +89,7 @@ Pour cet exercice, vous provisionnez la capacité via Security Copilot. Lorsque 
 1. Vous pouvez sélectionner des options pour améliorer Copilot. Vous pouvez sélectionner le bouton bascule en fonction de vos préférences.  Sélectionnez **Continuer**.
 
 1. Dans le cadre de la configuration initiale, Copilot fournit par défaut un accès Contributeur à tout le monde et ajoute les administrateurs généraux et les administrateurs de sécurité en tant que propriétaires de Copilot. Dans votre environnement de production, vous pouvez modifier qui a accès à Copilot une fois la configuration initiale terminée. Sélectionnez **Continuer**.
-1. Vous êtes prêt à commencer ! Sélectionnez **Terminer**.
+1. Vous voilà prêt ! Sélectionnez **Terminer**.
 1. Fermez l'onglet du navigateur, car l'exercice suivant utilisera un lien distinct vers l'environnement de type laboratoire.
 
 ### Tâche 2 : explorer l’expérience autonome de Microsoft Security Copilot.

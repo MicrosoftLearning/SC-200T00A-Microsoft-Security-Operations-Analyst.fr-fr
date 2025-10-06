@@ -22,7 +22,9 @@ Dans cette tâche, vous déployez le connecteur Microsoft Defender XDR.
 
 1. Connectez-vous à la machine virtuelle WIN1 en tant qu’Administrateur avec le mot de passe suivant : **Pa55w.rd**.  
 
-1. Dans le navigateur Microsoft Edge, ouvrez l’environnement simulé en sélectionnant ce lien : **[Portail Azure]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89)**.
+1. Dans le navigateur Microsoft Edge, ouvrez l’environnement simulé en sélectionnant ce lien : <https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89>
+
+    <!--- [Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89). --->
 
 1. Sur la page *Accueil* du portail Azure, sélectionnez l’icône **Microsoft Sentinel**.
 
