@@ -321,7 +321,9 @@ Dans cette tâche, au lieu d’utiliser un livestream, vous allez créer une rè
 
 1. Sous *Simulation des résultats*, sélectionnez **Tester avec les données actuelles**. Notez le nombre attendu d’*Alertes par jour*.
 
-1. Sous *Mappage d’entités*, sélectionnez :
+1. Dans la section *Amélioration de l’alerte*, sélectionnez *Mappage d’entités >*, **+ Ajouter une nouvelle entité**.
+
+1. Dans l’*Entité*, sélectionnez :
 
     - Pour la liste déroulante *Type d’entité*, sélectionnez **Hôte**.
     - Pour la liste déroulante *Identificateur*, sélectionnez **Nom d’hôte**.

@@ -199,9 +199,9 @@ Dans cette tâche, vous allez modifier la période de rétention de la table Sec
 
 1. Sélectionnez **Gérer la table**.
 
-1. Remplacez la *période de rétention interactive* par **90 jours**.
+1. Modifiez la *Conservation des données analytiques* à **90 jours**.
 
-1. Rétablissez la *période de rétention totale* de **180 jours** (si nécessaire). Notez que la *Période d’archivage* est définie sur *90 jours*, car *Azure Monitor* considère automatiquement les 90 jours restants de la durée de conservation totale des données comme une conservation à long terme et à faible coût.
+1. Rétablissez la *période de rétention totale* à **180 jours** (si nécessaire). Notez que *Rétention à long terme* est réglée sur *90 jours*, parce que *Azure Monitor* traite automatiquement les 90 jours restants de la période de conservation totale comme une conservation à long terme à faible coût.
 
 1. Sélectionnez **Enregistrer** pour appliquer la modification.
 
