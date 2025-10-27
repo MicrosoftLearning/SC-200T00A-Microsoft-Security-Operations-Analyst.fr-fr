@@ -130,10 +130,10 @@ Dans cette tâche, vous allez créer des instructions KQL simples.
 1. L’instruction suivante illustre l’utilisation de l’instruction **Let** pour déclarer des *variables*. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
-    let timeOffset = 1h;
+    let timeOffset = 10m;
     let discardEventID = 4688;
     SecurityEvent_CL
-    | where TimeGenerated > ago(timeOffset*2) and TimeGenerated < ago(timeOffset)
+    | where TimeGenerated > ago(timeOffset*60) and TimeGenerated < ago(timeOffset)
     | where EventID_s != discardEventID
     ```
 
@@ -189,14 +189,14 @@ Dans cette tâche, vous allez créer des instructions KQL pour agréger des donn
     | summarize dcount(IpAddress)
     ```
 
-1. L’instruction suivante est une règle permettant de détecter les échecs pour cause de mot de passe non valide sur plusieurs applications pour le même compte. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
+1. L’instruction suivante est une règle permettant de détecter les échecs *Le compte d’utilisateur est désactivé* dans plusieurs applications pour le même compte. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
     let timeframe = 30d;
     let threshold = 1;
     SigninLogs_CL
     | where TimeGenerated >= ago(timeframe)
-    | where ResultDescription has "Invalid password"
+    | where ResultDescription has "User account is disabled"
     | summarize applicationCount = dcount(AppDisplayName_s) by UserPrincipalName_s, IPAddress
     | where applicationCount >= threshold
     ```
@@ -309,10 +309,10 @@ Dans cette tâche, vous allez générer des instructions KQL à plusieurs tables
 
     >**Remarque :** La « ligne vide » dans les résultats affichera le nombre total de lignes de SigninLogs_CL.
 
-1. L’instruction suivante illustre la prise en charge de l’opérateur **Union** pour l’union de plusieurs tables avec des caractères génériques. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** : 
+1. L’instruction suivante illustre la prise en charge de l’opérateur **Union** pour l’union de plusieurs tables avec des caractères génériques. Dans la fenêtre de requête, entrez l’instruction suivante, puis sélectionnez **Exécuter** :
 
     ```KQL
-    union App*  
+    union Sec*  
     | summarize count() by Type
     ```
 
