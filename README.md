@@ -1,3 +1,5 @@
+**⚠️ This GitHub repo will retire on 28th November 2025.** 
+
 # SC-200 : analyste des opérations de sécurité Microsoft
 
 - **[Lien vers les labos (format HTML)](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/)**
